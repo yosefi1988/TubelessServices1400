@@ -14,5 +14,7 @@ namespace TubelessServices.Models.Category.Response
             tubelessException.message = "ok";
         }
         public List<CategoryItem> catlist = new List<CategoryItem>();
+        public List<Viw_Site_Cat_level_1> cat1list = new List<Viw_Site_Cat_level_1>();
+        public List<Viw_Site_Cat_level_2> cat2list = new List<Viw_Site_Cat_level_2>();
     }
 }

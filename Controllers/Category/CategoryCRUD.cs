@@ -90,6 +90,32 @@ namespace TubelessServices.Controllers.Category
                                                            select record);
             return selectedCats;
         }
-        
+        internal IEnumerable<Viw_Site_Cat_level_1> getCat_level_1_for_site(CategoryRequest2 request)
+        {
+
+            IEnumerable<Viw_Site_Cat_level_1> selectedCats = (from record in db.Viw_Site_Cat_level_1s
+                                                              select record).OrderByDescending(date => date.Id).ToList();
+  
+
+            IEnumerable<Models.Viw_Site_Cat_level_1> appList2 = selectedCats.Skip(request.pageIndex * request.pageSize);
+            IEnumerable<Models.Viw_Site_Cat_level_1> appList3 = appList2.Take(request.pageSize);
+
+            return appList3;
+
+        }
+
+        internal IEnumerable<Viw_Site_Cat_level_2> getCat_level_2_for_site(CategoryRequest2 request)
+        {
+
+            IEnumerable<Viw_Site_Cat_level_2> selectedCats = (from record in db.Viw_Site_Cat_level_2s
+                                                              select record).OrderByDescending(date => date.Id).ToList();
+
+
+            IEnumerable<Models.Viw_Site_Cat_level_2> appList2 = selectedCats.Skip(request.pageIndex * request.pageSize);
+            IEnumerable<Models.Viw_Site_Cat_level_2> appList3 = appList2.Take(request.pageSize);
+
+            return appList3;
+
+        }
     }
 }

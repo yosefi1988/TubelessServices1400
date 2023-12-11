@@ -204,63 +204,24 @@ namespace TubelessServices.Controllers.Category
         [Route("CategoryLevel1")]
         public string GetCategoryLevel1ForSite(CategoryRequest2 request)
         {
-            List<CategoryItem> catlist = new List<CategoryItem>();
+            List<Viw_Site_Cat_level_1> catlist = new List<Viw_Site_Cat_level_1>();
 
-            IEnumerable<Tbl_DetailsLookup> catList = null;
-            //if (request.CategoryCode != 0)
-            //{
-            //    catList = categoryCRUD.getCategory2(request);
-            //}
-            //else
-            //{
-            //    if (request.ParentID != 0)
-            //    {
-            //        catList = categoryCRUD.getCategoryByParentCode(request);
+            IEnumerable<Viw_Site_Cat_level_1> catList = null;
+            catList = categoryCRUD.getCat_level_1_for_site(request);
+            
 
-            //    }
-            //    else if (request.BrothersID != 0)
-            //    {
-            //        catList = categoryCRUD.getCategoryDetailByBrothersID(request);
-            //    }
-            //    else
-            //    {
-            //        catList = new List<Tbl_DetailsLookup>();
-            //    }
-            //}
-
-            foreach (Tbl_DetailsLookup item in catList)
+            foreach (Viw_Site_Cat_level_1 item in catList)
             {
-                CategoryItem catItem = new CategoryItem();
-                catItem.ID = item.Id;
-                catItem.HID = item.IDParent;
-                catItem.Title = item.Name;
-                catItem.Statment = item.Value;
-                catItem.Value = item.Value;
-                catItem.Image = item.ImageUrl;
-                catItem.Icon = item.icon;
-
-                if (item.Selectable != null && item.Selectable == true)
-                {
-                    catItem.Selectable = true;
-                    catItem.SelectableS = "true";
-                }
-                else
-                {
-                    //if (item.IDCategoryLookUp == request.SelectableCategory)
-                    //{
-                    //    catItem.SelectableS = "true";
-                    //    catItem.Selectable = true;
-                    //}
-                    //else
-                    //{
-                    //    catItem.SelectableS = "false";
-                    //    catItem.Selectable = false;
-                    //}
-                }
+                Viw_Site_Cat_level_1 catItem = new Viw_Site_Cat_level_1();
+                catItem.Id = item.Id;
+                catItem.Name= item.Name;
+                catItem.ImageUrl= item.ImageUrl;
+                catItem.icon= item.icon;
+                 
                 catlist.Add(catItem);
             }
 
-            response.catlist = catlist;
+            response.cat1list = catlist;
             string ssssssss = new JavaScriptSerializer().Serialize(response);
             return ssssssss;
 
@@ -273,5 +234,51 @@ namespace TubelessServices.Controllers.Category
             return "";
 
         }
+
+
+        [HttpPost]
+        [Route("CategoryLevel2")]
+        public string GetCategoryLevel2ForSite(CategoryRequest2 request)
+        {
+            List<Viw_Site_Cat_level_2> catlist = new List<Viw_Site_Cat_level_2>();
+
+            IEnumerable<Viw_Site_Cat_level_2> catList = null; 
+            catList = categoryCRUD.getCat_level_2_for_site(request); 
+
+            foreach (Viw_Site_Cat_level_2 item in catList)
+            {
+                Viw_Site_Cat_level_2 catItem = new Viw_Site_Cat_level_2();
+                catItem.Id = item.Id;
+                catItem.Name = item.Name;
+                catItem.ImageUrl = item.ImageUrl;
+                catItem.icon = item.icon;
+
+                catlist.Add(catItem);
+            }
+
+            response.cat2list = catlist;
+            string ssssssss = new JavaScriptSerializer().Serialize(response);
+            return ssssssss;
+
+            //ServerResponse responsex = new ServerResponse();
+            //responsex.tubelessException.code = -5;
+            //responsex.tubelessException.message = "user not found";
+            //string sssssss = new JavaScriptSerializer().Serialize(responsex);
+            //return sssssss;
+
+            return "";
+
+        }
+
+
+        //[HttpPost]
+        //[Route("ApplicationListByCompanyCode")]
+        //public string ApplicationListForSiteByCompanyCode(reqAppList requestPostList)
+        //{
+        //    IEnumerable<Viw_Site_AppList> xxxxxxxxx = AppsCRUD.getApplicationListByCompanyCode(requestPostList.id, requestPostList.pageIndex, requestPostList.pageSize);
+        //    response.postList = xxxxxxxxx.ToList();
+        //    string ssssssss = new JavaScriptSerializer().Serialize(response);
+        //    return ssssssss;
+        //}
     }
 }

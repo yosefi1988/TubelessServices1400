@@ -16,7 +16,7 @@ namespace TubelessServices.Models.Category.Request
     public class CategoryRequest2
     {
         public int id;
-        public int page;
-        public int sort; 
+        public int pageIndex;
+        public int pageSize; 
     }
 }
