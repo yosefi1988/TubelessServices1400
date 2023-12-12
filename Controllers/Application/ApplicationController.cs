@@ -23,11 +23,12 @@ using TubelessServices.Models.Post;
 using TubelessServices.Models.post.Response;
 using TubelessServices.Models.post.Request;
 using TubelessServices.Classes.Utility;
-using TubelessServices.Models.post;
+using TubelessServices.Models.post; 
 
 namespace TubelessServices.Controllers.Application
 {
-    [RoutePrefix("api/Application")]
+ 
+    [RoutePrefix("api/Application")] 
     public class ApplicationController : ApiController
     {
         DataClassesAutenticatorDataContext db = new DataClassesAutenticatorDataContext();
@@ -72,7 +73,7 @@ namespace TubelessServices.Controllers.Application
         }
 
         [HttpPost]
-        [Route("ApplicationListByCompanyCode")]
+        [Route("ApplicationListByCompanyCode")] 
         public string ApplicationListForSiteByCompanyCode(reqAppList requestPostList)
         {
             IEnumerable<Viw_Site_AppList> xxxxxxxxx = AppsCRUD.getApplicationListByCompanyCode(requestPostList.id, requestPostList.pageIndex, requestPostList.pageSize);
@@ -80,6 +81,7 @@ namespace TubelessServices.Controllers.Application
             string ssssssss = new JavaScriptSerializer().Serialize(response);
             return ssssssss;
         }
-        
+
+ 
     }
 }

@@ -108,6 +108,7 @@ namespace TubelessServices.Controllers.Category
         {
 
             IEnumerable<Viw_Site_Cat_level_2> selectedCats = (from record in db.Viw_Site_Cat_level_2s
+                                                              where record.IDParent == request.id
                                                               select record).OrderByDescending(date => date.Id).ToList();
 
 

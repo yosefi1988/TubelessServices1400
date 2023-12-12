@@ -239,7 +239,7 @@ namespace TubelessServices.Controllers.Category
         [HttpPost]
         [Route("CategoryLevel2")]
         public string GetCategoryLevel2ForSite(CategoryRequest2 request)
-        {
+        { 
             List<Viw_Site_Cat_level_2> catlist = new List<Viw_Site_Cat_level_2>();
 
             IEnumerable<Viw_Site_Cat_level_2> catList = null; 
