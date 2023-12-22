@@ -28,6 +28,8 @@ namespace TubelessServices.Controllers.Device
             device.CreatedOn = DateTime.Now;
             device.ModifiedOn = DateTime.Now;
             device.IP = deviceRegister.IP;
+            device.PushNotificaionToken = deviceRegister.token;
+            device.IDUser = int.Parse(deviceRegister.IDUser);
 
             try
             {
@@ -50,6 +52,7 @@ namespace TubelessServices.Controllers.Device
             device.Board = deviceRegister.Board;        
             device.ModifiedOn = DateTime.Now;
             device.IP = deviceRegister.IP;
+            device.PushNotificaionToken = deviceRegister.token;
             db.SubmitChanges();
         }
 
@@ -73,6 +76,24 @@ namespace TubelessServices.Controllers.Device
             }
         }
 
+        internal bool insertDeviceSetting(int deviceId)
+        {
+            Tbl_Loginto_DeviceSetting newDeviceApp = new Tbl_Loginto_DeviceSetting();
+            newDeviceApp.DeviceID = deviceId;
+            newDeviceApp.AutoAdd = false;
+            newDeviceApp.ReciveNotifs = false; 
+
+            try
+            {
+                db.Tbl_Loginto_DeviceSettings.InsertOnSubmit(newDeviceApp);
+                db.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         internal bool insertUserDevice(int userId, int deviceId)
         {
             tbl_UsersDevice newUserDevice = new tbl_UsersDevice();

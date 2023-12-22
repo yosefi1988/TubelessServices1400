@@ -21,21 +21,26 @@ namespace TubelessServices
 
             //https://stackoverflow.com/questions/57788435/setting-valid-produce-and-consume-media-types-in-swagger-for-mvc5-in-net-framew
             //https://blog.kloud.com.au/2017/08/04/swashbuckle-pro-tips-for-aspnet-web-api-part-1/
-            var mediaType = new MediaTypeHeaderValue("application/json");
-            var formatter = new JsonMediaTypeFormatter();
-            formatter.SupportedMediaTypes.Clear();
-            formatter.SupportedMediaTypes.Add(mediaType);
-            config.Formatters.Clear();
-            config.Formatters.Add(formatter);
+            //var mediaType = new MediaTypeHeaderValue("application/json");
+            //var formatter = new JsonMediaTypeFormatter();
+            //formatter.SupportedMediaTypes.Clear();
+            //formatter.SupportedMediaTypes.Add(mediaType);
+            //config.Formatters.Clear();
+            //config.Formatters.Add(formatter);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional });
         }
     }
 }

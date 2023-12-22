@@ -20,5 +20,7 @@ namespace TubelessServices.Models.Devices.Requests
         public string Model { get; set; }
         public string Serial { get; set; }
         public string Store { get; set; }
+        public string token { get; set; }
+        public string IDUser { get; set; }
     }
 }
