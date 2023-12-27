@@ -81,7 +81,5 @@ namespace TubelessServices.Controllers.Application
             string ssssssss = new JavaScriptSerializer().Serialize(response);
             return ssssssss;
         }
-
- 
     }
 }
