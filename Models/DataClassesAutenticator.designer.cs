@@ -125,118 +125,6 @@ namespace TubelessServices.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<report_ContactUsMessage> report_ContactUsMessages
-		{
-			get
-			{
-				return this.GetTable<report_ContactUsMessage>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_WalletTransaction2> Viw_WalletTransaction2s
-		{
-			get
-			{
-				return this.GetTable<Viw_WalletTransaction2>();
-			}
-		}
-		
-		public System.Data.Linq.Table<report_transaction> report_transactions
-		{
-			get
-			{
-				return this.GetTable<report_transaction>();
-			}
-		}
-		
-		public System.Data.Linq.Table<report_User> report_Users
-		{
-			get
-			{
-				return this.GetTable<report_User>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_AppStore> Viw_AppStores
-		{
-			get
-			{
-				return this.GetTable<Viw_AppStore>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_ElectedUserList> Viw_ElectedUserLists
-		{
-			get
-			{
-				return this.GetTable<Viw_ElectedUserList>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_PostDetail> Viw_PostDetails
-		{
-			get
-			{
-				return this.GetTable<Viw_PostDetail>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_postList> Viw_postLists
-		{
-			get
-			{
-				return this.GetTable<Viw_postList>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_Site_AppList> Viw_Site_AppLists
-		{
-			get
-			{
-				return this.GetTable<Viw_Site_AppList>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_Site_Cat_level_1> Viw_Site_Cat_level_1s
-		{
-			get
-			{
-				return this.GetTable<Viw_Site_Cat_level_1>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_Site_Cat_level_2> Viw_Site_Cat_level_2s
-		{
-			get
-			{
-				return this.GetTable<Viw_Site_Cat_level_2>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_Site_MainPostList> Viw_Site_MainPostLists
-		{
-			get
-			{
-				return this.GetTable<Viw_Site_MainPostList>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_userDevice> Viw_userDevices
-		{
-			get
-			{
-				return this.GetTable<Viw_userDevice>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Viw_WalletTransaction> Viw_WalletTransactions
-		{
-			get
-			{
-				return this.GetTable<Viw_WalletTransaction>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Tbl_ApplicationStore> Tbl_ApplicationStores
 		{
 			get
@@ -421,6 +309,126 @@ namespace TubelessServices.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<report_ContactUsMessage> report_ContactUsMessages
+		{
+			get
+			{
+				return this.GetTable<report_ContactUsMessage>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_WalletTransaction2> Viw_WalletTransaction2s
+		{
+			get
+			{
+				return this.GetTable<Viw_WalletTransaction2>();
+			}
+		}
+		
+		public System.Data.Linq.Table<report_transaction> report_transactions
+		{
+			get
+			{
+				return this.GetTable<report_transaction>();
+			}
+		}
+		
+		public System.Data.Linq.Table<report_User> report_Users
+		{
+			get
+			{
+				return this.GetTable<report_User>();
+			}
+		}
+		
+		public System.Data.Linq.Table<View_loginto_users_site_list1> View_loginto_users_site_list1s
+		{
+			get
+			{
+				return this.GetTable<View_loginto_users_site_list1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_AppStore> Viw_AppStores
+		{
+			get
+			{
+				return this.GetTable<Viw_AppStore>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_ElectedUserList> Viw_ElectedUserLists
+		{
+			get
+			{
+				return this.GetTable<Viw_ElectedUserList>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_PostDetail> Viw_PostDetails
+		{
+			get
+			{
+				return this.GetTable<Viw_PostDetail>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_postList> Viw_postLists
+		{
+			get
+			{
+				return this.GetTable<Viw_postList>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_Site_AppList> Viw_Site_AppLists
+		{
+			get
+			{
+				return this.GetTable<Viw_Site_AppList>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_Site_Cat_level_1> Viw_Site_Cat_level_1s
+		{
+			get
+			{
+				return this.GetTable<Viw_Site_Cat_level_1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_Site_Cat_level_2> Viw_Site_Cat_level_2s
+		{
+			get
+			{
+				return this.GetTable<Viw_Site_Cat_level_2>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_Site_MainPostList> Viw_Site_MainPostLists
+		{
+			get
+			{
+				return this.GetTable<Viw_Site_MainPostList>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_userDevice> Viw_userDevices
+		{
+			get
+			{
+				return this.GetTable<Viw_userDevice>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Viw_WalletTransaction> Viw_WalletTransactions
+		{
+			get
+			{
+				return this.GetTable<Viw_WalletTransaction>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FNGetWalletBalanceByUserId", IsComposable=true)]
 		public System.Nullable<decimal> FNGetWalletBalanceByUserId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userId)
 		{
@@ -439,4254 +447,6 @@ namespace TubelessServices.Models
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDUser);
 			return ((ISingleResult<Sp_postList_loggedinResult>)(result.ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_ContactUsMessages")]
-	public partial class report_ContactUsMessage
-	{
-		
-		private System.Nullable<int> _UserCode;
-		
-		private string _Email;
-		
-		private string _Mobile;
-		
-		private string _UserName;
-		
-		private string _Name;
-		
-		private string _Title;
-		
-		private string _Text;
-		
-		private string _MetaData;
-		
-		private System.Nullable<System.DateTime> _Date;
-		
-		public report_ContactUsMessage()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
-		public System.Nullable<int> UserCode
-		{
-			get
-			{
-				return this._UserCode;
-			}
-			set
-			{
-				if ((this._UserCode != value))
-				{
-					this._UserCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
-		public string Mobile
-		{
-			get
-			{
-				return this._Mobile;
-			}
-			set
-			{
-				if ((this._Mobile != value))
-				{
-					this._Mobile = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX)")]
-		public string Text
-		{
-			get
-			{
-				return this._Text;
-			}
-			set
-			{
-				if ((this._Text != value))
-				{
-					this._Text = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
-		public string MetaData
-		{
-			get
-			{
-				return this._MetaData;
-			}
-			set
-			{
-				if ((this._MetaData != value))
-				{
-					this._MetaData = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime")]
-		public System.Nullable<System.DateTime> Date
-		{
-			get
-			{
-				return this._Date;
-			}
-			set
-			{
-				if ((this._Date != value))
-				{
-					this._Date = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_WalletTransaction2")]
-	public partial class Viw_WalletTransaction2
-	{
-		
-		private int _TransactionID;
-		
-		private int _IDUser;
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private string _TransactionCreatorName;
-		
-		private string _TransactionCreatorFamily;
-		
-		private decimal _Amount;
-		
-		private int _TransactionTypeCode;
-		
-		private string _TransactionTypeName;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		private string _RefrenceNo;
-		
-		private string _MetaData;
-		
-		private System.DateTime _CreatedOn;
-		
-		private System.Nullable<int> _IDPost;
-		
-		private string _PostTitle;
-		
-		public Viw_WalletTransaction2()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionID", DbType="Int NOT NULL")]
-		public int TransactionID
-		{
-			get
-			{
-				return this._TransactionID;
-			}
-			set
-			{
-				if ((this._TransactionID != value))
-				{
-					this._TransactionID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
-		public int IDUser
-		{
-			get
-			{
-				return this._IDUser;
-			}
-			set
-			{
-				if ((this._IDUser != value))
-				{
-					this._IDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorName", DbType="NVarChar(550)")]
-		public string TransactionCreatorName
-		{
-			get
-			{
-				return this._TransactionCreatorName;
-			}
-			set
-			{
-				if ((this._TransactionCreatorName != value))
-				{
-					this._TransactionCreatorName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorFamily", DbType="NVarChar(550)")]
-		public string TransactionCreatorFamily
-		{
-			get
-			{
-				return this._TransactionCreatorFamily;
-			}
-			set
-			{
-				if ((this._TransactionCreatorFamily != value))
-				{
-					this._TransactionCreatorFamily = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Amount
-		{
-			get
-			{
-				return this._Amount;
-			}
-			set
-			{
-				if ((this._Amount != value))
-				{
-					this._Amount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
-		public int TransactionTypeCode
-		{
-			get
-			{
-				return this._TransactionTypeCode;
-			}
-			set
-			{
-				if ((this._TransactionTypeCode != value))
-				{
-					this._TransactionTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TransactionTypeName
-		{
-			get
-			{
-				return this._TransactionTypeName;
-			}
-			set
-			{
-				if ((this._TransactionTypeName != value))
-				{
-					this._TransactionTypeName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
-		public string RefrenceNo
-		{
-			get
-			{
-				return this._RefrenceNo;
-			}
-			set
-			{
-				if ((this._RefrenceNo != value))
-				{
-					this._RefrenceNo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
-		public string MetaData
-		{
-			get
-			{
-				return this._MetaData;
-			}
-			set
-			{
-				if ((this._MetaData != value))
-				{
-					this._MetaData = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPost", DbType="Int")]
-		public System.Nullable<int> IDPost
-		{
-			get
-			{
-				return this._IDPost;
-			}
-			set
-			{
-				if ((this._IDPost != value))
-				{
-					this._IDPost = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTitle", DbType="NVarChar(MAX)")]
-		public string PostTitle
-		{
-			get
-			{
-				return this._PostTitle;
-			}
-			set
-			{
-				if ((this._PostTitle != value))
-				{
-					this._PostTitle = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_transactions")]
-	public partial class report_transaction
-	{
-		
-		private int _IDUser;
-		
-		private System.Nullable<int> _IDUserCreator;
-		
-		private string _NameFa;
-		
-		private decimal _Amount;
-		
-		private System.Nullable<double> _Zarib;
-		
-		private int _TransactionTypeCode;
-		
-		private string _Name;
-		
-		private System.DateTime _CreatedOn;
-		
-		private string _RefrenceNo;
-		
-		private string _MetaData;
-		
-		public report_transaction()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
-		public int IDUser
-		{
-			get
-			{
-				return this._IDUser;
-			}
-			set
-			{
-				if ((this._IDUser != value))
-				{
-					this._IDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUserCreator", DbType="Int")]
-		public System.Nullable<int> IDUserCreator
-		{
-			get
-			{
-				return this._IDUserCreator;
-			}
-			set
-			{
-				if ((this._IDUserCreator != value))
-				{
-					this._IDUserCreator = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
-		public string NameFa
-		{
-			get
-			{
-				return this._NameFa;
-			}
-			set
-			{
-				if ((this._NameFa != value))
-				{
-					this._NameFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Amount
-		{
-			get
-			{
-				return this._Amount;
-			}
-			set
-			{
-				if ((this._Amount != value))
-				{
-					this._Amount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zarib", DbType="Float")]
-		public System.Nullable<double> Zarib
-		{
-			get
-			{
-				return this._Zarib;
-			}
-			set
-			{
-				if ((this._Zarib != value))
-				{
-					this._Zarib = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
-		public int TransactionTypeCode
-		{
-			get
-			{
-				return this._TransactionTypeCode;
-			}
-			set
-			{
-				if ((this._TransactionTypeCode != value))
-				{
-					this._TransactionTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
-		public string RefrenceNo
-		{
-			get
-			{
-				return this._RefrenceNo;
-			}
-			set
-			{
-				if ((this._RefrenceNo != value))
-				{
-					this._RefrenceNo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
-		public string MetaData
-		{
-			get
-			{
-				return this._MetaData;
-			}
-			set
-			{
-				if ((this._MetaData != value))
-				{
-					this._MetaData = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_Users")]
-	public partial class report_User
-	{
-		
-		private System.Nullable<int> _UserCode;
-		
-		private string _Email;
-		
-		private string _Mobile;
-		
-		private System.DateTime _CreatedOn;
-		
-		private string _NameFa;
-		
-		private string _Model;
-		
-		private string _AndroidVersion;
-		
-		private System.Nullable<int> _AndroidAPI;
-		
-		private string _Manufacturer;
-		
-		private string _Brand;
-		
-		private string _StoreName;
-		
-		public report_User()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
-		public System.Nullable<int> UserCode
-		{
-			get
-			{
-				return this._UserCode;
-			}
-			set
-			{
-				if ((this._UserCode != value))
-				{
-					this._UserCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
-		public string Mobile
-		{
-			get
-			{
-				return this._Mobile;
-			}
-			set
-			{
-				if ((this._Mobile != value))
-				{
-					this._Mobile = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
-		public string NameFa
-		{
-			get
-			{
-				return this._NameFa;
-			}
-			set
-			{
-				if ((this._NameFa != value))
-				{
-					this._NameFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="NVarChar(MAX)")]
-		public string Model
-		{
-			get
-			{
-				return this._Model;
-			}
-			set
-			{
-				if ((this._Model != value))
-				{
-					this._Model = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidVersion", DbType="NVarChar(MAX)")]
-		public string AndroidVersion
-		{
-			get
-			{
-				return this._AndroidVersion;
-			}
-			set
-			{
-				if ((this._AndroidVersion != value))
-				{
-					this._AndroidVersion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidAPI", DbType="Int")]
-		public System.Nullable<int> AndroidAPI
-		{
-			get
-			{
-				return this._AndroidAPI;
-			}
-			set
-			{
-				if ((this._AndroidAPI != value))
-				{
-					this._AndroidAPI = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacturer", DbType="NVarChar(MAX)")]
-		public string Manufacturer
-		{
-			get
-			{
-				return this._Manufacturer;
-			}
-			set
-			{
-				if ((this._Manufacturer != value))
-				{
-					this._Manufacturer = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brand", DbType="NVarChar(MAX)")]
-		public string Brand
-		{
-			get
-			{
-				return this._Brand;
-			}
-			set
-			{
-				if ((this._Brand != value))
-				{
-					this._Brand = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StoreName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string StoreName
-		{
-			get
-			{
-				return this._StoreName;
-			}
-			set
-			{
-				if ((this._StoreName != value))
-				{
-					this._StoreName = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_AppStore")]
-	public partial class Viw_AppStore
-	{
-		
-		private int _typeID;
-		
-		private string _type;
-		
-		private int _companyID;
-		
-		private string _company;
-		
-		private int _ApplicationID;
-		
-		private string _NameFa;
-		
-		private string _VersionName;
-		
-		private string _NameEn;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		private System.Nullable<int> _DownloadCount;
-		
-		private System.Nullable<int> _Views;
-		
-		private string _DownloadUrl;
-		
-		public Viw_AppStore()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeID", DbType="Int NOT NULL")]
-		public int typeID
-		{
-			get
-			{
-				return this._typeID;
-			}
-			set
-			{
-				if ((this._typeID != value))
-				{
-					this._typeID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string type
-		{
-			get
-			{
-				return this._type;
-			}
-			set
-			{
-				if ((this._type != value))
-				{
-					this._type = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_companyID", DbType="Int NOT NULL")]
-		public int companyID
-		{
-			get
-			{
-				return this._companyID;
-			}
-			set
-			{
-				if ((this._companyID != value))
-				{
-					this._companyID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_company", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string company
-		{
-			get
-			{
-				return this._company;
-			}
-			set
-			{
-				if ((this._company != value))
-				{
-					this._company = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationID", DbType="Int NOT NULL")]
-		public int ApplicationID
-		{
-			get
-			{
-				return this._ApplicationID;
-			}
-			set
-			{
-				if ((this._ApplicationID != value))
-				{
-					this._ApplicationID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
-		public string NameFa
-		{
-			get
-			{
-				return this._NameFa;
-			}
-			set
-			{
-				if ((this._NameFa != value))
-				{
-					this._NameFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionName", DbType="NVarChar(MAX)")]
-		public string VersionName
-		{
-			get
-			{
-				return this._VersionName;
-			}
-			set
-			{
-				if ((this._VersionName != value))
-				{
-					this._VersionName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameEn", DbType="NVarChar(MAX)")]
-		public string NameEn
-		{
-			get
-			{
-				return this._NameEn;
-			}
-			set
-			{
-				if ((this._NameEn != value))
-				{
-					this._NameEn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadCount", DbType="Int")]
-		public System.Nullable<int> DownloadCount
-		{
-			get
-			{
-				return this._DownloadCount;
-			}
-			set
-			{
-				if ((this._DownloadCount != value))
-				{
-					this._DownloadCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Views", DbType="Int")]
-		public System.Nullable<int> Views
-		{
-			get
-			{
-				return this._Views;
-			}
-			set
-			{
-				if ((this._Views != value))
-				{
-					this._Views = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadUrl", DbType="NVarChar(MAX)")]
-		public string DownloadUrl
-		{
-			get
-			{
-				return this._DownloadUrl;
-			}
-			set
-			{
-				if ((this._DownloadUrl != value))
-				{
-					this._DownloadUrl = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_ElectedUserList")]
-	public partial class Viw_ElectedUserList
-	{
-		
-		private int _UserId;
-		
-		private System.Nullable<int> _CountPosts;
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private System.Nullable<System.DateTime> _UserCreatedOn;
-		
-		private System.Nullable<int> _F_UserId;
-		
-		private System.Nullable<int> _F_ApplicationId;
-		
-		private System.Nullable<int> _F_StateId;
-		
-		private System.Nullable<bool> _IsElected;
-		
-		private System.Nullable<System.DateTime> _ElectedDate;
-		
-		private string _Title;
-		
-		private string _Comment;
-		
-		private System.Nullable<byte> _Star;
-		
-		private System.Nullable<bool> _ElectedUsersIsActive;
-		
-		private System.Nullable<bool> _ElectedUsersIsDelete;
-		
-		private string _StateName;
-		
-		private string _Name;
-		
-		private string _Family;
-		
-		private string _Avatar;
-		
-		private string _ProfileImage;
-		
-		private string _Mobile;
-		
-		private string _Email;
-		
-		private System.Nullable<bool> _PhoneNumberConfirmed;
-		
-		private System.Nullable<int> _UserCode;
-		
-		private string _CodeMelli;
-		
-		private string _UserName;
-		
-		private string _SimCardId;
-		
-		private System.Nullable<int> _UserTypeCode;
-		
-		private System.Nullable<bool> _UsersIsActive;
-		
-		private System.Nullable<bool> _UsersIsDelete;
-		
-		private System.Nullable<System.DateTime> _CreatedOn;
-		
-		private string _Address;
-		
-		private string _Location;
-		
-		private string _Tel;
-		
-		public Viw_ElectedUserList()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
-		public int UserId
-		{
-			get
-			{
-				return this._UserId;
-			}
-			set
-			{
-				if ((this._UserId != value))
-				{
-					this._UserId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountPosts", DbType="Int")]
-		public System.Nullable<int> CountPosts
-		{
-			get
-			{
-				return this._CountPosts;
-			}
-			set
-			{
-				if ((this._CountPosts != value))
-				{
-					this._CountPosts = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreatedOn", DbType="DateTime")]
-		public System.Nullable<System.DateTime> UserCreatedOn
-		{
-			get
-			{
-				return this._UserCreatedOn;
-			}
-			set
-			{
-				if ((this._UserCreatedOn != value))
-				{
-					this._UserCreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_UserId", DbType="Int")]
-		public System.Nullable<int> F_UserId
-		{
-			get
-			{
-				return this._F_UserId;
-			}
-			set
-			{
-				if ((this._F_UserId != value))
-				{
-					this._F_UserId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_ApplicationId", DbType="Int")]
-		public System.Nullable<int> F_ApplicationId
-		{
-			get
-			{
-				return this._F_ApplicationId;
-			}
-			set
-			{
-				if ((this._F_ApplicationId != value))
-				{
-					this._F_ApplicationId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_StateId", DbType="Int")]
-		public System.Nullable<int> F_StateId
-		{
-			get
-			{
-				return this._F_StateId;
-			}
-			set
-			{
-				if ((this._F_StateId != value))
-				{
-					this._F_StateId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsElected", DbType="Bit")]
-		public System.Nullable<bool> IsElected
-		{
-			get
-			{
-				return this._IsElected;
-			}
-			set
-			{
-				if ((this._IsElected != value))
-				{
-					this._IsElected = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ElectedDate
-		{
-			get
-			{
-				return this._ElectedDate;
-			}
-			set
-			{
-				if ((this._ElectedDate != value))
-				{
-					this._ElectedDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comment", DbType="NVarChar(MAX)")]
-		public string Comment
-		{
-			get
-			{
-				return this._Comment;
-			}
-			set
-			{
-				if ((this._Comment != value))
-				{
-					this._Comment = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Star", DbType="TinyInt")]
-		public System.Nullable<byte> Star
-		{
-			get
-			{
-				return this._Star;
-			}
-			set
-			{
-				if ((this._Star != value))
-				{
-					this._Star = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedUsersIsActive", DbType="Bit")]
-		public System.Nullable<bool> ElectedUsersIsActive
-		{
-			get
-			{
-				return this._ElectedUsersIsActive;
-			}
-			set
-			{
-				if ((this._ElectedUsersIsActive != value))
-				{
-					this._ElectedUsersIsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedUsersIsDelete", DbType="Bit")]
-		public System.Nullable<bool> ElectedUsersIsDelete
-		{
-			get
-			{
-				return this._ElectedUsersIsDelete;
-			}
-			set
-			{
-				if ((this._ElectedUsersIsDelete != value))
-				{
-					this._ElectedUsersIsDelete = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50)")]
-		public string StateName
-		{
-			get
-			{
-				return this._StateName;
-			}
-			set
-			{
-				if ((this._StateName != value))
-				{
-					this._StateName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Family", DbType="NVarChar(550)")]
-		public string Family
-		{
-			get
-			{
-				return this._Family;
-			}
-			set
-			{
-				if ((this._Family != value))
-				{
-					this._Family = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Avatar", DbType="NVarChar(MAX)")]
-		public string Avatar
-		{
-			get
-			{
-				return this._Avatar;
-			}
-			set
-			{
-				if ((this._Avatar != value))
-				{
-					this._Avatar = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProfileImage", DbType="NVarChar(MAX)")]
-		public string ProfileImage
-		{
-			get
-			{
-				return this._ProfileImage;
-			}
-			set
-			{
-				if ((this._ProfileImage != value))
-				{
-					this._ProfileImage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
-		public string Mobile
-		{
-			get
-			{
-				return this._Mobile;
-			}
-			set
-			{
-				if ((this._Mobile != value))
-				{
-					this._Mobile = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumberConfirmed", DbType="Bit")]
-		public System.Nullable<bool> PhoneNumberConfirmed
-		{
-			get
-			{
-				return this._PhoneNumberConfirmed;
-			}
-			set
-			{
-				if ((this._PhoneNumberConfirmed != value))
-				{
-					this._PhoneNumberConfirmed = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
-		public System.Nullable<int> UserCode
-		{
-			get
-			{
-				return this._UserCode;
-			}
-			set
-			{
-				if ((this._UserCode != value))
-				{
-					this._UserCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodeMelli", DbType="Char(10)")]
-		public string CodeMelli
-		{
-			get
-			{
-				return this._CodeMelli;
-			}
-			set
-			{
-				if ((this._CodeMelli != value))
-				{
-					this._CodeMelli = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SimCardId", DbType="NVarChar(50)")]
-		public string SimCardId
-		{
-			get
-			{
-				return this._SimCardId;
-			}
-			set
-			{
-				if ((this._SimCardId != value))
-				{
-					this._SimCardId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTypeCode", DbType="Int")]
-		public System.Nullable<int> UserTypeCode
-		{
-			get
-			{
-				return this._UserTypeCode;
-			}
-			set
-			{
-				if ((this._UserTypeCode != value))
-				{
-					this._UserTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersIsActive", DbType="Bit")]
-		public System.Nullable<bool> UsersIsActive
-		{
-			get
-			{
-				return this._UsersIsActive;
-			}
-			set
-			{
-				if ((this._UsersIsActive != value))
-				{
-					this._UsersIsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersIsDelete", DbType="Bit")]
-		public System.Nullable<bool> UsersIsDelete
-		{
-			get
-			{
-				return this._UsersIsDelete;
-			}
-			set
-			{
-				if ((this._UsersIsDelete != value))
-				{
-					this._UsersIsDelete = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
-		public System.Nullable<System.DateTime> CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(MAX)")]
-		public string Address
-		{
-			get
-			{
-				return this._Address;
-			}
-			set
-			{
-				if ((this._Address != value))
-				{
-					this._Address = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(MAX)")]
-		public string Location
-		{
-			get
-			{
-				return this._Location;
-			}
-			set
-			{
-				if ((this._Location != value))
-				{
-					this._Location = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel", DbType="NChar(12)")]
-		public string Tel
-		{
-			get
-			{
-				return this._Tel;
-			}
-			set
-			{
-				if ((this._Tel != value))
-				{
-					this._Tel = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_PostDetails")]
-	public partial class Viw_PostDetail
-	{
-		
-		private int _Id;
-		
-		private System.Nullable<int> _IDUser;
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private string _Title;
-		
-		private string _Text;
-		
-		private int _TypeCode;
-		
-		private string _TypeName;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		private int _StateCode;
-		
-		private string _StateName;
-		
-		private int _CityCode;
-		
-		private string _CityName;
-		
-		private decimal _PriceForVsit;
-		
-		private bool _IsActive;
-		
-		private bool _IsDeleted;
-		
-		private bool _ReciveMessage;
-		
-		private System.DateTime _PublishDate;
-		
-		private System.DateTime _ExpireDate;
-		
-		private System.Nullable<System.DateTime> _AcceptDate;
-		
-		private int _VisitCount;
-		
-		private System.DateTime _CreatedOn;
-		
-		private System.Nullable<System.DateTime> _ModifiedOn;
-		
-		private string _TitlePicture;
-		
-		private string _TextPicture;
-		
-		public Viw_PostDetail()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this._Id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int")]
-		public System.Nullable<int> IDUser
-		{
-			get
-			{
-				return this._IDUser;
-			}
-			set
-			{
-				if ((this._IDUser != value))
-				{
-					this._IDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Text
-		{
-			get
-			{
-				return this._Text;
-			}
-			set
-			{
-				if ((this._Text != value))
-				{
-					this._Text = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCode", DbType="Int NOT NULL")]
-		public int TypeCode
-		{
-			get
-			{
-				return this._TypeCode;
-			}
-			set
-			{
-				if ((this._TypeCode != value))
-				{
-					this._TypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TypeName
-		{
-			get
-			{
-				return this._TypeName;
-			}
-			set
-			{
-				if ((this._TypeName != value))
-				{
-					this._TypeName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCode", DbType="Int NOT NULL")]
-		public int StateCode
-		{
-			get
-			{
-				return this._StateCode;
-			}
-			set
-			{
-				if ((this._StateCode != value))
-				{
-					this._StateCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string StateName
-		{
-			get
-			{
-				return this._StateName;
-			}
-			set
-			{
-				if ((this._StateName != value))
-				{
-					this._StateName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityCode", DbType="Int NOT NULL")]
-		public int CityCode
-		{
-			get
-			{
-				return this._CityCode;
-			}
-			set
-			{
-				if ((this._CityCode != value))
-				{
-					this._CityCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string CityName
-		{
-			get
-			{
-				return this._CityName;
-			}
-			set
-			{
-				if ((this._CityName != value))
-				{
-					this._CityName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceForVsit", DbType="Decimal(18,0) NOT NULL")]
-		public decimal PriceForVsit
-		{
-			get
-			{
-				return this._PriceForVsit;
-			}
-			set
-			{
-				if ((this._PriceForVsit != value))
-				{
-					this._PriceForVsit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
-		public bool IsActive
-		{
-			get
-			{
-				return this._IsActive;
-			}
-			set
-			{
-				if ((this._IsActive != value))
-				{
-					this._IsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
-		public bool IsDeleted
-		{
-			get
-			{
-				return this._IsDeleted;
-			}
-			set
-			{
-				if ((this._IsDeleted != value))
-				{
-					this._IsDeleted = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
-		public bool ReciveMessage
-		{
-			get
-			{
-				return this._ReciveMessage;
-			}
-			set
-			{
-				if ((this._ReciveMessage != value))
-				{
-					this._ReciveMessage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
-		public System.DateTime PublishDate
-		{
-			get
-			{
-				return this._PublishDate;
-			}
-			set
-			{
-				if ((this._PublishDate != value))
-				{
-					this._PublishDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
-		public System.DateTime ExpireDate
-		{
-			get
-			{
-				return this._ExpireDate;
-			}
-			set
-			{
-				if ((this._ExpireDate != value))
-				{
-					this._ExpireDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> AcceptDate
-		{
-			get
-			{
-				return this._AcceptDate;
-			}
-			set
-			{
-				if ((this._AcceptDate != value))
-				{
-					this._AcceptDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
-		public int VisitCount
-		{
-			get
-			{
-				return this._VisitCount;
-			}
-			set
-			{
-				if ((this._VisitCount != value))
-				{
-					this._VisitCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ModifiedOn
-		{
-			get
-			{
-				return this._ModifiedOn;
-			}
-			set
-			{
-				if ((this._ModifiedOn != value))
-				{
-					this._ModifiedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
-		public string TitlePicture
-		{
-			get
-			{
-				return this._TitlePicture;
-			}
-			set
-			{
-				if ((this._TitlePicture != value))
-				{
-					this._TitlePicture = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextPicture", DbType="NVarChar(MAX)")]
-		public string TextPicture
-		{
-			get
-			{
-				return this._TextPicture;
-			}
-			set
-			{
-				if ((this._TextPicture != value))
-				{
-					this._TextPicture = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_postList")]
-	public partial class Viw_postList
-	{
-		
-		private int _IDPost;
-		
-		private System.Nullable<int> _CreatorIDUser;
-		
-		private System.Nullable<int> _CreatorUserCode;
-		
-		private string _CreatorName;
-		
-		private string _CreatorFamily;
-		
-		private string _CreatorAvatar;
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private string _Title;
-		
-		private string _Text;
-		
-		private int _PostTypeCode;
-		
-		private string _PostTypeName;
-		
-		private int _StateCode;
-		
-		private string _StateName;
-		
-		private int _CityCode;
-		
-		private string _CityName;
-		
-		private decimal _PriceForVsit;
-		
-		private bool _IsActive;
-		
-		private bool _IsDeleted;
-		
-		private bool _ReciveMessage;
-		
-		private System.DateTime _PublishDate;
-		
-		private System.DateTime _ExpireDate;
-		
-		private int _VisitCount;
-		
-		private System.DateTime _CreatedOn;
-		
-		private string _TitlePicture;
-		
-		public Viw_postList()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPost", DbType="Int NOT NULL")]
-		public int IDPost
-		{
-			get
-			{
-				return this._IDPost;
-			}
-			set
-			{
-				if ((this._IDPost != value))
-				{
-					this._IDPost = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorIDUser", DbType="Int")]
-		public System.Nullable<int> CreatorIDUser
-		{
-			get
-			{
-				return this._CreatorIDUser;
-			}
-			set
-			{
-				if ((this._CreatorIDUser != value))
-				{
-					this._CreatorIDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorUserCode", DbType="Int")]
-		public System.Nullable<int> CreatorUserCode
-		{
-			get
-			{
-				return this._CreatorUserCode;
-			}
-			set
-			{
-				if ((this._CreatorUserCode != value))
-				{
-					this._CreatorUserCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorName", DbType="NVarChar(550)")]
-		public string CreatorName
-		{
-			get
-			{
-				return this._CreatorName;
-			}
-			set
-			{
-				if ((this._CreatorName != value))
-				{
-					this._CreatorName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorFamily", DbType="NVarChar(550)")]
-		public string CreatorFamily
-		{
-			get
-			{
-				return this._CreatorFamily;
-			}
-			set
-			{
-				if ((this._CreatorFamily != value))
-				{
-					this._CreatorFamily = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorAvatar", DbType="NVarChar(MAX)")]
-		public string CreatorAvatar
-		{
-			get
-			{
-				return this._CreatorAvatar;
-			}
-			set
-			{
-				if ((this._CreatorAvatar != value))
-				{
-					this._CreatorAvatar = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Text
-		{
-			get
-			{
-				return this._Text;
-			}
-			set
-			{
-				if ((this._Text != value))
-				{
-					this._Text = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTypeCode", DbType="Int NOT NULL")]
-		public int PostTypeCode
-		{
-			get
-			{
-				return this._PostTypeCode;
-			}
-			set
-			{
-				if ((this._PostTypeCode != value))
-				{
-					this._PostTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string PostTypeName
-		{
-			get
-			{
-				return this._PostTypeName;
-			}
-			set
-			{
-				if ((this._PostTypeName != value))
-				{
-					this._PostTypeName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCode", DbType="Int NOT NULL")]
-		public int StateCode
-		{
-			get
-			{
-				return this._StateCode;
-			}
-			set
-			{
-				if ((this._StateCode != value))
-				{
-					this._StateCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string StateName
-		{
-			get
-			{
-				return this._StateName;
-			}
-			set
-			{
-				if ((this._StateName != value))
-				{
-					this._StateName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityCode", DbType="Int NOT NULL")]
-		public int CityCode
-		{
-			get
-			{
-				return this._CityCode;
-			}
-			set
-			{
-				if ((this._CityCode != value))
-				{
-					this._CityCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string CityName
-		{
-			get
-			{
-				return this._CityName;
-			}
-			set
-			{
-				if ((this._CityName != value))
-				{
-					this._CityName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceForVsit", DbType="Decimal(18,0) NOT NULL")]
-		public decimal PriceForVsit
-		{
-			get
-			{
-				return this._PriceForVsit;
-			}
-			set
-			{
-				if ((this._PriceForVsit != value))
-				{
-					this._PriceForVsit = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
-		public bool IsActive
-		{
-			get
-			{
-				return this._IsActive;
-			}
-			set
-			{
-				if ((this._IsActive != value))
-				{
-					this._IsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
-		public bool IsDeleted
-		{
-			get
-			{
-				return this._IsDeleted;
-			}
-			set
-			{
-				if ((this._IsDeleted != value))
-				{
-					this._IsDeleted = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
-		public bool ReciveMessage
-		{
-			get
-			{
-				return this._ReciveMessage;
-			}
-			set
-			{
-				if ((this._ReciveMessage != value))
-				{
-					this._ReciveMessage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
-		public System.DateTime PublishDate
-		{
-			get
-			{
-				return this._PublishDate;
-			}
-			set
-			{
-				if ((this._PublishDate != value))
-				{
-					this._PublishDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
-		public System.DateTime ExpireDate
-		{
-			get
-			{
-				return this._ExpireDate;
-			}
-			set
-			{
-				if ((this._ExpireDate != value))
-				{
-					this._ExpireDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
-		public int VisitCount
-		{
-			get
-			{
-				return this._VisitCount;
-			}
-			set
-			{
-				if ((this._VisitCount != value))
-				{
-					this._VisitCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
-		public string TitlePicture
-		{
-			get
-			{
-				return this._TitlePicture;
-			}
-			set
-			{
-				if ((this._TitlePicture != value))
-				{
-					this._TitlePicture = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_AppList")]
-	public partial class Viw_Site_AppList
-	{
-		
-		private int _ApplicationID;
-		
-		private string _NameFa;
-		
-		private string _StatementFa;
-		
-		private string _TextFa;
-		
-		private string _LogoPicture;
-		
-		private string _NameEn;
-		
-		private string _StatementEn;
-		
-		private int _VersionCode;
-		
-		private string _VersionName;
-		
-		private System.Nullable<double> _Price;
-		
-		private System.Nullable<int> _DownloadCount;
-		
-		private System.Nullable<int> _Views;
-		
-		private string _StoreName;
-		
-		private System.Nullable<bool> _isFree;
-		
-		private string _URL;
-		
-		private string _Description;
-		
-		private System.Nullable<int> _AppTypeCode;
-		
-		private int _CompanyCode;
-		
-		private string _Company;
-		
-		private string _CompanyUrl;
-		
-		private string _CompanyIcon;
-		
-		private System.Nullable<int> _Priority;
-		
-		public Viw_Site_AppList()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationID", DbType="Int NOT NULL")]
-		public int ApplicationID
-		{
-			get
-			{
-				return this._ApplicationID;
-			}
-			set
-			{
-				if ((this._ApplicationID != value))
-				{
-					this._ApplicationID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
-		public string NameFa
-		{
-			get
-			{
-				return this._NameFa;
-			}
-			set
-			{
-				if ((this._NameFa != value))
-				{
-					this._NameFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatementFa", DbType="NVarChar(MAX)")]
-		public string StatementFa
-		{
-			get
-			{
-				return this._StatementFa;
-			}
-			set
-			{
-				if ((this._StatementFa != value))
-				{
-					this._StatementFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextFa", DbType="NVarChar(MAX)")]
-		public string TextFa
-		{
-			get
-			{
-				return this._TextFa;
-			}
-			set
-			{
-				if ((this._TextFa != value))
-				{
-					this._TextFa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoPicture", DbType="NVarChar(MAX)")]
-		public string LogoPicture
-		{
-			get
-			{
-				return this._LogoPicture;
-			}
-			set
-			{
-				if ((this._LogoPicture != value))
-				{
-					this._LogoPicture = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameEn", DbType="NVarChar(MAX)")]
-		public string NameEn
-		{
-			get
-			{
-				return this._NameEn;
-			}
-			set
-			{
-				if ((this._NameEn != value))
-				{
-					this._NameEn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatementEn", DbType="NVarChar(MAX)")]
-		public string StatementEn
-		{
-			get
-			{
-				return this._StatementEn;
-			}
-			set
-			{
-				if ((this._StatementEn != value))
-				{
-					this._StatementEn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionCode", DbType="Int NOT NULL")]
-		public int VersionCode
-		{
-			get
-			{
-				return this._VersionCode;
-			}
-			set
-			{
-				if ((this._VersionCode != value))
-				{
-					this._VersionCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionName", DbType="NVarChar(MAX)")]
-		public string VersionName
-		{
-			get
-			{
-				return this._VersionName;
-			}
-			set
-			{
-				if ((this._VersionName != value))
-				{
-					this._VersionName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
-		public System.Nullable<double> Price
-		{
-			get
-			{
-				return this._Price;
-			}
-			set
-			{
-				if ((this._Price != value))
-				{
-					this._Price = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadCount", DbType="Int")]
-		public System.Nullable<int> DownloadCount
-		{
-			get
-			{
-				return this._DownloadCount;
-			}
-			set
-			{
-				if ((this._DownloadCount != value))
-				{
-					this._DownloadCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Views", DbType="Int")]
-		public System.Nullable<int> Views
-		{
-			get
-			{
-				return this._Views;
-			}
-			set
-			{
-				if ((this._Views != value))
-				{
-					this._Views = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StoreName", DbType="VarChar(50)")]
-		public string StoreName
-		{
-			get
-			{
-				return this._StoreName;
-			}
-			set
-			{
-				if ((this._StoreName != value))
-				{
-					this._StoreName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isFree", DbType="Bit")]
-		public System.Nullable<bool> isFree
-		{
-			get
-			{
-				return this._isFree;
-			}
-			set
-			{
-				if ((this._isFree != value))
-				{
-					this._isFree = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(MAX)")]
-		public string URL
-		{
-			get
-			{
-				return this._URL;
-			}
-			set
-			{
-				if ((this._URL != value))
-				{
-					this._URL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this._Description = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AppTypeCode", DbType="Int")]
-		public System.Nullable<int> AppTypeCode
-		{
-			get
-			{
-				return this._AppTypeCode;
-			}
-			set
-			{
-				if ((this._AppTypeCode != value))
-				{
-					this._AppTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyCode", DbType="Int NOT NULL")]
-		public int CompanyCode
-		{
-			get
-			{
-				return this._CompanyCode;
-			}
-			set
-			{
-				if ((this._CompanyCode != value))
-				{
-					this._CompanyCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Company
-		{
-			get
-			{
-				return this._Company;
-			}
-			set
-			{
-				if ((this._Company != value))
-				{
-					this._Company = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyUrl", DbType="NVarChar(MAX)")]
-		public string CompanyUrl
-		{
-			get
-			{
-				return this._CompanyUrl;
-			}
-			set
-			{
-				if ((this._CompanyUrl != value))
-				{
-					this._CompanyUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyIcon", DbType="NVarChar(MAX)")]
-		public string CompanyIcon
-		{
-			get
-			{
-				return this._CompanyIcon;
-			}
-			set
-			{
-				if ((this._CompanyIcon != value))
-				{
-					this._CompanyIcon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Priority", DbType="Int")]
-		public System.Nullable<int> Priority
-		{
-			get
-			{
-				return this._Priority;
-			}
-			set
-			{
-				if ((this._Priority != value))
-				{
-					this._Priority = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_1")]
-	public partial class Viw_Site_Cat_level_1
-	{
-		
-		private int _Id;
-		
-		private string _Name;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		public Viw_Site_Cat_level_1()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this._Id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_2")]
-	public partial class Viw_Site_Cat_level_2
-	{
-		
-		private int _Id;
-		
-		private string _Name;
-		
-		private System.Nullable<int> _IDParent;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		public Viw_Site_Cat_level_2()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this._Id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDParent", DbType="Int")]
-		public System.Nullable<int> IDParent
-		{
-			get
-			{
-				return this._IDParent;
-			}
-			set
-			{
-				if ((this._IDParent != value))
-				{
-					this._IDParent = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_MainPostList")]
-	public partial class Viw_Site_MainPostList
-	{
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private string _ApplicationName;
-		
-		private int _PostId;
-		
-		private string _Title;
-		
-		private string _TitlePicture;
-		
-		private string _Text;
-		
-		private string _TextPicture;
-		
-		private string _CatName;
-		
-		private string _CatIcon;
-		
-		private string _SecoundCatName;
-		
-		private string _SecoundCatIconName;
-		
-		private bool _IsActive;
-		
-		private bool _IsDeleted;
-		
-		private bool _ReciveMessage;
-		
-		private System.DateTime _PublishDate;
-		
-		private System.DateTime _ExpireDate;
-		
-		private System.Nullable<System.DateTime> _AcceptDate;
-		
-		private int _VisitCount;
-		
-		private System.DateTime _CreatedOn;
-		
-		private string _HeaderName;
-		
-		public Viw_Site_MainPostList()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationName", DbType="NVarChar(MAX)")]
-		public string ApplicationName
-		{
-			get
-			{
-				return this._ApplicationName;
-			}
-			set
-			{
-				if ((this._ApplicationName != value))
-				{
-					this._ApplicationName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostId", DbType="Int NOT NULL")]
-		public int PostId
-		{
-			get
-			{
-				return this._PostId;
-			}
-			set
-			{
-				if ((this._PostId != value))
-				{
-					this._PostId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
-		public string TitlePicture
-		{
-			get
-			{
-				return this._TitlePicture;
-			}
-			set
-			{
-				if ((this._TitlePicture != value))
-				{
-					this._TitlePicture = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Text
-		{
-			get
-			{
-				return this._Text;
-			}
-			set
-			{
-				if ((this._Text != value))
-				{
-					this._Text = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextPicture", DbType="NVarChar(MAX)")]
-		public string TextPicture
-		{
-			get
-			{
-				return this._TextPicture;
-			}
-			set
-			{
-				if ((this._TextPicture != value))
-				{
-					this._TextPicture = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string CatName
-		{
-			get
-			{
-				return this._CatName;
-			}
-			set
-			{
-				if ((this._CatName != value))
-				{
-					this._CatName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatIcon", DbType="NVarChar(MAX)")]
-		public string CatIcon
-		{
-			get
-			{
-				return this._CatIcon;
-			}
-			set
-			{
-				if ((this._CatIcon != value))
-				{
-					this._CatIcon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecoundCatName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string SecoundCatName
-		{
-			get
-			{
-				return this._SecoundCatName;
-			}
-			set
-			{
-				if ((this._SecoundCatName != value))
-				{
-					this._SecoundCatName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecoundCatIconName", DbType="NVarChar(MAX)")]
-		public string SecoundCatIconName
-		{
-			get
-			{
-				return this._SecoundCatIconName;
-			}
-			set
-			{
-				if ((this._SecoundCatIconName != value))
-				{
-					this._SecoundCatIconName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
-		public bool IsActive
-		{
-			get
-			{
-				return this._IsActive;
-			}
-			set
-			{
-				if ((this._IsActive != value))
-				{
-					this._IsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
-		public bool IsDeleted
-		{
-			get
-			{
-				return this._IsDeleted;
-			}
-			set
-			{
-				if ((this._IsDeleted != value))
-				{
-					this._IsDeleted = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
-		public bool ReciveMessage
-		{
-			get
-			{
-				return this._ReciveMessage;
-			}
-			set
-			{
-				if ((this._ReciveMessage != value))
-				{
-					this._ReciveMessage = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
-		public System.DateTime PublishDate
-		{
-			get
-			{
-				return this._PublishDate;
-			}
-			set
-			{
-				if ((this._PublishDate != value))
-				{
-					this._PublishDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
-		public System.DateTime ExpireDate
-		{
-			get
-			{
-				return this._ExpireDate;
-			}
-			set
-			{
-				if ((this._ExpireDate != value))
-				{
-					this._ExpireDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> AcceptDate
-		{
-			get
-			{
-				return this._AcceptDate;
-			}
-			set
-			{
-				if ((this._AcceptDate != value))
-				{
-					this._AcceptDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
-		public int VisitCount
-		{
-			get
-			{
-				return this._VisitCount;
-			}
-			set
-			{
-				if ((this._VisitCount != value))
-				{
-					this._VisitCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HeaderName", DbType="NVarChar(50)")]
-		public string HeaderName
-		{
-			get
-			{
-				return this._HeaderName;
-			}
-			set
-			{
-				if ((this._HeaderName != value))
-				{
-					this._HeaderName = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_userDevices")]
-	public partial class Viw_userDevice
-	{
-		
-		private int _IDUser;
-		
-		private System.Nullable<int> _UserCode;
-		
-		private string _Email;
-		
-		private string _CodeMelli;
-		
-		private string _UserName;
-		
-		private string _Mobile;
-		
-		private string _Password;
-		
-		private string _Name;
-		
-		private string _Family;
-		
-		private int _IDDevice;
-		
-		private int _Id;
-		
-		private string _DeviceID;
-		
-		private string _Serial;
-		
-		private string _Model;
-		
-		private string _BuildId;
-		
-		private string _AndroidVersion;
-		
-		private System.Nullable<int> _AndroidAPI;
-		
-		private string _Manufacturer;
-		
-		private string _Brand;
-		
-		private string _Board;
-		
-		private string _Display;
-		
-		private System.DateTime _CreatedOn;
-		
-		private System.Nullable<System.DateTime> _ModifiedOn;
-		
-		private string _IP;
-		
-		private bool _PhoneNumberConfirmed;
-		
-		public Viw_userDevice()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
-		public int IDUser
-		{
-			get
-			{
-				return this._IDUser;
-			}
-			set
-			{
-				if ((this._IDUser != value))
-				{
-					this._IDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
-		public System.Nullable<int> UserCode
-		{
-			get
-			{
-				return this._UserCode;
-			}
-			set
-			{
-				if ((this._UserCode != value))
-				{
-					this._UserCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this._Email = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodeMelli", DbType="Char(10)")]
-		public string CodeMelli
-		{
-			get
-			{
-				return this._CodeMelli;
-			}
-			set
-			{
-				if ((this._CodeMelli != value))
-				{
-					this._CodeMelli = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this._UserName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
-		public string Mobile
-		{
-			get
-			{
-				return this._Mobile;
-			}
-			set
-			{
-				if ((this._Mobile != value))
-				{
-					this._Mobile = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX)")]
-		public string Password
-		{
-			get
-			{
-				return this._Password;
-			}
-			set
-			{
-				if ((this._Password != value))
-				{
-					this._Password = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
-		public string Name
-		{
-			get
-			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this._Name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Family", DbType="NVarChar(550)")]
-		public string Family
-		{
-			get
-			{
-				return this._Family;
-			}
-			set
-			{
-				if ((this._Family != value))
-				{
-					this._Family = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDevice", DbType="Int NOT NULL")]
-		public int IDDevice
-		{
-			get
-			{
-				return this._IDDevice;
-			}
-			set
-			{
-				if ((this._IDDevice != value))
-				{
-					this._IDDevice = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this._Id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="NVarChar(MAX)")]
-		public string DeviceID
-		{
-			get
-			{
-				return this._DeviceID;
-			}
-			set
-			{
-				if ((this._DeviceID != value))
-				{
-					this._DeviceID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Serial", DbType="NVarChar(MAX)")]
-		public string Serial
-		{
-			get
-			{
-				return this._Serial;
-			}
-			set
-			{
-				if ((this._Serial != value))
-				{
-					this._Serial = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="NVarChar(MAX)")]
-		public string Model
-		{
-			get
-			{
-				return this._Model;
-			}
-			set
-			{
-				if ((this._Model != value))
-				{
-					this._Model = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildId", DbType="NVarChar(MAX)")]
-		public string BuildId
-		{
-			get
-			{
-				return this._BuildId;
-			}
-			set
-			{
-				if ((this._BuildId != value))
-				{
-					this._BuildId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidVersion", DbType="NVarChar(MAX)")]
-		public string AndroidVersion
-		{
-			get
-			{
-				return this._AndroidVersion;
-			}
-			set
-			{
-				if ((this._AndroidVersion != value))
-				{
-					this._AndroidVersion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidAPI", DbType="Int")]
-		public System.Nullable<int> AndroidAPI
-		{
-			get
-			{
-				return this._AndroidAPI;
-			}
-			set
-			{
-				if ((this._AndroidAPI != value))
-				{
-					this._AndroidAPI = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacturer", DbType="NVarChar(MAX)")]
-		public string Manufacturer
-		{
-			get
-			{
-				return this._Manufacturer;
-			}
-			set
-			{
-				if ((this._Manufacturer != value))
-				{
-					this._Manufacturer = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brand", DbType="NVarChar(MAX)")]
-		public string Brand
-		{
-			get
-			{
-				return this._Brand;
-			}
-			set
-			{
-				if ((this._Brand != value))
-				{
-					this._Brand = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Board", DbType="NVarChar(MAX)")]
-		public string Board
-		{
-			get
-			{
-				return this._Board;
-			}
-			set
-			{
-				if ((this._Board != value))
-				{
-					this._Board = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Display", DbType="NVarChar(MAX)")]
-		public string Display
-		{
-			get
-			{
-				return this._Display;
-			}
-			set
-			{
-				if ((this._Display != value))
-				{
-					this._Display = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
-		public System.Nullable<System.DateTime> ModifiedOn
-		{
-			get
-			{
-				return this._ModifiedOn;
-			}
-			set
-			{
-				if ((this._ModifiedOn != value))
-				{
-					this._ModifiedOn = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IP", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string IP
-		{
-			get
-			{
-				return this._IP;
-			}
-			set
-			{
-				if ((this._IP != value))
-				{
-					this._IP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumberConfirmed", DbType="Bit NOT NULL")]
-		public bool PhoneNumberConfirmed
-		{
-			get
-			{
-				return this._PhoneNumberConfirmed;
-			}
-			set
-			{
-				if ((this._PhoneNumberConfirmed != value))
-				{
-					this._PhoneNumberConfirmed = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_WalletTransaction")]
-	public partial class Viw_WalletTransaction
-	{
-		
-		private int _TransactionID;
-		
-		private int _IDUser;
-		
-		private System.Nullable<int> _IDApplication;
-		
-		private string _TransactionCreatorName;
-		
-		private string _TransactionCreatorFamily;
-		
-		private decimal _Amount;
-		
-		private int _TransactionTypeCode;
-		
-		private string _TransactionTypeName;
-		
-		private string _ImageUrl;
-		
-		private string _icon;
-		
-		private string _RefrenceNo;
-		
-		private string _MetaData;
-		
-		private System.DateTime _CreatedOn;
-		
-		public Viw_WalletTransaction()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionID", DbType="Int NOT NULL")]
-		public int TransactionID
-		{
-			get
-			{
-				return this._TransactionID;
-			}
-			set
-			{
-				if ((this._TransactionID != value))
-				{
-					this._TransactionID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
-		public int IDUser
-		{
-			get
-			{
-				return this._IDUser;
-			}
-			set
-			{
-				if ((this._IDUser != value))
-				{
-					this._IDUser = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
-		public System.Nullable<int> IDApplication
-		{
-			get
-			{
-				return this._IDApplication;
-			}
-			set
-			{
-				if ((this._IDApplication != value))
-				{
-					this._IDApplication = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorName", DbType="NVarChar(550)")]
-		public string TransactionCreatorName
-		{
-			get
-			{
-				return this._TransactionCreatorName;
-			}
-			set
-			{
-				if ((this._TransactionCreatorName != value))
-				{
-					this._TransactionCreatorName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorFamily", DbType="NVarChar(550)")]
-		public string TransactionCreatorFamily
-		{
-			get
-			{
-				return this._TransactionCreatorFamily;
-			}
-			set
-			{
-				if ((this._TransactionCreatorFamily != value))
-				{
-					this._TransactionCreatorFamily = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Amount
-		{
-			get
-			{
-				return this._Amount;
-			}
-			set
-			{
-				if ((this._Amount != value))
-				{
-					this._Amount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
-		public int TransactionTypeCode
-		{
-			get
-			{
-				return this._TransactionTypeCode;
-			}
-			set
-			{
-				if ((this._TransactionTypeCode != value))
-				{
-					this._TransactionTypeCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TransactionTypeName
-		{
-			get
-			{
-				return this._TransactionTypeName;
-			}
-			set
-			{
-				if ((this._TransactionTypeName != value))
-				{
-					this._TransactionTypeName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
-		public string ImageUrl
-		{
-			get
-			{
-				return this._ImageUrl;
-			}
-			set
-			{
-				if ((this._ImageUrl != value))
-				{
-					this._ImageUrl = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
-		public string icon
-		{
-			get
-			{
-				return this._icon;
-			}
-			set
-			{
-				if ((this._icon != value))
-				{
-					this._icon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
-		public string RefrenceNo
-		{
-			get
-			{
-				return this._RefrenceNo;
-			}
-			set
-			{
-				if ((this._RefrenceNo != value))
-				{
-					this._RefrenceNo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
-		public string MetaData
-		{
-			get
-			{
-				return this._MetaData;
-			}
-			set
-			{
-				if ((this._MetaData != value))
-				{
-					this._MetaData = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
-		public System.DateTime CreatedOn
-		{
-			get
-			{
-				return this._CreatedOn;
-			}
-			set
-			{
-				if ((this._CreatedOn != value))
-				{
-					this._CreatedOn = value;
-				}
-			}
 		}
 	}
 	
@@ -12567,6 +8327,4515 @@ namespace TubelessServices.Models
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_ContactUsMessages")]
+	public partial class report_ContactUsMessage
+	{
+		
+		private System.Nullable<int> _UserCode;
+		
+		private string _Email;
+		
+		private string _Mobile;
+		
+		private string _UserName;
+		
+		private string _Name;
+		
+		private string _Title;
+		
+		private string _Text;
+		
+		private string _MetaData;
+		
+		private System.Nullable<System.DateTime> _Date;
+		
+		public report_ContactUsMessage()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
+		public System.Nullable<int> UserCode
+		{
+			get
+			{
+				return this._UserCode;
+			}
+			set
+			{
+				if ((this._UserCode != value))
+				{
+					this._UserCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
+		public string Mobile
+		{
+			get
+			{
+				return this._Mobile;
+			}
+			set
+			{
+				if ((this._Mobile != value))
+				{
+					this._Mobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX)")]
+		public string Text
+		{
+			get
+			{
+				return this._Text;
+			}
+			set
+			{
+				if ((this._Text != value))
+				{
+					this._Text = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
+		public string MetaData
+		{
+			get
+			{
+				return this._MetaData;
+			}
+			set
+			{
+				if ((this._MetaData != value))
+				{
+					this._MetaData = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				if ((this._Date != value))
+				{
+					this._Date = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_WalletTransaction2")]
+	public partial class Viw_WalletTransaction2
+	{
+		
+		private int _TransactionID;
+		
+		private int _IDUser;
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private string _TransactionCreatorName;
+		
+		private string _TransactionCreatorFamily;
+		
+		private decimal _Amount;
+		
+		private int _TransactionTypeCode;
+		
+		private string _TransactionTypeName;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		private string _RefrenceNo;
+		
+		private string _MetaData;
+		
+		private System.DateTime _CreatedOn;
+		
+		private System.Nullable<int> _IDPost;
+		
+		private string _PostTitle;
+		
+		public Viw_WalletTransaction2()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionID", DbType="Int NOT NULL")]
+		public int TransactionID
+		{
+			get
+			{
+				return this._TransactionID;
+			}
+			set
+			{
+				if ((this._TransactionID != value))
+				{
+					this._TransactionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
+		public int IDUser
+		{
+			get
+			{
+				return this._IDUser;
+			}
+			set
+			{
+				if ((this._IDUser != value))
+				{
+					this._IDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorName", DbType="NVarChar(550)")]
+		public string TransactionCreatorName
+		{
+			get
+			{
+				return this._TransactionCreatorName;
+			}
+			set
+			{
+				if ((this._TransactionCreatorName != value))
+				{
+					this._TransactionCreatorName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorFamily", DbType="NVarChar(550)")]
+		public string TransactionCreatorFamily
+		{
+			get
+			{
+				return this._TransactionCreatorFamily;
+			}
+			set
+			{
+				if ((this._TransactionCreatorFamily != value))
+				{
+					this._TransactionCreatorFamily = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
+		public decimal Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this._Amount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
+		public int TransactionTypeCode
+		{
+			get
+			{
+				return this._TransactionTypeCode;
+			}
+			set
+			{
+				if ((this._TransactionTypeCode != value))
+				{
+					this._TransactionTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TransactionTypeName
+		{
+			get
+			{
+				return this._TransactionTypeName;
+			}
+			set
+			{
+				if ((this._TransactionTypeName != value))
+				{
+					this._TransactionTypeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
+		public string RefrenceNo
+		{
+			get
+			{
+				return this._RefrenceNo;
+			}
+			set
+			{
+				if ((this._RefrenceNo != value))
+				{
+					this._RefrenceNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
+		public string MetaData
+		{
+			get
+			{
+				return this._MetaData;
+			}
+			set
+			{
+				if ((this._MetaData != value))
+				{
+					this._MetaData = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPost", DbType="Int")]
+		public System.Nullable<int> IDPost
+		{
+			get
+			{
+				return this._IDPost;
+			}
+			set
+			{
+				if ((this._IDPost != value))
+				{
+					this._IDPost = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTitle", DbType="NVarChar(MAX)")]
+		public string PostTitle
+		{
+			get
+			{
+				return this._PostTitle;
+			}
+			set
+			{
+				if ((this._PostTitle != value))
+				{
+					this._PostTitle = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_transactions")]
+	public partial class report_transaction
+	{
+		
+		private int _IDUser;
+		
+		private System.Nullable<int> _IDUserCreator;
+		
+		private string _NameFa;
+		
+		private decimal _Amount;
+		
+		private System.Nullable<double> _Zarib;
+		
+		private int _TransactionTypeCode;
+		
+		private string _Name;
+		
+		private System.DateTime _CreatedOn;
+		
+		private string _RefrenceNo;
+		
+		private string _MetaData;
+		
+		public report_transaction()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
+		public int IDUser
+		{
+			get
+			{
+				return this._IDUser;
+			}
+			set
+			{
+				if ((this._IDUser != value))
+				{
+					this._IDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUserCreator", DbType="Int")]
+		public System.Nullable<int> IDUserCreator
+		{
+			get
+			{
+				return this._IDUserCreator;
+			}
+			set
+			{
+				if ((this._IDUserCreator != value))
+				{
+					this._IDUserCreator = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
+		public string NameFa
+		{
+			get
+			{
+				return this._NameFa;
+			}
+			set
+			{
+				if ((this._NameFa != value))
+				{
+					this._NameFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
+		public decimal Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this._Amount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Zarib", DbType="Float")]
+		public System.Nullable<double> Zarib
+		{
+			get
+			{
+				return this._Zarib;
+			}
+			set
+			{
+				if ((this._Zarib != value))
+				{
+					this._Zarib = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
+		public int TransactionTypeCode
+		{
+			get
+			{
+				return this._TransactionTypeCode;
+			}
+			set
+			{
+				if ((this._TransactionTypeCode != value))
+				{
+					this._TransactionTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
+		public string RefrenceNo
+		{
+			get
+			{
+				return this._RefrenceNo;
+			}
+			set
+			{
+				if ((this._RefrenceNo != value))
+				{
+					this._RefrenceNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
+		public string MetaData
+		{
+			get
+			{
+				return this._MetaData;
+			}
+			set
+			{
+				if ((this._MetaData != value))
+				{
+					this._MetaData = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_Users")]
+	public partial class report_User
+	{
+		
+		private System.Nullable<int> _UserCode;
+		
+		private string _Email;
+		
+		private string _Mobile;
+		
+		private System.DateTime _CreatedOn;
+		
+		private string _NameFa;
+		
+		private string _Model;
+		
+		private string _AndroidVersion;
+		
+		private System.Nullable<int> _AndroidAPI;
+		
+		private string _Manufacturer;
+		
+		private string _Brand;
+		
+		private string _StoreName;
+		
+		public report_User()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
+		public System.Nullable<int> UserCode
+		{
+			get
+			{
+				return this._UserCode;
+			}
+			set
+			{
+				if ((this._UserCode != value))
+				{
+					this._UserCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
+		public string Mobile
+		{
+			get
+			{
+				return this._Mobile;
+			}
+			set
+			{
+				if ((this._Mobile != value))
+				{
+					this._Mobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
+		public string NameFa
+		{
+			get
+			{
+				return this._NameFa;
+			}
+			set
+			{
+				if ((this._NameFa != value))
+				{
+					this._NameFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="NVarChar(MAX)")]
+		public string Model
+		{
+			get
+			{
+				return this._Model;
+			}
+			set
+			{
+				if ((this._Model != value))
+				{
+					this._Model = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidVersion", DbType="NVarChar(MAX)")]
+		public string AndroidVersion
+		{
+			get
+			{
+				return this._AndroidVersion;
+			}
+			set
+			{
+				if ((this._AndroidVersion != value))
+				{
+					this._AndroidVersion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidAPI", DbType="Int")]
+		public System.Nullable<int> AndroidAPI
+		{
+			get
+			{
+				return this._AndroidAPI;
+			}
+			set
+			{
+				if ((this._AndroidAPI != value))
+				{
+					this._AndroidAPI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacturer", DbType="NVarChar(MAX)")]
+		public string Manufacturer
+		{
+			get
+			{
+				return this._Manufacturer;
+			}
+			set
+			{
+				if ((this._Manufacturer != value))
+				{
+					this._Manufacturer = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brand", DbType="NVarChar(MAX)")]
+		public string Brand
+		{
+			get
+			{
+				return this._Brand;
+			}
+			set
+			{
+				if ((this._Brand != value))
+				{
+					this._Brand = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StoreName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string StoreName
+		{
+			get
+			{
+				return this._StoreName;
+			}
+			set
+			{
+				if ((this._StoreName != value))
+				{
+					this._StoreName = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists")]
+	public partial class View_loginto_users_site_list1
+	{
+		
+		private string _AndroidID;
+		
+		private System.Guid _SiteCode;
+		
+		private int _DeviceID;
+		
+		private string _Title;
+		
+		private System.Nullable<bool> _IsActive;
+		
+		private System.Nullable<System.DateTime> _LastLoginDate;
+		
+		private System.Nullable<int> _LoginCount;
+		
+		private System.Nullable<bool> _AddedAuto;
+		
+		public View_loginto_users_site_list1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidID", DbType="NVarChar(MAX)")]
+		public string AndroidID
+		{
+			get
+			{
+				return this._AndroidID;
+			}
+			set
+			{
+				if ((this._AndroidID != value))
+				{
+					this._AndroidID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteCode", DbType="UniqueIdentifier NOT NULL")]
+		public System.Guid SiteCode
+		{
+			get
+			{
+				return this._SiteCode;
+			}
+			set
+			{
+				if ((this._SiteCode != value))
+				{
+					this._SiteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL")]
+		public int DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					this._DeviceID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit")]
+		public System.Nullable<bool> IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this._IsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastLoginDate
+		{
+			get
+			{
+				return this._LastLoginDate;
+			}
+			set
+			{
+				if ((this._LastLoginDate != value))
+				{
+					this._LastLoginDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoginCount", DbType="Int")]
+		public System.Nullable<int> LoginCount
+		{
+			get
+			{
+				return this._LoginCount;
+			}
+			set
+			{
+				if ((this._LoginCount != value))
+				{
+					this._LoginCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedAuto", DbType="Bit")]
+		public System.Nullable<bool> AddedAuto
+		{
+			get
+			{
+				return this._AddedAuto;
+			}
+			set
+			{
+				if ((this._AddedAuto != value))
+				{
+					this._AddedAuto = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_AppStore")]
+	public partial class Viw_AppStore
+	{
+		
+		private int _typeID;
+		
+		private string _type;
+		
+		private int _companyID;
+		
+		private string _company;
+		
+		private int _ApplicationID;
+		
+		private string _NameFa;
+		
+		private string _VersionName;
+		
+		private string _NameEn;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		private System.Nullable<int> _DownloadCount;
+		
+		private System.Nullable<int> _Views;
+		
+		private string _DownloadUrl;
+		
+		public Viw_AppStore()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_typeID", DbType="Int NOT NULL")]
+		public int typeID
+		{
+			get
+			{
+				return this._typeID;
+			}
+			set
+			{
+				if ((this._typeID != value))
+				{
+					this._typeID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this._type = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_companyID", DbType="Int NOT NULL")]
+		public int companyID
+		{
+			get
+			{
+				return this._companyID;
+			}
+			set
+			{
+				if ((this._companyID != value))
+				{
+					this._companyID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_company", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string company
+		{
+			get
+			{
+				return this._company;
+			}
+			set
+			{
+				if ((this._company != value))
+				{
+					this._company = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationID", DbType="Int NOT NULL")]
+		public int ApplicationID
+		{
+			get
+			{
+				return this._ApplicationID;
+			}
+			set
+			{
+				if ((this._ApplicationID != value))
+				{
+					this._ApplicationID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
+		public string NameFa
+		{
+			get
+			{
+				return this._NameFa;
+			}
+			set
+			{
+				if ((this._NameFa != value))
+				{
+					this._NameFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionName", DbType="NVarChar(MAX)")]
+		public string VersionName
+		{
+			get
+			{
+				return this._VersionName;
+			}
+			set
+			{
+				if ((this._VersionName != value))
+				{
+					this._VersionName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameEn", DbType="NVarChar(MAX)")]
+		public string NameEn
+		{
+			get
+			{
+				return this._NameEn;
+			}
+			set
+			{
+				if ((this._NameEn != value))
+				{
+					this._NameEn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadCount", DbType="Int")]
+		public System.Nullable<int> DownloadCount
+		{
+			get
+			{
+				return this._DownloadCount;
+			}
+			set
+			{
+				if ((this._DownloadCount != value))
+				{
+					this._DownloadCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Views", DbType="Int")]
+		public System.Nullable<int> Views
+		{
+			get
+			{
+				return this._Views;
+			}
+			set
+			{
+				if ((this._Views != value))
+				{
+					this._Views = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadUrl", DbType="NVarChar(MAX)")]
+		public string DownloadUrl
+		{
+			get
+			{
+				return this._DownloadUrl;
+			}
+			set
+			{
+				if ((this._DownloadUrl != value))
+				{
+					this._DownloadUrl = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_ElectedUserList")]
+	public partial class Viw_ElectedUserList
+	{
+		
+		private int _UserId;
+		
+		private System.Nullable<int> _CountPosts;
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private System.Nullable<System.DateTime> _UserCreatedOn;
+		
+		private System.Nullable<int> _F_UserId;
+		
+		private System.Nullable<int> _F_ApplicationId;
+		
+		private System.Nullable<int> _F_StateId;
+		
+		private System.Nullable<bool> _IsElected;
+		
+		private System.Nullable<System.DateTime> _ElectedDate;
+		
+		private string _Title;
+		
+		private string _Comment;
+		
+		private System.Nullable<byte> _Star;
+		
+		private System.Nullable<bool> _ElectedUsersIsActive;
+		
+		private System.Nullable<bool> _ElectedUsersIsDelete;
+		
+		private string _StateName;
+		
+		private string _Name;
+		
+		private string _Family;
+		
+		private string _Avatar;
+		
+		private string _ProfileImage;
+		
+		private string _Mobile;
+		
+		private string _Email;
+		
+		private System.Nullable<bool> _PhoneNumberConfirmed;
+		
+		private System.Nullable<int> _UserCode;
+		
+		private string _CodeMelli;
+		
+		private string _UserName;
+		
+		private string _SimCardId;
+		
+		private System.Nullable<int> _UserTypeCode;
+		
+		private System.Nullable<bool> _UsersIsActive;
+		
+		private System.Nullable<bool> _UsersIsDelete;
+		
+		private System.Nullable<System.DateTime> _CreatedOn;
+		
+		private string _Address;
+		
+		private string _Location;
+		
+		private string _Tel;
+		
+		public Viw_ElectedUserList()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+		public int UserId
+		{
+			get
+			{
+				return this._UserId;
+			}
+			set
+			{
+				if ((this._UserId != value))
+				{
+					this._UserId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountPosts", DbType="Int")]
+		public System.Nullable<int> CountPosts
+		{
+			get
+			{
+				return this._CountPosts;
+			}
+			set
+			{
+				if ((this._CountPosts != value))
+				{
+					this._CountPosts = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCreatedOn", DbType="DateTime")]
+		public System.Nullable<System.DateTime> UserCreatedOn
+		{
+			get
+			{
+				return this._UserCreatedOn;
+			}
+			set
+			{
+				if ((this._UserCreatedOn != value))
+				{
+					this._UserCreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_UserId", DbType="Int")]
+		public System.Nullable<int> F_UserId
+		{
+			get
+			{
+				return this._F_UserId;
+			}
+			set
+			{
+				if ((this._F_UserId != value))
+				{
+					this._F_UserId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_ApplicationId", DbType="Int")]
+		public System.Nullable<int> F_ApplicationId
+		{
+			get
+			{
+				return this._F_ApplicationId;
+			}
+			set
+			{
+				if ((this._F_ApplicationId != value))
+				{
+					this._F_ApplicationId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_F_StateId", DbType="Int")]
+		public System.Nullable<int> F_StateId
+		{
+			get
+			{
+				return this._F_StateId;
+			}
+			set
+			{
+				if ((this._F_StateId != value))
+				{
+					this._F_StateId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsElected", DbType="Bit")]
+		public System.Nullable<bool> IsElected
+		{
+			get
+			{
+				return this._IsElected;
+			}
+			set
+			{
+				if ((this._IsElected != value))
+				{
+					this._IsElected = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ElectedDate
+		{
+			get
+			{
+				return this._ElectedDate;
+			}
+			set
+			{
+				if ((this._ElectedDate != value))
+				{
+					this._ElectedDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Comment", DbType="NVarChar(MAX)")]
+		public string Comment
+		{
+			get
+			{
+				return this._Comment;
+			}
+			set
+			{
+				if ((this._Comment != value))
+				{
+					this._Comment = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Star", DbType="TinyInt")]
+		public System.Nullable<byte> Star
+		{
+			get
+			{
+				return this._Star;
+			}
+			set
+			{
+				if ((this._Star != value))
+				{
+					this._Star = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedUsersIsActive", DbType="Bit")]
+		public System.Nullable<bool> ElectedUsersIsActive
+		{
+			get
+			{
+				return this._ElectedUsersIsActive;
+			}
+			set
+			{
+				if ((this._ElectedUsersIsActive != value))
+				{
+					this._ElectedUsersIsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ElectedUsersIsDelete", DbType="Bit")]
+		public System.Nullable<bool> ElectedUsersIsDelete
+		{
+			get
+			{
+				return this._ElectedUsersIsDelete;
+			}
+			set
+			{
+				if ((this._ElectedUsersIsDelete != value))
+				{
+					this._ElectedUsersIsDelete = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50)")]
+		public string StateName
+		{
+			get
+			{
+				return this._StateName;
+			}
+			set
+			{
+				if ((this._StateName != value))
+				{
+					this._StateName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Family", DbType="NVarChar(550)")]
+		public string Family
+		{
+			get
+			{
+				return this._Family;
+			}
+			set
+			{
+				if ((this._Family != value))
+				{
+					this._Family = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Avatar", DbType="NVarChar(MAX)")]
+		public string Avatar
+		{
+			get
+			{
+				return this._Avatar;
+			}
+			set
+			{
+				if ((this._Avatar != value))
+				{
+					this._Avatar = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProfileImage", DbType="NVarChar(MAX)")]
+		public string ProfileImage
+		{
+			get
+			{
+				return this._ProfileImage;
+			}
+			set
+			{
+				if ((this._ProfileImage != value))
+				{
+					this._ProfileImage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
+		public string Mobile
+		{
+			get
+			{
+				return this._Mobile;
+			}
+			set
+			{
+				if ((this._Mobile != value))
+				{
+					this._Mobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumberConfirmed", DbType="Bit")]
+		public System.Nullable<bool> PhoneNumberConfirmed
+		{
+			get
+			{
+				return this._PhoneNumberConfirmed;
+			}
+			set
+			{
+				if ((this._PhoneNumberConfirmed != value))
+				{
+					this._PhoneNumberConfirmed = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
+		public System.Nullable<int> UserCode
+		{
+			get
+			{
+				return this._UserCode;
+			}
+			set
+			{
+				if ((this._UserCode != value))
+				{
+					this._UserCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodeMelli", DbType="Char(10)")]
+		public string CodeMelli
+		{
+			get
+			{
+				return this._CodeMelli;
+			}
+			set
+			{
+				if ((this._CodeMelli != value))
+				{
+					this._CodeMelli = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SimCardId", DbType="NVarChar(50)")]
+		public string SimCardId
+		{
+			get
+			{
+				return this._SimCardId;
+			}
+			set
+			{
+				if ((this._SimCardId != value))
+				{
+					this._SimCardId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTypeCode", DbType="Int")]
+		public System.Nullable<int> UserTypeCode
+		{
+			get
+			{
+				return this._UserTypeCode;
+			}
+			set
+			{
+				if ((this._UserTypeCode != value))
+				{
+					this._UserTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersIsActive", DbType="Bit")]
+		public System.Nullable<bool> UsersIsActive
+		{
+			get
+			{
+				return this._UsersIsActive;
+			}
+			set
+			{
+				if ((this._UsersIsActive != value))
+				{
+					this._UsersIsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UsersIsDelete", DbType="Bit")]
+		public System.Nullable<bool> UsersIsDelete
+		{
+			get
+			{
+				return this._UsersIsDelete;
+			}
+			set
+			{
+				if ((this._UsersIsDelete != value))
+				{
+					this._UsersIsDelete = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(MAX)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this._Address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(MAX)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel", DbType="NChar(12)")]
+		public string Tel
+		{
+			get
+			{
+				return this._Tel;
+			}
+			set
+			{
+				if ((this._Tel != value))
+				{
+					this._Tel = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_PostDetails")]
+	public partial class Viw_PostDetail
+	{
+		
+		private int _Id;
+		
+		private System.Nullable<int> _IDUser;
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private string _Title;
+		
+		private string _Text;
+		
+		private int _TypeCode;
+		
+		private string _TypeName;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		private int _StateCode;
+		
+		private string _StateName;
+		
+		private int _CityCode;
+		
+		private string _CityName;
+		
+		private decimal _PriceForVsit;
+		
+		private bool _IsActive;
+		
+		private bool _IsDeleted;
+		
+		private bool _ReciveMessage;
+		
+		private System.DateTime _PublishDate;
+		
+		private System.DateTime _ExpireDate;
+		
+		private System.Nullable<System.DateTime> _AcceptDate;
+		
+		private int _VisitCount;
+		
+		private System.DateTime _CreatedOn;
+		
+		private System.Nullable<System.DateTime> _ModifiedOn;
+		
+		private string _TitlePicture;
+		
+		private string _TextPicture;
+		
+		public Viw_PostDetail()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int")]
+		public System.Nullable<int> IDUser
+		{
+			get
+			{
+				return this._IDUser;
+			}
+			set
+			{
+				if ((this._IDUser != value))
+				{
+					this._IDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Text
+		{
+			get
+			{
+				return this._Text;
+			}
+			set
+			{
+				if ((this._Text != value))
+				{
+					this._Text = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCode", DbType="Int NOT NULL")]
+		public int TypeCode
+		{
+			get
+			{
+				return this._TypeCode;
+			}
+			set
+			{
+				if ((this._TypeCode != value))
+				{
+					this._TypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TypeName
+		{
+			get
+			{
+				return this._TypeName;
+			}
+			set
+			{
+				if ((this._TypeName != value))
+				{
+					this._TypeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCode", DbType="Int NOT NULL")]
+		public int StateCode
+		{
+			get
+			{
+				return this._StateCode;
+			}
+			set
+			{
+				if ((this._StateCode != value))
+				{
+					this._StateCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string StateName
+		{
+			get
+			{
+				return this._StateName;
+			}
+			set
+			{
+				if ((this._StateName != value))
+				{
+					this._StateName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityCode", DbType="Int NOT NULL")]
+		public int CityCode
+		{
+			get
+			{
+				return this._CityCode;
+			}
+			set
+			{
+				if ((this._CityCode != value))
+				{
+					this._CityCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string CityName
+		{
+			get
+			{
+				return this._CityName;
+			}
+			set
+			{
+				if ((this._CityName != value))
+				{
+					this._CityName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceForVsit", DbType="Decimal(18,0) NOT NULL")]
+		public decimal PriceForVsit
+		{
+			get
+			{
+				return this._PriceForVsit;
+			}
+			set
+			{
+				if ((this._PriceForVsit != value))
+				{
+					this._PriceForVsit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this._IsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
+		public bool IsDeleted
+		{
+			get
+			{
+				return this._IsDeleted;
+			}
+			set
+			{
+				if ((this._IsDeleted != value))
+				{
+					this._IsDeleted = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
+		public bool ReciveMessage
+		{
+			get
+			{
+				return this._ReciveMessage;
+			}
+			set
+			{
+				if ((this._ReciveMessage != value))
+				{
+					this._ReciveMessage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
+		public System.DateTime PublishDate
+		{
+			get
+			{
+				return this._PublishDate;
+			}
+			set
+			{
+				if ((this._PublishDate != value))
+				{
+					this._PublishDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
+		public System.DateTime ExpireDate
+		{
+			get
+			{
+				return this._ExpireDate;
+			}
+			set
+			{
+				if ((this._ExpireDate != value))
+				{
+					this._ExpireDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> AcceptDate
+		{
+			get
+			{
+				return this._AcceptDate;
+			}
+			set
+			{
+				if ((this._AcceptDate != value))
+				{
+					this._AcceptDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
+		public int VisitCount
+		{
+			get
+			{
+				return this._VisitCount;
+			}
+			set
+			{
+				if ((this._VisitCount != value))
+				{
+					this._VisitCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this._ModifiedOn;
+			}
+			set
+			{
+				if ((this._ModifiedOn != value))
+				{
+					this._ModifiedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
+		public string TitlePicture
+		{
+			get
+			{
+				return this._TitlePicture;
+			}
+			set
+			{
+				if ((this._TitlePicture != value))
+				{
+					this._TitlePicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextPicture", DbType="NVarChar(MAX)")]
+		public string TextPicture
+		{
+			get
+			{
+				return this._TextPicture;
+			}
+			set
+			{
+				if ((this._TextPicture != value))
+				{
+					this._TextPicture = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_postList")]
+	public partial class Viw_postList
+	{
+		
+		private int _IDPost;
+		
+		private System.Nullable<int> _CreatorIDUser;
+		
+		private System.Nullable<int> _CreatorUserCode;
+		
+		private string _CreatorName;
+		
+		private string _CreatorFamily;
+		
+		private string _CreatorAvatar;
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private string _Title;
+		
+		private string _Text;
+		
+		private int _PostTypeCode;
+		
+		private string _PostTypeName;
+		
+		private int _StateCode;
+		
+		private string _StateName;
+		
+		private int _CityCode;
+		
+		private string _CityName;
+		
+		private decimal _PriceForVsit;
+		
+		private bool _IsActive;
+		
+		private bool _IsDeleted;
+		
+		private bool _ReciveMessage;
+		
+		private System.DateTime _PublishDate;
+		
+		private System.DateTime _ExpireDate;
+		
+		private int _VisitCount;
+		
+		private System.DateTime _CreatedOn;
+		
+		private string _TitlePicture;
+		
+		public Viw_postList()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDPost", DbType="Int NOT NULL")]
+		public int IDPost
+		{
+			get
+			{
+				return this._IDPost;
+			}
+			set
+			{
+				if ((this._IDPost != value))
+				{
+					this._IDPost = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorIDUser", DbType="Int")]
+		public System.Nullable<int> CreatorIDUser
+		{
+			get
+			{
+				return this._CreatorIDUser;
+			}
+			set
+			{
+				if ((this._CreatorIDUser != value))
+				{
+					this._CreatorIDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorUserCode", DbType="Int")]
+		public System.Nullable<int> CreatorUserCode
+		{
+			get
+			{
+				return this._CreatorUserCode;
+			}
+			set
+			{
+				if ((this._CreatorUserCode != value))
+				{
+					this._CreatorUserCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorName", DbType="NVarChar(550)")]
+		public string CreatorName
+		{
+			get
+			{
+				return this._CreatorName;
+			}
+			set
+			{
+				if ((this._CreatorName != value))
+				{
+					this._CreatorName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorFamily", DbType="NVarChar(550)")]
+		public string CreatorFamily
+		{
+			get
+			{
+				return this._CreatorFamily;
+			}
+			set
+			{
+				if ((this._CreatorFamily != value))
+				{
+					this._CreatorFamily = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatorAvatar", DbType="NVarChar(MAX)")]
+		public string CreatorAvatar
+		{
+			get
+			{
+				return this._CreatorAvatar;
+			}
+			set
+			{
+				if ((this._CreatorAvatar != value))
+				{
+					this._CreatorAvatar = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Text
+		{
+			get
+			{
+				return this._Text;
+			}
+			set
+			{
+				if ((this._Text != value))
+				{
+					this._Text = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTypeCode", DbType="Int NOT NULL")]
+		public int PostTypeCode
+		{
+			get
+			{
+				return this._PostTypeCode;
+			}
+			set
+			{
+				if ((this._PostTypeCode != value))
+				{
+					this._PostTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string PostTypeName
+		{
+			get
+			{
+				return this._PostTypeName;
+			}
+			set
+			{
+				if ((this._PostTypeName != value))
+				{
+					this._PostTypeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateCode", DbType="Int NOT NULL")]
+		public int StateCode
+		{
+			get
+			{
+				return this._StateCode;
+			}
+			set
+			{
+				if ((this._StateCode != value))
+				{
+					this._StateCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string StateName
+		{
+			get
+			{
+				return this._StateName;
+			}
+			set
+			{
+				if ((this._StateName != value))
+				{
+					this._StateName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityCode", DbType="Int NOT NULL")]
+		public int CityCode
+		{
+			get
+			{
+				return this._CityCode;
+			}
+			set
+			{
+				if ((this._CityCode != value))
+				{
+					this._CityCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string CityName
+		{
+			get
+			{
+				return this._CityName;
+			}
+			set
+			{
+				if ((this._CityName != value))
+				{
+					this._CityName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PriceForVsit", DbType="Decimal(18,0) NOT NULL")]
+		public decimal PriceForVsit
+		{
+			get
+			{
+				return this._PriceForVsit;
+			}
+			set
+			{
+				if ((this._PriceForVsit != value))
+				{
+					this._PriceForVsit = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this._IsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
+		public bool IsDeleted
+		{
+			get
+			{
+				return this._IsDeleted;
+			}
+			set
+			{
+				if ((this._IsDeleted != value))
+				{
+					this._IsDeleted = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
+		public bool ReciveMessage
+		{
+			get
+			{
+				return this._ReciveMessage;
+			}
+			set
+			{
+				if ((this._ReciveMessage != value))
+				{
+					this._ReciveMessage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
+		public System.DateTime PublishDate
+		{
+			get
+			{
+				return this._PublishDate;
+			}
+			set
+			{
+				if ((this._PublishDate != value))
+				{
+					this._PublishDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
+		public System.DateTime ExpireDate
+		{
+			get
+			{
+				return this._ExpireDate;
+			}
+			set
+			{
+				if ((this._ExpireDate != value))
+				{
+					this._ExpireDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
+		public int VisitCount
+		{
+			get
+			{
+				return this._VisitCount;
+			}
+			set
+			{
+				if ((this._VisitCount != value))
+				{
+					this._VisitCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
+		public string TitlePicture
+		{
+			get
+			{
+				return this._TitlePicture;
+			}
+			set
+			{
+				if ((this._TitlePicture != value))
+				{
+					this._TitlePicture = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_AppList")]
+	public partial class Viw_Site_AppList
+	{
+		
+		private int _ApplicationID;
+		
+		private string _NameFa;
+		
+		private string _StatementFa;
+		
+		private string _TextFa;
+		
+		private string _LogoPicture;
+		
+		private string _NameEn;
+		
+		private string _StatementEn;
+		
+		private int _VersionCode;
+		
+		private string _VersionName;
+		
+		private System.Nullable<double> _Price;
+		
+		private System.Nullable<int> _DownloadCount;
+		
+		private System.Nullable<int> _Views;
+		
+		private string _StoreName;
+		
+		private System.Nullable<bool> _isFree;
+		
+		private string _URL;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _AppTypeCode;
+		
+		private int _CompanyCode;
+		
+		private string _Company;
+		
+		private string _CompanyUrl;
+		
+		private string _CompanyIcon;
+		
+		private System.Nullable<int> _Priority;
+		
+		private string _ApplicationVersionStatement;
+		
+		private string _DownloadUrl;
+		
+		private string _MainUrl;
+		
+		private string _Name;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		public Viw_Site_AppList()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationID", DbType="Int NOT NULL")]
+		public int ApplicationID
+		{
+			get
+			{
+				return this._ApplicationID;
+			}
+			set
+			{
+				if ((this._ApplicationID != value))
+				{
+					this._ApplicationID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameFa", DbType="NVarChar(MAX)")]
+		public string NameFa
+		{
+			get
+			{
+				return this._NameFa;
+			}
+			set
+			{
+				if ((this._NameFa != value))
+				{
+					this._NameFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatementFa", DbType="NVarChar(MAX)")]
+		public string StatementFa
+		{
+			get
+			{
+				return this._StatementFa;
+			}
+			set
+			{
+				if ((this._StatementFa != value))
+				{
+					this._StatementFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextFa", DbType="NVarChar(MAX)")]
+		public string TextFa
+		{
+			get
+			{
+				return this._TextFa;
+			}
+			set
+			{
+				if ((this._TextFa != value))
+				{
+					this._TextFa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoPicture", DbType="NVarChar(MAX)")]
+		public string LogoPicture
+		{
+			get
+			{
+				return this._LogoPicture;
+			}
+			set
+			{
+				if ((this._LogoPicture != value))
+				{
+					this._LogoPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NameEn", DbType="NVarChar(MAX)")]
+		public string NameEn
+		{
+			get
+			{
+				return this._NameEn;
+			}
+			set
+			{
+				if ((this._NameEn != value))
+				{
+					this._NameEn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StatementEn", DbType="NVarChar(MAX)")]
+		public string StatementEn
+		{
+			get
+			{
+				return this._StatementEn;
+			}
+			set
+			{
+				if ((this._StatementEn != value))
+				{
+					this._StatementEn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionCode", DbType="Int NOT NULL")]
+		public int VersionCode
+		{
+			get
+			{
+				return this._VersionCode;
+			}
+			set
+			{
+				if ((this._VersionCode != value))
+				{
+					this._VersionCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VersionName", DbType="NVarChar(MAX)")]
+		public string VersionName
+		{
+			get
+			{
+				return this._VersionName;
+			}
+			set
+			{
+				if ((this._VersionName != value))
+				{
+					this._VersionName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Float")]
+		public System.Nullable<double> Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this._Price = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadCount", DbType="Int")]
+		public System.Nullable<int> DownloadCount
+		{
+			get
+			{
+				return this._DownloadCount;
+			}
+			set
+			{
+				if ((this._DownloadCount != value))
+				{
+					this._DownloadCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Views", DbType="Int")]
+		public System.Nullable<int> Views
+		{
+			get
+			{
+				return this._Views;
+			}
+			set
+			{
+				if ((this._Views != value))
+				{
+					this._Views = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StoreName", DbType="VarChar(50)")]
+		public string StoreName
+		{
+			get
+			{
+				return this._StoreName;
+			}
+			set
+			{
+				if ((this._StoreName != value))
+				{
+					this._StoreName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isFree", DbType="Bit")]
+		public System.Nullable<bool> isFree
+		{
+			get
+			{
+				return this._isFree;
+			}
+			set
+			{
+				if ((this._isFree != value))
+				{
+					this._isFree = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(MAX)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this._Description = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AppTypeCode", DbType="Int")]
+		public System.Nullable<int> AppTypeCode
+		{
+			get
+			{
+				return this._AppTypeCode;
+			}
+			set
+			{
+				if ((this._AppTypeCode != value))
+				{
+					this._AppTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyCode", DbType="Int NOT NULL")]
+		public int CompanyCode
+		{
+			get
+			{
+				return this._CompanyCode;
+			}
+			set
+			{
+				if ((this._CompanyCode != value))
+				{
+					this._CompanyCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Company
+		{
+			get
+			{
+				return this._Company;
+			}
+			set
+			{
+				if ((this._Company != value))
+				{
+					this._Company = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyUrl", DbType="NVarChar(MAX)")]
+		public string CompanyUrl
+		{
+			get
+			{
+				return this._CompanyUrl;
+			}
+			set
+			{
+				if ((this._CompanyUrl != value))
+				{
+					this._CompanyUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CompanyIcon", DbType="NVarChar(MAX)")]
+		public string CompanyIcon
+		{
+			get
+			{
+				return this._CompanyIcon;
+			}
+			set
+			{
+				if ((this._CompanyIcon != value))
+				{
+					this._CompanyIcon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Priority", DbType="Int")]
+		public System.Nullable<int> Priority
+		{
+			get
+			{
+				return this._Priority;
+			}
+			set
+			{
+				if ((this._Priority != value))
+				{
+					this._Priority = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationVersionStatement", DbType="NVarChar(MAX)")]
+		public string ApplicationVersionStatement
+		{
+			get
+			{
+				return this._ApplicationVersionStatement;
+			}
+			set
+			{
+				if ((this._ApplicationVersionStatement != value))
+				{
+					this._ApplicationVersionStatement = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DownloadUrl", DbType="NVarChar(MAX)")]
+		public string DownloadUrl
+		{
+			get
+			{
+				return this._DownloadUrl;
+			}
+			set
+			{
+				if ((this._DownloadUrl != value))
+				{
+					this._DownloadUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MainUrl", DbType="NVarChar(MAX)")]
+		public string MainUrl
+		{
+			get
+			{
+				return this._MainUrl;
+			}
+			set
+			{
+				if ((this._MainUrl != value))
+				{
+					this._MainUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_1")]
+	public partial class Viw_Site_Cat_level_1
+	{
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		public Viw_Site_Cat_level_1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_2")]
+	public partial class Viw_Site_Cat_level_2
+	{
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private System.Nullable<int> _IDParent;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		public Viw_Site_Cat_level_2()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDParent", DbType="Int")]
+		public System.Nullable<int> IDParent
+		{
+			get
+			{
+				return this._IDParent;
+			}
+			set
+			{
+				if ((this._IDParent != value))
+				{
+					this._IDParent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_Site_MainPostList")]
+	public partial class Viw_Site_MainPostList
+	{
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private string _ApplicationName;
+		
+		private int _PostId;
+		
+		private string _Title;
+		
+		private string _TitlePicture;
+		
+		private string _Text;
+		
+		private string _TextPicture;
+		
+		private string _CatName;
+		
+		private string _CatIcon;
+		
+		private string _SecoundCatName;
+		
+		private string _SecoundCatIconName;
+		
+		private bool _IsActive;
+		
+		private bool _IsDeleted;
+		
+		private bool _ReciveMessage;
+		
+		private System.DateTime _PublishDate;
+		
+		private System.DateTime _ExpireDate;
+		
+		private System.Nullable<System.DateTime> _AcceptDate;
+		
+		private int _VisitCount;
+		
+		private System.DateTime _CreatedOn;
+		
+		private string _HeaderName;
+		
+		public Viw_Site_MainPostList()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationName", DbType="NVarChar(MAX)")]
+		public string ApplicationName
+		{
+			get
+			{
+				return this._ApplicationName;
+			}
+			set
+			{
+				if ((this._ApplicationName != value))
+				{
+					this._ApplicationName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostId", DbType="Int NOT NULL")]
+		public int PostId
+		{
+			get
+			{
+				return this._PostId;
+			}
+			set
+			{
+				if ((this._PostId != value))
+				{
+					this._PostId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitlePicture", DbType="NVarChar(MAX)")]
+		public string TitlePicture
+		{
+			get
+			{
+				return this._TitlePicture;
+			}
+			set
+			{
+				if ((this._TitlePicture != value))
+				{
+					this._TitlePicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Text", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Text
+		{
+			get
+			{
+				return this._Text;
+			}
+			set
+			{
+				if ((this._Text != value))
+				{
+					this._Text = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TextPicture", DbType="NVarChar(MAX)")]
+		public string TextPicture
+		{
+			get
+			{
+				return this._TextPicture;
+			}
+			set
+			{
+				if ((this._TextPicture != value))
+				{
+					this._TextPicture = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string CatName
+		{
+			get
+			{
+				return this._CatName;
+			}
+			set
+			{
+				if ((this._CatName != value))
+				{
+					this._CatName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatIcon", DbType="NVarChar(MAX)")]
+		public string CatIcon
+		{
+			get
+			{
+				return this._CatIcon;
+			}
+			set
+			{
+				if ((this._CatIcon != value))
+				{
+					this._CatIcon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecoundCatName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string SecoundCatName
+		{
+			get
+			{
+				return this._SecoundCatName;
+			}
+			set
+			{
+				if ((this._SecoundCatName != value))
+				{
+					this._SecoundCatName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecoundCatIconName", DbType="NVarChar(MAX)")]
+		public string SecoundCatIconName
+		{
+			get
+			{
+				return this._SecoundCatIconName;
+			}
+			set
+			{
+				if ((this._SecoundCatIconName != value))
+				{
+					this._SecoundCatIconName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
+		public bool IsActive
+		{
+			get
+			{
+				return this._IsActive;
+			}
+			set
+			{
+				if ((this._IsActive != value))
+				{
+					this._IsActive = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsDeleted", DbType="Bit NOT NULL")]
+		public bool IsDeleted
+		{
+			get
+			{
+				return this._IsDeleted;
+			}
+			set
+			{
+				if ((this._IsDeleted != value))
+				{
+					this._IsDeleted = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveMessage", DbType="Bit NOT NULL")]
+		public bool ReciveMessage
+		{
+			get
+			{
+				return this._ReciveMessage;
+			}
+			set
+			{
+				if ((this._ReciveMessage != value))
+				{
+					this._ReciveMessage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PublishDate", DbType="DateTime NOT NULL")]
+		public System.DateTime PublishDate
+		{
+			get
+			{
+				return this._PublishDate;
+			}
+			set
+			{
+				if ((this._PublishDate != value))
+				{
+					this._PublishDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExpireDate", DbType="DateTime NOT NULL")]
+		public System.DateTime ExpireDate
+		{
+			get
+			{
+				return this._ExpireDate;
+			}
+			set
+			{
+				if ((this._ExpireDate != value))
+				{
+					this._ExpireDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AcceptDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> AcceptDate
+		{
+			get
+			{
+				return this._AcceptDate;
+			}
+			set
+			{
+				if ((this._AcceptDate != value))
+				{
+					this._AcceptDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitCount", DbType="Int NOT NULL")]
+		public int VisitCount
+		{
+			get
+			{
+				return this._VisitCount;
+			}
+			set
+			{
+				if ((this._VisitCount != value))
+				{
+					this._VisitCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HeaderName", DbType="NVarChar(50)")]
+		public string HeaderName
+		{
+			get
+			{
+				return this._HeaderName;
+			}
+			set
+			{
+				if ((this._HeaderName != value))
+				{
+					this._HeaderName = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_userDevices")]
+	public partial class Viw_userDevice
+	{
+		
+		private int _IDUser;
+		
+		private System.Nullable<int> _UserCode;
+		
+		private string _Email;
+		
+		private string _CodeMelli;
+		
+		private string _UserName;
+		
+		private string _Mobile;
+		
+		private string _Password;
+		
+		private string _Name;
+		
+		private string _Family;
+		
+		private int _IDDevice;
+		
+		private int _Id;
+		
+		private string _DeviceID;
+		
+		private string _Serial;
+		
+		private string _Model;
+		
+		private string _BuildId;
+		
+		private string _AndroidVersion;
+		
+		private System.Nullable<int> _AndroidAPI;
+		
+		private string _Manufacturer;
+		
+		private string _Brand;
+		
+		private string _Board;
+		
+		private string _Display;
+		
+		private System.DateTime _CreatedOn;
+		
+		private System.Nullable<System.DateTime> _ModifiedOn;
+		
+		private string _IP;
+		
+		private bool _PhoneNumberConfirmed;
+		
+		public Viw_userDevice()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
+		public int IDUser
+		{
+			get
+			{
+				return this._IDUser;
+			}
+			set
+			{
+				if ((this._IDUser != value))
+				{
+					this._IDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="Int")]
+		public System.Nullable<int> UserCode
+		{
+			get
+			{
+				return this._UserCode;
+			}
+			set
+			{
+				if ((this._UserCode != value))
+				{
+					this._UserCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(250)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodeMelli", DbType="Char(10)")]
+		public string CodeMelli
+		{
+			get
+			{
+				return this._CodeMelli;
+			}
+			set
+			{
+				if ((this._CodeMelli != value))
+				{
+					this._CodeMelli = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(250)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
+		public string Mobile
+		{
+			get
+			{
+				return this._Mobile;
+			}
+			set
+			{
+				if ((this._Mobile != value))
+				{
+					this._Mobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(MAX)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(550)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this._Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Family", DbType="NVarChar(550)")]
+		public string Family
+		{
+			get
+			{
+				return this._Family;
+			}
+			set
+			{
+				if ((this._Family != value))
+				{
+					this._Family = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDDevice", DbType="Int NOT NULL")]
+		public int IDDevice
+		{
+			get
+			{
+				return this._IDDevice;
+			}
+			set
+			{
+				if ((this._IDDevice != value))
+				{
+					this._IDDevice = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL")]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this._Id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="NVarChar(MAX)")]
+		public string DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					this._DeviceID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Serial", DbType="NVarChar(MAX)")]
+		public string Serial
+		{
+			get
+			{
+				return this._Serial;
+			}
+			set
+			{
+				if ((this._Serial != value))
+				{
+					this._Serial = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="NVarChar(MAX)")]
+		public string Model
+		{
+			get
+			{
+				return this._Model;
+			}
+			set
+			{
+				if ((this._Model != value))
+				{
+					this._Model = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuildId", DbType="NVarChar(MAX)")]
+		public string BuildId
+		{
+			get
+			{
+				return this._BuildId;
+			}
+			set
+			{
+				if ((this._BuildId != value))
+				{
+					this._BuildId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidVersion", DbType="NVarChar(MAX)")]
+		public string AndroidVersion
+		{
+			get
+			{
+				return this._AndroidVersion;
+			}
+			set
+			{
+				if ((this._AndroidVersion != value))
+				{
+					this._AndroidVersion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidAPI", DbType="Int")]
+		public System.Nullable<int> AndroidAPI
+		{
+			get
+			{
+				return this._AndroidAPI;
+			}
+			set
+			{
+				if ((this._AndroidAPI != value))
+				{
+					this._AndroidAPI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Manufacturer", DbType="NVarChar(MAX)")]
+		public string Manufacturer
+		{
+			get
+			{
+				return this._Manufacturer;
+			}
+			set
+			{
+				if ((this._Manufacturer != value))
+				{
+					this._Manufacturer = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Brand", DbType="NVarChar(MAX)")]
+		public string Brand
+		{
+			get
+			{
+				return this._Brand;
+			}
+			set
+			{
+				if ((this._Brand != value))
+				{
+					this._Brand = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Board", DbType="NVarChar(MAX)")]
+		public string Board
+		{
+			get
+			{
+				return this._Board;
+			}
+			set
+			{
+				if ((this._Board != value))
+				{
+					this._Board = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Display", DbType="NVarChar(MAX)")]
+		public string Display
+		{
+			get
+			{
+				return this._Display;
+			}
+			set
+			{
+				if ((this._Display != value))
+				{
+					this._Display = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this._ModifiedOn;
+			}
+			set
+			{
+				if ((this._ModifiedOn != value))
+				{
+					this._ModifiedOn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IP", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string IP
+		{
+			get
+			{
+				return this._IP;
+			}
+			set
+			{
+				if ((this._IP != value))
+				{
+					this._IP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumberConfirmed", DbType="Bit NOT NULL")]
+		public bool PhoneNumberConfirmed
+		{
+			get
+			{
+				return this._PhoneNumberConfirmed;
+			}
+			set
+			{
+				if ((this._PhoneNumberConfirmed != value))
+				{
+					this._PhoneNumberConfirmed = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Viw_WalletTransaction")]
+	public partial class Viw_WalletTransaction
+	{
+		
+		private int _TransactionID;
+		
+		private int _IDUser;
+		
+		private System.Nullable<int> _IDApplication;
+		
+		private string _TransactionCreatorName;
+		
+		private string _TransactionCreatorFamily;
+		
+		private decimal _Amount;
+		
+		private int _TransactionTypeCode;
+		
+		private string _TransactionTypeName;
+		
+		private string _ImageUrl;
+		
+		private string _icon;
+		
+		private string _RefrenceNo;
+		
+		private string _MetaData;
+		
+		private System.DateTime _CreatedOn;
+		
+		public Viw_WalletTransaction()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionID", DbType="Int NOT NULL")]
+		public int TransactionID
+		{
+			get
+			{
+				return this._TransactionID;
+			}
+			set
+			{
+				if ((this._TransactionID != value))
+				{
+					this._TransactionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDUser", DbType="Int NOT NULL")]
+		public int IDUser
+		{
+			get
+			{
+				return this._IDUser;
+			}
+			set
+			{
+				if ((this._IDUser != value))
+				{
+					this._IDUser = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDApplication", DbType="Int")]
+		public System.Nullable<int> IDApplication
+		{
+			get
+			{
+				return this._IDApplication;
+			}
+			set
+			{
+				if ((this._IDApplication != value))
+				{
+					this._IDApplication = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorName", DbType="NVarChar(550)")]
+		public string TransactionCreatorName
+		{
+			get
+			{
+				return this._TransactionCreatorName;
+			}
+			set
+			{
+				if ((this._TransactionCreatorName != value))
+				{
+					this._TransactionCreatorName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionCreatorFamily", DbType="NVarChar(550)")]
+		public string TransactionCreatorFamily
+		{
+			get
+			{
+				return this._TransactionCreatorFamily;
+			}
+			set
+			{
+				if ((this._TransactionCreatorFamily != value))
+				{
+					this._TransactionCreatorFamily = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Amount", DbType="Decimal(18,0) NOT NULL")]
+		public decimal Amount
+		{
+			get
+			{
+				return this._Amount;
+			}
+			set
+			{
+				if ((this._Amount != value))
+				{
+					this._Amount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeCode", DbType="Int NOT NULL")]
+		public int TransactionTypeCode
+		{
+			get
+			{
+				return this._TransactionTypeCode;
+			}
+			set
+			{
+				if ((this._TransactionTypeCode != value))
+				{
+					this._TransactionTypeCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransactionTypeName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TransactionTypeName
+		{
+			get
+			{
+				return this._TransactionTypeName;
+			}
+			set
+			{
+				if ((this._TransactionTypeName != value))
+				{
+					this._TransactionTypeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ImageUrl", DbType="NVarChar(MAX)")]
+		public string ImageUrl
+		{
+			get
+			{
+				return this._ImageUrl;
+			}
+			set
+			{
+				if ((this._ImageUrl != value))
+				{
+					this._ImageUrl = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_icon", DbType="NVarChar(MAX)")]
+		public string icon
+		{
+			get
+			{
+				return this._icon;
+			}
+			set
+			{
+				if ((this._icon != value))
+				{
+					this._icon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RefrenceNo", DbType="NVarChar(MAX)")]
+		public string RefrenceNo
+		{
+			get
+			{
+				return this._RefrenceNo;
+			}
+			set
+			{
+				if ((this._RefrenceNo != value))
+				{
+					this._RefrenceNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MetaData", DbType="NVarChar(MAX)")]
+		public string MetaData
+		{
+			get
+			{
+				return this._MetaData;
+			}
+			set
+			{
+				if ((this._MetaData != value))
+				{
+					this._MetaData = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+		public System.DateTime CreatedOn
+		{
+			get
+			{
+				return this._CreatedOn;
+			}
+			set
+			{
+				if ((this._CreatedOn != value))
+				{
+					this._CreatedOn = value;
+				}
 			}
 		}
 	}

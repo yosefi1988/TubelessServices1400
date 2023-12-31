@@ -1,290 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="balabar1_Tubeless" Class="DataClassesAutenticatorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=balabarkaran.com;Initial Catalog=balabar1_Tubeless;Persist Security Info=True;User ID=balabar1_Tubeless_Develop" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="balabar1_TubelessConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="balabar1_Tubeless_Develop.report_ContactUsMessages" Member="report_ContactUsMessages">
-    <Type Name="report_ContactUsMessage">
-      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_WalletTransaction2" Member="Viw_WalletTransaction2s">
-    <Type Name="Viw_WalletTransaction2">
-      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TransactionCreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="TransactionCreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TransactionTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="IDPost" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="PostTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.report_transactions" Member="report_transactions">
-    <Type Name="report_transaction">
-      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDUserCreator" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="Zarib" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.report_Users" Member="report_Users">
-    <Type Name="report_User">
-      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="AndroidVersion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="AndroidAPI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Manufacturer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Brand" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="StoreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_AppStore" Member="Viw_AppStores">
-    <Type Name="Viw_AppStore">
-      <Column Name="typeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="companyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="company" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ApplicationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="VersionName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="NameEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="DownloadCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Views" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DownloadUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_ElectedUserList" Member="Viw_ElectedUserLists">
-    <Type Name="Viw_ElectedUserList">
-      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CountPosts" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="UserCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="F_UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="F_ApplicationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="F_StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IsElected" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ElectedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Star" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
-      <Column Name="ElectedUsersIsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ElectedUsersIsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="StateName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Family" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Avatar" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="ProfileImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="PhoneNumberConfirmed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CodeMelli" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="SimCardId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="UserTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="UsersIsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="UsersIsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Tel" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_PostDetails" Member="Viw_PostDetails">
-    <Type Name="Viw_PostDetail">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="TypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="StateCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="StateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CityCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="PriceForVsit" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="TextPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_postList" Member="Viw_postLists">
-    <Type Name="Viw_postList">
-      <Column Name="IDPost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CreatorIDUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CreatorUserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="CreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="CreatorAvatar" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="PostTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="PostTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="StateCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="StateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CityCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="PriceForVsit" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_Site_AppList" Member="Viw_Site_AppLists">
-    <Type Name="Viw_Site_AppList">
-      <Column Name="ApplicationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="StatementFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="TextFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="LogoPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="NameEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="StatementEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="VersionCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="VersionName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DownloadCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Views" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="StoreName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="isFree" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="AppTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CompanyCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Company" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CompanyUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CompanyIcon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_1" Member="Viw_Site_Cat_level_1s">
-    <Type Name="Viw_Site_Cat_level_1">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_2" Member="Viw_Site_Cat_level_2s">
-    <Type Name="Viw_Site_Cat_level_2">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IDParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_Site_MainPostList" Member="Viw_Site_MainPostLists">
-    <Type Name="Viw_Site_MainPostList">
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="TextPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CatName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="CatIcon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="SecoundCatName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="SecoundCatIconName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="HeaderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_userDevices" Member="Viw_userDevices">
-    <Type Name="Viw_userDevice">
-      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="CodeMelli" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Family" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="IDDevice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="DeviceID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Serial" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="BuildId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="AndroidVersion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="AndroidAPI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Manufacturer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Brand" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Board" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Display" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="IP" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="PhoneNumberConfirmed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Viw_WalletTransaction" Member="Viw_WalletTransactions">
-    <Type Name="Viw_WalletTransaction">
-      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TransactionCreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="TransactionCreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
-      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
-      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TransactionTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="balabar1_Tubeless_Develop.Tbl_ApplicationStore" Member="Tbl_ApplicationStores">
     <Type Name="Tbl_ApplicationStore">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -650,6 +365,309 @@
       <Column Name="AutoAdd" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="ReciveNotifs" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="Tbl_Device_Tbl_Loginto_DeviceSetting" Member="Tbl_Device" ThisKey="DeviceID" OtherKey="Id" Type="Tbl_Device" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.report_ContactUsMessages" Member="report_ContactUsMessages">
+    <Type Name="report_ContactUsMessage">
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_WalletTransaction2" Member="Viw_WalletTransaction2s">
+    <Type Name="Viw_WalletTransaction2">
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TransactionCreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="TransactionCreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IDPost" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.report_transactions" Member="report_transactions">
+    <Type Name="report_transaction">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDUserCreator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Zarib" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.report_Users" Member="report_Users">
+    <Type Name="report_User">
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AndroidVersion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AndroidAPI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manufacturer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists" Member="View_loginto_users_site_list1s">
+    <Type Name="View_loginto_users_site_list1">
+      <Column Name="AndroidID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SiteCode" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoginCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddedAuto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_AppStore" Member="Viw_AppStores">
+    <Type Name="Viw_AppStore">
+      <Column Name="typeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="companyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="company" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VersionName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NameEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DownloadCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Views" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DownloadUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_ElectedUserList" Member="Viw_ElectedUserLists">
+    <Type Name="Viw_ElectedUserList">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountPosts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="F_UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="F_ApplicationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="F_StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsElected" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ElectedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Star" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="ElectedUsersIsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ElectedUsersIsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StateName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Avatar" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProfileImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="PhoneNumberConfirmed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="SimCardId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UsersIsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UsersIsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_PostDetails" Member="Viw_PostDetails">
+    <Type Name="Viw_PostDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StateCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceForVsit" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TextPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_postList" Member="Viw_postLists">
+    <Type Name="Viw_postList">
+      <Column Name="IDPost" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatorIDUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="CreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="CreatorAvatar" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PostTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StateCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceForVsit" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_Site_AppList" Member="Viw_Site_AppLists">
+    <Type Name="Viw_Site_AppList">
+      <Column Name="ApplicationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NameFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatementFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TextFa" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogoPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NameEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StatementEn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VersionCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VersionName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DownloadCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Views" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoreName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="isFree" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AppTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyIcon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationVersionStatement" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DownloadUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MainUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_1" Member="Viw_Site_Cat_level_1s">
+    <Type Name="Viw_Site_Cat_level_1">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_Site_Cat_level_2" Member="Viw_Site_Cat_level_2s">
+    <Type Name="Viw_Site_Cat_level_2">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDParent" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_Site_MainPostList" Member="Viw_Site_MainPostLists">
+    <Type Name="Viw_Site_MainPostList">
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TitlePicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TextPicture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CatIcon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecoundCatName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SecoundCatIconName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReciveMessage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpireDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HeaderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_userDevices" Member="Viw_userDevices">
+    <Type Name="Viw_userDevice">
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CodeMelli" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="IDDevice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Serial" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BuildId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AndroidVersion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AndroidAPI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manufacturer" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Board" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Display" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumberConfirmed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Viw_WalletTransaction" Member="Viw_WalletTransactions">
+    <Type Name="Viw_WalletTransaction">
+      <Column Name="TransactionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDApplication" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TransactionCreatorName" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="TransactionCreatorFamily" Type="System.String" DbType="NVarChar(550)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.FNGetWalletBalanceByUserId" Method="FNGetWalletBalanceByUserId" IsComposable="true">

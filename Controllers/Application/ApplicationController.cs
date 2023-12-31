@@ -40,11 +40,12 @@ namespace TubelessServices.Controllers.Application
 
         [HttpPost]
         [Route("ApplicationDetails")]
-        public string ApplicationDetails(RegisterPost newPostRequest)
+        public string ApplicationDetails(ApplicationDetails applicationDetails)
         {
-
-
-            return "";
+            IEnumerable<Viw_Site_AppList> xxxxxxxxx = AppsCRUD.getApplicationByStore(applicationDetails.storeName,applicationDetails.ApplicationID);
+            response.postList = xxxxxxxxx.ToList();
+            string ssssssss = new JavaScriptSerializer().Serialize(response);
+            return ssssssss;
         }
 
         [HttpPost]
