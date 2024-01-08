@@ -16,6 +16,7 @@ namespace TubelessServices.Models.Post
 
         public string RefrenceNo { get; set; }
         public string title { get; set; }
+        public string text { get; set; }
         public long Amount { get; set; }
         public float Zarib{ get; set; }
         public string DateTime{ get; set; }

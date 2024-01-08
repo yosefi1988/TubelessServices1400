@@ -398,6 +398,67 @@ namespace TubelessServices.Controllers.Post
                 return preparelist2(transactionList3);
             }
         }
+
+        internal List<PostItem> getPostListForSite(reqPostList reqPostList, int userId)
+        {
+            PostSearchHelper helper = new Post.PostSearchHelper();
+            IEnumerable<Viw_postList> postList1 = (from x in db.Viw_postLists
+                                                    where
+                                                        //x.IsActive == true &&
+                                                        x.IsDeleted == false
+                                                    select x).OrderByDescending(date => date.CreatedOn).ToList();
+
+
+            IEnumerable<Viw_postList> finalList =
+            helper.checkIsActive(
+                //checkIsDelete(
+                //checkReciveMessage(
+                    //helper.checkTransactionTypeCode(
+                        helper.checkAppID(
+                            postList1,
+                        reqPostList),
+                    //reqPostList),
+                //reqPostList),
+            //reqPostList),
+            reqPostList);
+
+            IEnumerable<Models.Viw_postList> transactionList2 = finalList.Skip(reqPostList.pageIndex * reqPostList.pageSize);
+            IEnumerable<Models.Viw_postList> transactionList3 = transactionList2.Take(reqPostList.pageSize);
+            return preparelistForsite(transactionList3);
+        }
+
+        private List<PostItem> preparelistForsite(IEnumerable<Viw_postList> transactionList3)
+        {
+            List<PostItem> transactionListOut = new List<PostItem>();
+            foreach (Models.Viw_postList postitem in transactionList3)
+            {
+                PostItem postItem = new PostItem();
+                postItem.ID = postitem.IDPost;
+                postItem.CreatorFullName = postitem.CreatorName + " " + postitem.CreatorFamily;
+                postItem.TTC = postitem.PostTypeCode;
+                postItem.TTN = postitem.PostTypeName;
+                postItem.text = postitem.Text.Substring(0,500);
+                //postItem.image = postitem.
+                //postItem.icon = postitem.;
+                //postItem.RefrenceNo = postitem.Title;
+                postItem.title = postitem.Title;
+                postItem.Amount = (long)postitem.PriceForVsit;
+                //postItem.Zarib = postitem.;
+
+                postItem.ReciveMessage = (bool)postitem.ReciveMessage;
+                postItem.StateName = postitem.StateName;
+                postItem.CityName = postitem.CityName;
+                postItem.TitlePicture = postitem.TitlePicture;
+
+                postItem.DateTime = Date.convertToPersianDate(postitem.CreatedOn);
+                postItem.DateTimeExpire = Date.convertToPersianDate(postitem.ExpireDate);
+
+                transactionListOut.Add(postItem);
+            }
+
+            return transactionListOut;
+        }
+
         private List<PostItem> preparelist(IEnumerable<Viw_postList> transactionList3)
         {
             List<PostItem> transactionListOut = new List<PostItem>();

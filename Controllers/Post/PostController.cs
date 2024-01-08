@@ -673,5 +673,18 @@ namespace TubelessServices.Controllers.Post
             string ssssssss = new JavaScriptSerializer().Serialize(response);
             return ssssssss;
         }
+
+        [HttpPost]
+        [Route("PostListForSite")]
+        public string PostListForSite(reqPostList requestPostList)
+        {
+            List<PostItem> xxxxxxxxx = postCRUD.getPostListForSite(requestPostList, 0);
+            response.postList = xxxxxxxxx;
+
+            //WalletCRUD userCRUD = new WalletCRUD();            
+            //response.wallet.Amount = (long)walletCRUD.getWallet(userId).Amount;
+            string ssssssss = new JavaScriptSerializer().Serialize(response);
+            return ssssssss;
+        }
     }
 }
