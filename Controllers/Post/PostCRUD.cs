@@ -437,7 +437,12 @@ namespace TubelessServices.Controllers.Post
                 postItem.CreatorFullName = postitem.CreatorName + " " + postitem.CreatorFamily;
                 postItem.TTC = postitem.PostTypeCode;
                 postItem.TTN = postitem.PostTypeName;
-                postItem.text = postitem.Text.Substring(0,500);
+
+                if (postitem.Text.Length > 500)
+                    postItem.text = postitem.Text.Substring(0, 500);
+                else
+                    postItem.text = postitem.Text;
+
                 //postItem.image = postitem.
                 //postItem.icon = postitem.;
                 //postItem.RefrenceNo = postitem.Title;
