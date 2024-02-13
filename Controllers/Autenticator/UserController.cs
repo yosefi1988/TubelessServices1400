@@ -74,7 +74,13 @@ namespace TubelessServices.Controllers.Autenticator
                     }
 
                     //todo uncomment and fix
-                    //updateDeviceUserId(loginAccount, (int)newUserId);
+                    try {
+                        List<Tbl_Device> devicelist = deviceCRUD.findDeviceByDeviceID(loginAccount.AndroidID);
+                        deviceCRUD.updateDeviceUserId(devicelist.First(), (int)newUserId);
+                    }catch(Exception ex)
+                    {
+
+                    }
 
                     if (newUserId != 0)
                     {

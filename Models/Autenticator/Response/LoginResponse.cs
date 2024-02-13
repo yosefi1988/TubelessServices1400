@@ -69,9 +69,14 @@ namespace TubelessServices.Models.Autenticator.Response
                 this.IsDeleted = user.IsDeleted;
                 this.CreateDate = Date.convertToPersianDate(user.CreatedOn);
 
-                WalletCRUD userCRUD = new WalletCRUD();
-                this.wallet = new UserWallet();
-                wallet.Amount = (long)userCRUD.getWallet(user).Amount;
+                try {
+                    WalletCRUD userCRUD = new WalletCRUD();
+                    this.wallet = new UserWallet();
+                    wallet.Amount = (long)userCRUD.getWallet(user).Amount;
+                }catch(System.Exception ex)
+                {
+
+                }
             }
         }
         internal void setUser(Viw_ElectedUserList user)

@@ -60,6 +60,11 @@ namespace TubelessServices.Controllers.Device
             db.SubmitChanges();
         }
 
+        internal void updateDeviceUserId(Tbl_Device device, int newUserId)
+        { 
+            device.IDUser = newUserId;
+            db.SubmitChanges();
+        }
         internal bool insertDeviceApp(int deviceId, RequestDeviceRegister deviceRegister, int storeID)
         {
             Tbl_DeviceApp newDeviceApp = new Tbl_DeviceApp();
