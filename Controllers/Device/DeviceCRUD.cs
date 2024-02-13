@@ -29,7 +29,11 @@ namespace TubelessServices.Controllers.Device
             device.ModifiedOn = DateTime.Now;
             device.IP = deviceRegister.IP;
             device.PushNotificaionToken = deviceRegister.token;
-            device.IDUser = int.Parse(deviceRegister.IDUser);
+
+            if(deviceRegister.IDUser == null)
+                device.IDUser = 10012;
+            else
+                device.IDUser = int.Parse(deviceRegister.IDUser);
 
             try
             {
