@@ -31,7 +31,7 @@ namespace TubelessServices.Controllers.Device
             device.PushNotificaionToken = deviceRegister.token;
 
             if(deviceRegister.IDUser == null)
-                device.IDUser = 10012;
+                device.IDUser = 10012;//کابر لاگین نشده
             else
                 device.IDUser = int.Parse(deviceRegister.IDUser);
 
