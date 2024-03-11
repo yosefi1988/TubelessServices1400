@@ -201,6 +201,7 @@ namespace TubelessServices.Controllers.media
                         else
                         {
                             var filePath = HttpContext.Current.Server.MapPath("~/Images/Blog/" + DateTime.Now.Year + "/" +
+                                BlogId + "_" +
                                 "P" + "_" +
                                 //postedFile.FileName +
                                 DateTime.Now.Year +
