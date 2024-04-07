@@ -102,7 +102,16 @@ namespace TubelessServices.Controllers.Post
                     float Amount = float.Parse(userCRUD.getTansactionValue(TransactionTypeCode)) * zarib;
                     int idApp = newPostRequest.IDApplication;
 
-                    Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, IDUser, IDUser, idApp, Amount, zarib, TransactionTypeCode, postId + "", null, newPostRequest.IP);
+                    bool isWaletTransation = false;
+                    try {
+                        if (newPostRequest.DirectPay == true)
+                            isWaletTransation = false;
+                        else
+                            isWaletTransation = true;
+                    }
+                    catch (Exception ex) { }
+
+                    Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, IDUser, IDUser, idApp, Amount, zarib, TransactionTypeCode, postId + "", null, newPostRequest.IP, isWaletTransation);
                     if (trans != null)
                     {
                         if (canSendDirectPost(newPostRequest.IDApplication))

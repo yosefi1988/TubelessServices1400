@@ -25,6 +25,7 @@
       <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="IP" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="isWalletTransaction" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Association Name="Tbl_Application_Tbl_WalletTransaction" Member="Tbl_Application" ThisKey="IDApplication" OtherKey="ID" Type="Tbl_Application" IsForeignKey="true" />
       <Association Name="Tbl_DetailsLookup_Tbl_WalletTransaction" Member="Tbl_DetailsLookup" ThisKey="TransactionTypeCode" OtherKey="Id" Type="Tbl_DetailsLookup" IsForeignKey="true" />
       <Association Name="Tbl_User_Tbl_WalletTransaction" Member="Tbl_User" ThisKey="IDUser" OtherKey="Id" Type="Tbl_User" IsForeignKey="true" />
@@ -71,6 +72,24 @@
       <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="Tbl_Post_Tbl_Faved_Post" Member="Tbl_Post" ThisKey="IDPost" OtherKey="Id" Type="Tbl_Post" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Tbl_User_Tbl_Faved_Post" Member="Tbl_User" ThisKey="IDUser" OtherKey="Id" Type="Tbl_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSettings" Member="Tbl_Loginto_DeviceSettings">
+    <Type Name="Tbl_Loginto_DeviceSetting">
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AutoAdd" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReciveNotifs" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSetting" Member="Tbl_Device" ThisKey="DeviceID" OtherKey="Id" Type="Tbl_Device" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSites" Member="Tbl_Loginto_DeviceSites">
+    <Type Name="Tbl_Loginto_DeviceSite">
+      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoginCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddedAuto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSite" Member="Tbl_Device" ThisKey="DeviceID" OtherKey="Id" Type="Tbl_Device" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="balabar1_Tubeless_Develop.Tbl_Loginto_Site" Member="Tbl_Loginto_Sites">
@@ -210,9 +229,9 @@
       <Column Name="IP" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="IDUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PushNotificaionToken" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Association Name="Tbl_Device_tbl_UsersDevice" Member="tbl_UsersDevices" ThisKey="Id" OtherKey="IDDevice" Type="tbl_UsersDevice" />
-      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSite" Member="Tbl_Loginto_DeviceSites" ThisKey="Id" OtherKey="DeviceID" Type="Tbl_Loginto_DeviceSite" />
       <Association Name="Tbl_Device_Tbl_Loginto_DeviceSetting" Member="Tbl_Loginto_DeviceSetting" ThisKey="Id" OtherKey="DeviceID" Type="Tbl_Loginto_DeviceSetting" Cardinality="One" />
+      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSite" Member="Tbl_Loginto_DeviceSites" ThisKey="Id" OtherKey="DeviceID" Type="Tbl_Loginto_DeviceSite" />
+      <Association Name="Tbl_Device_tbl_UsersDevice" Member="tbl_UsersDevices" ThisKey="Id" OtherKey="IDDevice" Type="tbl_UsersDevice" />
       <Association Name="Tbl_User_Tbl_Device" Member="Tbl_User" ThisKey="IDUser" OtherKey="Id" Type="Tbl_User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -337,36 +356,6 @@
       <Association Name="Tbl_User_Tbl_Wallet" Member="Tbl_User" ThisKey="IDUser" OtherKey="Id" Type="Tbl_User" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists" Member="View_loginto_users_site_lists">
-    <Type Name="View_loginto_users_site_list">
-      <Column Name="AndroidID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="SiteCode" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
-      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="LoginCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AddedAuto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSites" Member="Tbl_Loginto_DeviceSites">
-    <Type Name="Tbl_Loginto_DeviceSite">
-      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SiteID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="LoginCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="AddedAuto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSite" Member="Tbl_Device" ThisKey="DeviceID" OtherKey="Id" Type="Tbl_Device" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSettings" Member="Tbl_Loginto_DeviceSettings">
-    <Type Name="Tbl_Loginto_DeviceSetting">
-      <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="AutoAdd" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ReciveNotifs" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="Tbl_Device_Tbl_Loginto_DeviceSetting" Member="Tbl_Device" ThisKey="DeviceID" OtherKey="Id" Type="Tbl_Device" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="balabar1_Tubeless_Develop.report_ContactUsMessages" Member="report_ContactUsMessages">
     <Type Name="report_ContactUsMessage">
       <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -428,8 +417,8 @@
       <Column Name="StoreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists" Member="View_loginto_users_site_list1s">
-    <Type Name="View_loginto_users_site_list1">
+  <Table Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists" Member="View_loginto_users_site_lists">
+    <Type Name="View_loginto_users_site_list">
       <Column Name="AndroidID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="SiteCode" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="DeviceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -670,10 +659,6 @@
       <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Function Name="dbo.FNGetWalletBalanceByUserId" Method="FNGetWalletBalanceByUserId" IsComposable="true">
-    <Parameter Name="userId" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Decimal" />
-  </Function>
   <Function Name="balabar1_Tubeless_Develop.Sp_MyPostList" Method="Sp_MyPostList">
     <Parameter Name="IDUser" Parameter="iDUser" Type="System.String" DbType="NVarChar(30)" />
     <ElementType Name="Sp_MyPostListResult">
@@ -735,5 +720,9 @@
       <Column Name="IsFav" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="FavPostID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.FNGetWalletBalanceByUserId" Method="FNGetWalletBalanceByUserId" IsComposable="true">
+    <Parameter Name="userId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Decimal" />
   </Function>
 </Database>

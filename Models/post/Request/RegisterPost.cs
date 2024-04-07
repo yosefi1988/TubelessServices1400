@@ -16,6 +16,7 @@ namespace TubelessServices.Models.Post.Request
         public int CityCode { get; set; }       
         public string Amount { get; set; }
         public bool ReciveMessage { get; set; }        
+        public bool DirectPay { get; set; }
         public string PublishDate { get; set; }
         public string ExpireDate { get; set; }                
         public string IP { get; set; }

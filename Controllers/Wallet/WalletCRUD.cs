@@ -24,7 +24,36 @@ namespace TubelessServices.Controllers.Wallet
         UserCRUD userCRUD = new UserCRUD();
 
 
-        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount,float zarib , int TransactionTypeCode, String RefrenceNo, String MetaData, String ip)
+        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount, float zarib, int TransactionTypeCode, String RefrenceNo, String MetaData, String ip)
+        {
+            try
+            {
+                Tbl_WalletTransaction transaction = new Tbl_WalletTransaction();
+                if (Amount == 0)
+                    return transaction;
+
+                transaction.IDUser = newUserId;
+                transaction.IDUserCreator = IDUserCreator;
+                transaction.IDApplication = IdApp;
+                transaction.Amount = (decimal)Amount;
+                transaction.Zarib = zarib;
+                transaction.TransactionTypeCode = TransactionTypeCode;
+                transaction.RefrenceNo = RefrenceNo;
+                transaction.MetaData = MetaData;
+                transaction.TransactionTypeCode = TransactionTypeCode;
+                transaction.CreatedOn = DateTime.Now;
+                transaction.IP = ip;
+
+                db.Tbl_WalletTransactions.InsertOnSubmit(transaction);
+                db.SubmitChanges();
+                return transaction;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount,float zarib , int TransactionTypeCode, String RefrenceNo, String MetaData, String ip,bool isWaletTransaction)
         {
             try
             {
@@ -42,6 +71,7 @@ namespace TubelessServices.Controllers.Wallet
                 transaction.MetaData = MetaData;
                 transaction.TransactionTypeCode = TransactionTypeCode;
                 transaction.CreatedOn = DateTime.Now;
+                transaction.isWalletTransaction = isWaletTransaction;
                 transaction.IP = ip;
 
                 db.Tbl_WalletTransactions.InsertOnSubmit(transaction);

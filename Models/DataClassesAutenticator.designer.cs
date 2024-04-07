@@ -42,6 +42,12 @@ namespace TubelessServices.Models
     partial void InsertTbl_Faved_Post(Tbl_Faved_Post instance);
     partial void UpdateTbl_Faved_Post(Tbl_Faved_Post instance);
     partial void DeleteTbl_Faved_Post(Tbl_Faved_Post instance);
+    partial void InsertTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
+    partial void UpdateTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
+    partial void DeleteTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
+    partial void InsertTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
+    partial void UpdateTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
+    partial void DeleteTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
     partial void InsertTbl_Loginto_Site(Tbl_Loginto_Site instance);
     partial void UpdateTbl_Loginto_Site(Tbl_Loginto_Site instance);
     partial void DeleteTbl_Loginto_Site(Tbl_Loginto_Site instance);
@@ -87,12 +93,6 @@ namespace TubelessServices.Models
     partial void InsertTbl_Wallet(Tbl_Wallet instance);
     partial void UpdateTbl_Wallet(Tbl_Wallet instance);
     partial void DeleteTbl_Wallet(Tbl_Wallet instance);
-    partial void InsertTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
-    partial void UpdateTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
-    partial void DeleteTbl_Loginto_DeviceSite(Tbl_Loginto_DeviceSite instance);
-    partial void InsertTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
-    partial void UpdateTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
-    partial void DeleteTbl_Loginto_DeviceSetting(Tbl_Loginto_DeviceSetting instance);
     #endregion
 		
 		public DataClassesAutenticatorDataContext() : 
@@ -162,6 +162,22 @@ namespace TubelessServices.Models
 			get
 			{
 				return this.GetTable<Tbl_Faved_Post>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_Loginto_DeviceSetting> Tbl_Loginto_DeviceSettings
+		{
+			get
+			{
+				return this.GetTable<Tbl_Loginto_DeviceSetting>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_Loginto_DeviceSite> Tbl_Loginto_DeviceSites
+		{
+			get
+			{
+				return this.GetTable<Tbl_Loginto_DeviceSite>();
 			}
 		}
 		
@@ -285,30 +301,6 @@ namespace TubelessServices.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<View_loginto_users_site_list> View_loginto_users_site_lists
-		{
-			get
-			{
-				return this.GetTable<View_loginto_users_site_list>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Tbl_Loginto_DeviceSite> Tbl_Loginto_DeviceSites
-		{
-			get
-			{
-				return this.GetTable<Tbl_Loginto_DeviceSite>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Tbl_Loginto_DeviceSetting> Tbl_Loginto_DeviceSettings
-		{
-			get
-			{
-				return this.GetTable<Tbl_Loginto_DeviceSetting>();
-			}
-		}
-		
 		public System.Data.Linq.Table<report_ContactUsMessage> report_ContactUsMessages
 		{
 			get
@@ -341,11 +333,11 @@ namespace TubelessServices.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<View_loginto_users_site_list1> View_loginto_users_site_list1s
+		public System.Data.Linq.Table<View_loginto_users_site_list> View_loginto_users_site_lists
 		{
 			get
 			{
-				return this.GetTable<View_loginto_users_site_list1>();
+				return this.GetTable<View_loginto_users_site_list>();
 			}
 		}
 		
@@ -429,12 +421,6 @@ namespace TubelessServices.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FNGetWalletBalanceByUserId", IsComposable=true)]
-		public System.Nullable<decimal> FNGetWalletBalanceByUserId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userId)
-		{
-			return ((System.Nullable<decimal>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userId).ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="balabar1_Tubeless_Develop.Sp_MyPostList")]
 		public ISingleResult<Sp_MyPostListResult> Sp_MyPostList([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDUser", DbType="NVarChar(30)")] string iDUser)
 		{
@@ -447,6 +433,12 @@ namespace TubelessServices.Models
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDUser);
 			return ((ISingleResult<Sp_postList_loggedinResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.FNGetWalletBalanceByUserId", IsComposable=true)]
+		public System.Nullable<decimal> FNGetWalletBalanceByUserId([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> userId)
+		{
+			return ((System.Nullable<decimal>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userId).ReturnValue));
 		}
 	}
 	
@@ -729,6 +721,8 @@ namespace TubelessServices.Models
 		
 		private string _IP;
 		
+		private System.Nullable<bool> _isWalletTransaction;
+		
 		private EntityRef<Tbl_Application> _Tbl_Application;
 		
 		private EntityRef<Tbl_DetailsLookup> _Tbl_DetailsLookup;
@@ -763,6 +757,8 @@ namespace TubelessServices.Models
     partial void OnCreatedOnChanged();
     partial void OnIPChanging(string value);
     partial void OnIPChanged();
+    partial void OnisWalletTransactionChanging(System.Nullable<bool> value);
+    partial void OnisWalletTransactionChanged();
     #endregion
 		
 		public Tbl_WalletTransaction()
@@ -1006,6 +1002,26 @@ namespace TubelessServices.Models
 					this._IP = value;
 					this.SendPropertyChanged("IP");
 					this.OnIPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_isWalletTransaction", DbType="Bit")]
+		public System.Nullable<bool> isWalletTransaction
+		{
+			get
+			{
+				return this._isWalletTransaction;
+			}
+			set
+			{
+				if ((this._isWalletTransaction != value))
+				{
+					this.OnisWalletTransactionChanging(value);
+					this.SendPropertyChanging();
+					this._isWalletTransaction = value;
+					this.SendPropertyChanged("isWalletTransaction");
+					this.OnisWalletTransactionChanged();
 				}
 			}
 		}
@@ -1878,6 +1894,356 @@ namespace TubelessServices.Models
 						this._IDUser = default(int);
 					}
 					this.SendPropertyChanged("Tbl_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSettings")]
+	public partial class Tbl_Loginto_DeviceSetting : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DeviceID;
+		
+		private System.Nullable<bool> _AutoAdd;
+		
+		private System.Nullable<bool> _ReciveNotifs;
+		
+		private EntityRef<Tbl_Device> _Tbl_Device;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDeviceIDChanging(int value);
+    partial void OnDeviceIDChanged();
+    partial void OnAutoAddChanging(System.Nullable<bool> value);
+    partial void OnAutoAddChanged();
+    partial void OnReciveNotifsChanging(System.Nullable<bool> value);
+    partial void OnReciveNotifsChanged();
+    #endregion
+		
+		public Tbl_Loginto_DeviceSetting()
+		{
+			this._Tbl_Device = default(EntityRef<Tbl_Device>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					if (this._Tbl_Device.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDeviceIDChanging(value);
+					this.SendPropertyChanging();
+					this._DeviceID = value;
+					this.SendPropertyChanged("DeviceID");
+					this.OnDeviceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AutoAdd", DbType="Bit")]
+		public System.Nullable<bool> AutoAdd
+		{
+			get
+			{
+				return this._AutoAdd;
+			}
+			set
+			{
+				if ((this._AutoAdd != value))
+				{
+					this.OnAutoAddChanging(value);
+					this.SendPropertyChanging();
+					this._AutoAdd = value;
+					this.SendPropertyChanged("AutoAdd");
+					this.OnAutoAddChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveNotifs", DbType="Bit")]
+		public System.Nullable<bool> ReciveNotifs
+		{
+			get
+			{
+				return this._ReciveNotifs;
+			}
+			set
+			{
+				if ((this._ReciveNotifs != value))
+				{
+					this.OnReciveNotifsChanging(value);
+					this.SendPropertyChanging();
+					this._ReciveNotifs = value;
+					this.SendPropertyChanged("ReciveNotifs");
+					this.OnReciveNotifsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSetting", Storage="_Tbl_Device", ThisKey="DeviceID", OtherKey="Id", IsForeignKey=true)]
+		public Tbl_Device Tbl_Device
+		{
+			get
+			{
+				return this._Tbl_Device.Entity;
+			}
+			set
+			{
+				Tbl_Device previousValue = this._Tbl_Device.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_Device.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_Device.Entity = null;
+						previousValue.Tbl_Loginto_DeviceSetting = null;
+					}
+					this._Tbl_Device.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_Loginto_DeviceSetting = this;
+						this._DeviceID = value.Id;
+					}
+					else
+					{
+						this._DeviceID = default(int);
+					}
+					this.SendPropertyChanged("Tbl_Device");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSites")]
+	public partial class Tbl_Loginto_DeviceSite : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _DeviceID;
+		
+		private System.Guid _SiteID;
+		
+		private System.Nullable<System.DateTime> _LastLoginDate;
+		
+		private System.Nullable<int> _LoginCount;
+		
+		private System.Nullable<bool> _AddedAuto;
+		
+		private EntityRef<Tbl_Device> _Tbl_Device;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDeviceIDChanging(int value);
+    partial void OnDeviceIDChanged();
+    partial void OnSiteIDChanging(System.Guid value);
+    partial void OnSiteIDChanged();
+    partial void OnLastLoginDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastLoginDateChanged();
+    partial void OnLoginCountChanging(System.Nullable<int> value);
+    partial void OnLoginCountChanged();
+    partial void OnAddedAutoChanging(System.Nullable<bool> value);
+    partial void OnAddedAutoChanged();
+    #endregion
+		
+		public Tbl_Loginto_DeviceSite()
+		{
+			this._Tbl_Device = default(EntityRef<Tbl_Device>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int DeviceID
+		{
+			get
+			{
+				return this._DeviceID;
+			}
+			set
+			{
+				if ((this._DeviceID != value))
+				{
+					if (this._Tbl_Device.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDeviceIDChanging(value);
+					this.SendPropertyChanging();
+					this._DeviceID = value;
+					this.SendPropertyChanged("DeviceID");
+					this.OnDeviceIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
+		public System.Guid SiteID
+		{
+			get
+			{
+				return this._SiteID;
+			}
+			set
+			{
+				if ((this._SiteID != value))
+				{
+					this.OnSiteIDChanging(value);
+					this.SendPropertyChanging();
+					this._SiteID = value;
+					this.SendPropertyChanged("SiteID");
+					this.OnSiteIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastLoginDate
+		{
+			get
+			{
+				return this._LastLoginDate;
+			}
+			set
+			{
+				if ((this._LastLoginDate != value))
+				{
+					this.OnLastLoginDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastLoginDate = value;
+					this.SendPropertyChanged("LastLoginDate");
+					this.OnLastLoginDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoginCount", DbType="Int")]
+		public System.Nullable<int> LoginCount
+		{
+			get
+			{
+				return this._LoginCount;
+			}
+			set
+			{
+				if ((this._LoginCount != value))
+				{
+					this.OnLoginCountChanging(value);
+					this.SendPropertyChanging();
+					this._LoginCount = value;
+					this.SendPropertyChanged("LoginCount");
+					this.OnLoginCountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedAuto", DbType="Bit")]
+		public System.Nullable<bool> AddedAuto
+		{
+			get
+			{
+				return this._AddedAuto;
+			}
+			set
+			{
+				if ((this._AddedAuto != value))
+				{
+					this.OnAddedAutoChanging(value);
+					this.SendPropertyChanging();
+					this._AddedAuto = value;
+					this.SendPropertyChanged("AddedAuto");
+					this.OnAddedAutoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSite", Storage="_Tbl_Device", ThisKey="DeviceID", OtherKey="Id", IsForeignKey=true)]
+		public Tbl_Device Tbl_Device
+		{
+			get
+			{
+				return this._Tbl_Device.Entity;
+			}
+			set
+			{
+				Tbl_Device previousValue = this._Tbl_Device.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_Device.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_Device.Entity = null;
+						previousValue.Tbl_Loginto_DeviceSites.Remove(this);
+					}
+					this._Tbl_Device.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_Loginto_DeviceSites.Add(this);
+						this._DeviceID = value.Id;
+					}
+					else
+					{
+						this._DeviceID = default(int);
+					}
+					this.SendPropertyChanged("Tbl_Device");
 				}
 			}
 		}
@@ -4494,11 +4860,11 @@ namespace TubelessServices.Models
 		
 		private string _PushNotificaionToken;
 		
-		private EntitySet<tbl_UsersDevice> _tbl_UsersDevices;
+		private EntityRef<Tbl_Loginto_DeviceSetting> _Tbl_Loginto_DeviceSetting;
 		
 		private EntitySet<Tbl_Loginto_DeviceSite> _Tbl_Loginto_DeviceSites;
 		
-		private EntityRef<Tbl_Loginto_DeviceSetting> _Tbl_Loginto_DeviceSetting;
+		private EntitySet<tbl_UsersDevice> _tbl_UsersDevices;
 		
 		private EntityRef<Tbl_User> _Tbl_User;
 		
@@ -4542,9 +4908,9 @@ namespace TubelessServices.Models
 		
 		public Tbl_Device()
 		{
-			this._tbl_UsersDevices = new EntitySet<tbl_UsersDevice>(new Action<tbl_UsersDevice>(this.attach_tbl_UsersDevices), new Action<tbl_UsersDevice>(this.detach_tbl_UsersDevices));
-			this._Tbl_Loginto_DeviceSites = new EntitySet<Tbl_Loginto_DeviceSite>(new Action<Tbl_Loginto_DeviceSite>(this.attach_Tbl_Loginto_DeviceSites), new Action<Tbl_Loginto_DeviceSite>(this.detach_Tbl_Loginto_DeviceSites));
 			this._Tbl_Loginto_DeviceSetting = default(EntityRef<Tbl_Loginto_DeviceSetting>);
+			this._Tbl_Loginto_DeviceSites = new EntitySet<Tbl_Loginto_DeviceSite>(new Action<Tbl_Loginto_DeviceSite>(this.attach_Tbl_Loginto_DeviceSites), new Action<Tbl_Loginto_DeviceSite>(this.detach_Tbl_Loginto_DeviceSites));
+			this._tbl_UsersDevices = new EntitySet<tbl_UsersDevice>(new Action<tbl_UsersDevice>(this.attach_tbl_UsersDevices), new Action<tbl_UsersDevice>(this.detach_tbl_UsersDevices));
 			this._Tbl_User = default(EntityRef<Tbl_User>);
 			OnCreated();
 		}
@@ -4873,32 +5239,6 @@ namespace TubelessServices.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_tbl_UsersDevice", Storage="_tbl_UsersDevices", ThisKey="Id", OtherKey="IDDevice")]
-		public EntitySet<tbl_UsersDevice> tbl_UsersDevices
-		{
-			get
-			{
-				return this._tbl_UsersDevices;
-			}
-			set
-			{
-				this._tbl_UsersDevices.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSite", Storage="_Tbl_Loginto_DeviceSites", ThisKey="Id", OtherKey="DeviceID")]
-		public EntitySet<Tbl_Loginto_DeviceSite> Tbl_Loginto_DeviceSites
-		{
-			get
-			{
-				return this._Tbl_Loginto_DeviceSites;
-			}
-			set
-			{
-				this._Tbl_Loginto_DeviceSites.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSetting", Storage="_Tbl_Loginto_DeviceSetting", ThisKey="Id", OtherKey="DeviceID", IsUnique=true, IsForeignKey=false)]
 		public Tbl_Loginto_DeviceSetting Tbl_Loginto_DeviceSetting
 		{
@@ -4925,6 +5265,32 @@ namespace TubelessServices.Models
 					}
 					this.SendPropertyChanged("Tbl_Loginto_DeviceSetting");
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSite", Storage="_Tbl_Loginto_DeviceSites", ThisKey="Id", OtherKey="DeviceID")]
+		public EntitySet<Tbl_Loginto_DeviceSite> Tbl_Loginto_DeviceSites
+		{
+			get
+			{
+				return this._Tbl_Loginto_DeviceSites;
+			}
+			set
+			{
+				this._Tbl_Loginto_DeviceSites.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_tbl_UsersDevice", Storage="_tbl_UsersDevices", ThisKey="Id", OtherKey="IDDevice")]
+		public EntitySet<tbl_UsersDevice> tbl_UsersDevices
+		{
+			get
+			{
+				return this._tbl_UsersDevices;
+			}
+			set
+			{
+				this._tbl_UsersDevices.Assign(value);
 			}
 		}
 		
@@ -4982,18 +5348,6 @@ namespace TubelessServices.Models
 			}
 		}
 		
-		private void attach_tbl_UsersDevices(tbl_UsersDevice entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_Device = this;
-		}
-		
-		private void detach_tbl_UsersDevices(tbl_UsersDevice entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_Device = null;
-		}
-		
 		private void attach_Tbl_Loginto_DeviceSites(Tbl_Loginto_DeviceSite entity)
 		{
 			this.SendPropertyChanging();
@@ -5001,6 +5355,18 @@ namespace TubelessServices.Models
 		}
 		
 		private void detach_Tbl_Loginto_DeviceSites(Tbl_Loginto_DeviceSite entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Device = null;
+		}
+		
+		private void attach_tbl_UsersDevices(tbl_UsersDevice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Device = this;
+		}
+		
+		private void detach_tbl_UsersDevices(tbl_UsersDevice entity)
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_Device = null;
@@ -7828,509 +8194,6 @@ namespace TubelessServices.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists")]
-	public partial class View_loginto_users_site_list
-	{
-		
-		private string _AndroidID;
-		
-		private System.Guid _SiteCode;
-		
-		private int _DeviceID;
-		
-		private string _Title;
-		
-		private System.Nullable<bool> _IsActive;
-		
-		private System.Nullable<System.DateTime> _LastLoginDate;
-		
-		private System.Nullable<int> _LoginCount;
-		
-		private System.Nullable<bool> _AddedAuto;
-		
-		public View_loginto_users_site_list()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AndroidID", DbType="NVarChar(MAX)")]
-		public string AndroidID
-		{
-			get
-			{
-				return this._AndroidID;
-			}
-			set
-			{
-				if ((this._AndroidID != value))
-				{
-					this._AndroidID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteCode", DbType="UniqueIdentifier NOT NULL")]
-		public System.Guid SiteCode
-		{
-			get
-			{
-				return this._SiteCode;
-			}
-			set
-			{
-				if ((this._SiteCode != value))
-				{
-					this._SiteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL")]
-		public int DeviceID
-		{
-			get
-			{
-				return this._DeviceID;
-			}
-			set
-			{
-				if ((this._DeviceID != value))
-				{
-					this._DeviceID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(MAX)")]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit")]
-		public System.Nullable<bool> IsActive
-		{
-			get
-			{
-				return this._IsActive;
-			}
-			set
-			{
-				if ((this._IsActive != value))
-				{
-					this._IsActive = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> LastLoginDate
-		{
-			get
-			{
-				return this._LastLoginDate;
-			}
-			set
-			{
-				if ((this._LastLoginDate != value))
-				{
-					this._LastLoginDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoginCount", DbType="Int")]
-		public System.Nullable<int> LoginCount
-		{
-			get
-			{
-				return this._LoginCount;
-			}
-			set
-			{
-				if ((this._LoginCount != value))
-				{
-					this._LoginCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedAuto", DbType="Bit")]
-		public System.Nullable<bool> AddedAuto
-		{
-			get
-			{
-				return this._AddedAuto;
-			}
-			set
-			{
-				if ((this._AddedAuto != value))
-				{
-					this._AddedAuto = value;
-				}
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSites")]
-	public partial class Tbl_Loginto_DeviceSite : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DeviceID;
-		
-		private System.Guid _SiteID;
-		
-		private System.Nullable<System.DateTime> _LastLoginDate;
-		
-		private System.Nullable<int> _LoginCount;
-		
-		private System.Nullable<bool> _AddedAuto;
-		
-		private EntityRef<Tbl_Device> _Tbl_Device;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDeviceIDChanging(int value);
-    partial void OnDeviceIDChanged();
-    partial void OnSiteIDChanging(System.Guid value);
-    partial void OnSiteIDChanged();
-    partial void OnLastLoginDateChanging(System.Nullable<System.DateTime> value);
-    partial void OnLastLoginDateChanged();
-    partial void OnLoginCountChanging(System.Nullable<int> value);
-    partial void OnLoginCountChanged();
-    partial void OnAddedAutoChanging(System.Nullable<bool> value);
-    partial void OnAddedAutoChanged();
-    #endregion
-		
-		public Tbl_Loginto_DeviceSite()
-		{
-			this._Tbl_Device = default(EntityRef<Tbl_Device>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int DeviceID
-		{
-			get
-			{
-				return this._DeviceID;
-			}
-			set
-			{
-				if ((this._DeviceID != value))
-				{
-					if (this._Tbl_Device.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDeviceIDChanging(value);
-					this.SendPropertyChanging();
-					this._DeviceID = value;
-					this.SendPropertyChanged("DeviceID");
-					this.OnDeviceIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteID", DbType="UniqueIdentifier NOT NULL", IsPrimaryKey=true)]
-		public System.Guid SiteID
-		{
-			get
-			{
-				return this._SiteID;
-			}
-			set
-			{
-				if ((this._SiteID != value))
-				{
-					this.OnSiteIDChanging(value);
-					this.SendPropertyChanging();
-					this._SiteID = value;
-					this.SendPropertyChanged("SiteID");
-					this.OnSiteIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastLoginDate", DbType="DateTime")]
-		public System.Nullable<System.DateTime> LastLoginDate
-		{
-			get
-			{
-				return this._LastLoginDate;
-			}
-			set
-			{
-				if ((this._LastLoginDate != value))
-				{
-					this.OnLastLoginDateChanging(value);
-					this.SendPropertyChanging();
-					this._LastLoginDate = value;
-					this.SendPropertyChanged("LastLoginDate");
-					this.OnLastLoginDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LoginCount", DbType="Int")]
-		public System.Nullable<int> LoginCount
-		{
-			get
-			{
-				return this._LoginCount;
-			}
-			set
-			{
-				if ((this._LoginCount != value))
-				{
-					this.OnLoginCountChanging(value);
-					this.SendPropertyChanging();
-					this._LoginCount = value;
-					this.SendPropertyChanged("LoginCount");
-					this.OnLoginCountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedAuto", DbType="Bit")]
-		public System.Nullable<bool> AddedAuto
-		{
-			get
-			{
-				return this._AddedAuto;
-			}
-			set
-			{
-				if ((this._AddedAuto != value))
-				{
-					this.OnAddedAutoChanging(value);
-					this.SendPropertyChanging();
-					this._AddedAuto = value;
-					this.SendPropertyChanged("AddedAuto");
-					this.OnAddedAutoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSite", Storage="_Tbl_Device", ThisKey="DeviceID", OtherKey="Id", IsForeignKey=true)]
-		public Tbl_Device Tbl_Device
-		{
-			get
-			{
-				return this._Tbl_Device.Entity;
-			}
-			set
-			{
-				Tbl_Device previousValue = this._Tbl_Device.Entity;
-				if (((previousValue != value) 
-							|| (this._Tbl_Device.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Tbl_Device.Entity = null;
-						previousValue.Tbl_Loginto_DeviceSites.Remove(this);
-					}
-					this._Tbl_Device.Entity = value;
-					if ((value != null))
-					{
-						value.Tbl_Loginto_DeviceSites.Add(this);
-						this._DeviceID = value.Id;
-					}
-					else
-					{
-						this._DeviceID = default(int);
-					}
-					this.SendPropertyChanged("Tbl_Device");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Tbl_Loginto_DeviceSettings")]
-	public partial class Tbl_Loginto_DeviceSetting : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _DeviceID;
-		
-		private System.Nullable<bool> _AutoAdd;
-		
-		private System.Nullable<bool> _ReciveNotifs;
-		
-		private EntityRef<Tbl_Device> _Tbl_Device;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnDeviceIDChanging(int value);
-    partial void OnDeviceIDChanged();
-    partial void OnAutoAddChanging(System.Nullable<bool> value);
-    partial void OnAutoAddChanged();
-    partial void OnReciveNotifsChanging(System.Nullable<bool> value);
-    partial void OnReciveNotifsChanged();
-    #endregion
-		
-		public Tbl_Loginto_DeviceSetting()
-		{
-			this._Tbl_Device = default(EntityRef<Tbl_Device>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DeviceID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int DeviceID
-		{
-			get
-			{
-				return this._DeviceID;
-			}
-			set
-			{
-				if ((this._DeviceID != value))
-				{
-					if (this._Tbl_Device.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDeviceIDChanging(value);
-					this.SendPropertyChanging();
-					this._DeviceID = value;
-					this.SendPropertyChanged("DeviceID");
-					this.OnDeviceIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AutoAdd", DbType="Bit")]
-		public System.Nullable<bool> AutoAdd
-		{
-			get
-			{
-				return this._AutoAdd;
-			}
-			set
-			{
-				if ((this._AutoAdd != value))
-				{
-					this.OnAutoAddChanging(value);
-					this.SendPropertyChanging();
-					this._AutoAdd = value;
-					this.SendPropertyChanged("AutoAdd");
-					this.OnAutoAddChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReciveNotifs", DbType="Bit")]
-		public System.Nullable<bool> ReciveNotifs
-		{
-			get
-			{
-				return this._ReciveNotifs;
-			}
-			set
-			{
-				if ((this._ReciveNotifs != value))
-				{
-					this.OnReciveNotifsChanging(value);
-					this.SendPropertyChanging();
-					this._ReciveNotifs = value;
-					this.SendPropertyChanged("ReciveNotifs");
-					this.OnReciveNotifsChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Device_Tbl_Loginto_DeviceSetting", Storage="_Tbl_Device", ThisKey="DeviceID", OtherKey="Id", IsForeignKey=true)]
-		public Tbl_Device Tbl_Device
-		{
-			get
-			{
-				return this._Tbl_Device.Entity;
-			}
-			set
-			{
-				Tbl_Device previousValue = this._Tbl_Device.Entity;
-				if (((previousValue != value) 
-							|| (this._Tbl_Device.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Tbl_Device.Entity = null;
-						previousValue.Tbl_Loginto_DeviceSetting = null;
-					}
-					this._Tbl_Device.Entity = value;
-					if ((value != null))
-					{
-						value.Tbl_Loginto_DeviceSetting = this;
-						this._DeviceID = value.Id;
-					}
-					else
-					{
-						this._DeviceID = default(int);
-					}
-					this.SendPropertyChanged("Tbl_Device");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.report_ContactUsMessages")]
 	public partial class report_ContactUsMessage
 	{
@@ -9178,7 +9041,7 @@ namespace TubelessServices.Models
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.View_loginto_users_site_lists")]
-	public partial class View_loginto_users_site_list1
+	public partial class View_loginto_users_site_list
 	{
 		
 		private string _AndroidID;
@@ -9197,7 +9060,7 @@ namespace TubelessServices.Models
 		
 		private System.Nullable<bool> _AddedAuto;
 		
-		public View_loginto_users_site_list1()
+		public View_loginto_users_site_list()
 		{
 		}
 		
