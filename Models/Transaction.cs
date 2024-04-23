@@ -15,6 +15,7 @@ namespace TubelessServices.Models
         public string icon { get; set; }
 
         public string RefrenceNo { get; set; }
+        public string IdPost { get; set; }
         public string title { get; set; }
         public long Amount { get; set; }
         public float Zarib{ get; set; }

@@ -9,6 +9,7 @@
       <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="Tbl_ApplicationStore_Tbl_DeviceApp" Member="Tbl_DeviceApps" ThisKey="ID" OtherKey="IDApplicationStore" Type="Tbl_DeviceApp" />
+      <Association Name="Tbl_ApplicationStore_Tbl_ApplicationStorePermission" Member="Tbl_ApplicationStorePermissions" ThisKey="ID" OtherKey="ApplicationStoreId" Type="Tbl_ApplicationStorePermission" />
       <Association Name="Tbl_Application_Tbl_ApplicationStore" Member="Tbl_Application" ThisKey="IDApplication" OtherKey="ID" Type="Tbl_Application" IsForeignKey="true" />
     </Type>
   </Table>
@@ -208,6 +209,7 @@
       <Association Name="Tbl_DetailsLookup_Tbl_Application" Member="Tbl_Applications" ThisKey="Id" OtherKey="AppTypeCode" Type="Tbl_Application" />
       <Association Name="Tbl_DetailsLookup_Tbl_Message" Member="Tbl_Messages" ThisKey="Id" OtherKey="Type" Type="Tbl_Message" />
       <Association Name="Tbl_DetailsLookup_Tbl_User" Member="Tbl_Users" ThisKey="Id" OtherKey="UserTypeCode" Type="Tbl_User" />
+      <Association Name="Tbl_DetailsLookup_Tbl_ApplicationStorePermission" Member="Tbl_ApplicationStorePermissions" ThisKey="Id" OtherKey="UserTypeCode" Type="Tbl_ApplicationStorePermission" />
       <Association Name="Tbl_CategoriesLookUp_Tbl_DetailsLookup" Member="Tbl_CategoriesLookUp" ThisKey="IDCategoryLookUp" OtherKey="Id" Type="Tbl_CategoriesLookUp" IsForeignKey="true" />
     </Type>
   </Table>
@@ -657,6 +659,18 @@
       <Column Name="RefrenceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="MetaData" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="balabar1_Tubeless_Develop.Tbl_ApplicationStorePermissions" Member="Tbl_ApplicationStorePermissions">
+    <Type Name="Tbl_ApplicationStorePermission">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ApplicationStoreId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsPostFree" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SendImageInPost" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsViewFree" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Tbl_ApplicationStore_Tbl_ApplicationStorePermission" Member="Tbl_ApplicationStore" ThisKey="ApplicationStoreId" OtherKey="ID" Type="Tbl_ApplicationStore" IsForeignKey="true" />
+      <Association Name="Tbl_DetailsLookup_Tbl_ApplicationStorePermission" Member="Tbl_DetailsLookup" ThisKey="UserTypeCode" OtherKey="Id" Type="Tbl_DetailsLookup" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="balabar1_Tubeless_Develop.Sp_MyPostList" Method="Sp_MyPostList">

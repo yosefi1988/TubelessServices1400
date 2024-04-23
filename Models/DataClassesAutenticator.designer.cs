@@ -93,6 +93,9 @@ namespace TubelessServices.Models
     partial void InsertTbl_Wallet(Tbl_Wallet instance);
     partial void UpdateTbl_Wallet(Tbl_Wallet instance);
     partial void DeleteTbl_Wallet(Tbl_Wallet instance);
+    partial void InsertTbl_ApplicationStorePermission(Tbl_ApplicationStorePermission instance);
+    partial void UpdateTbl_ApplicationStorePermission(Tbl_ApplicationStorePermission instance);
+    partial void DeleteTbl_ApplicationStorePermission(Tbl_ApplicationStorePermission instance);
     #endregion
 		
 		public DataClassesAutenticatorDataContext() : 
@@ -421,6 +424,14 @@ namespace TubelessServices.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<Tbl_ApplicationStorePermission> Tbl_ApplicationStorePermissions
+		{
+			get
+			{
+				return this.GetTable<Tbl_ApplicationStorePermission>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="balabar1_Tubeless_Develop.Sp_MyPostList")]
 		public ISingleResult<Sp_MyPostListResult> Sp_MyPostList([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDUser", DbType="NVarChar(30)")] string iDUser)
 		{
@@ -462,6 +473,8 @@ namespace TubelessServices.Models
 		
 		private EntitySet<Tbl_DeviceApp> _Tbl_DeviceApps;
 		
+		private EntitySet<Tbl_ApplicationStorePermission> _Tbl_ApplicationStorePermissions;
+		
 		private EntityRef<Tbl_Application> _Tbl_Application;
 		
     #region Extensibility Method Definitions
@@ -485,6 +498,7 @@ namespace TubelessServices.Models
 		public Tbl_ApplicationStore()
 		{
 			this._Tbl_DeviceApps = new EntitySet<Tbl_DeviceApp>(new Action<Tbl_DeviceApp>(this.attach_Tbl_DeviceApps), new Action<Tbl_DeviceApp>(this.detach_Tbl_DeviceApps));
+			this._Tbl_ApplicationStorePermissions = new EntitySet<Tbl_ApplicationStorePermission>(new Action<Tbl_ApplicationStorePermission>(this.attach_Tbl_ApplicationStorePermissions), new Action<Tbl_ApplicationStorePermission>(this.detach_Tbl_ApplicationStorePermissions));
 			this._Tbl_Application = default(EntityRef<Tbl_Application>);
 			OnCreated();
 		}
@@ -626,6 +640,19 @@ namespace TubelessServices.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_ApplicationStore_Tbl_ApplicationStorePermission", Storage="_Tbl_ApplicationStorePermissions", ThisKey="ID", OtherKey="ApplicationStoreId")]
+		public EntitySet<Tbl_ApplicationStorePermission> Tbl_ApplicationStorePermissions
+		{
+			get
+			{
+				return this._Tbl_ApplicationStorePermissions;
+			}
+			set
+			{
+				this._Tbl_ApplicationStorePermissions.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Application_Tbl_ApplicationStore", Storage="_Tbl_Application", ThisKey="IDApplication", OtherKey="ID", IsForeignKey=true)]
 		public Tbl_Application Tbl_Application
 		{
@@ -687,6 +714,18 @@ namespace TubelessServices.Models
 		}
 		
 		private void detach_Tbl_DeviceApps(Tbl_DeviceApp entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_ApplicationStore = null;
+		}
+		
+		private void attach_Tbl_ApplicationStorePermissions(Tbl_ApplicationStorePermission entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_ApplicationStore = this;
+		}
+		
+		private void detach_Tbl_ApplicationStorePermissions(Tbl_ApplicationStorePermission entity)
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_ApplicationStore = null;
@@ -4377,6 +4416,8 @@ namespace TubelessServices.Models
 		
 		private EntitySet<Tbl_User> _Tbl_Users;
 		
+		private EntitySet<Tbl_ApplicationStorePermission> _Tbl_ApplicationStorePermissions;
+		
 		private EntityRef<Tbl_CategoriesLookUp> _Tbl_CategoriesLookUp;
 		
     #region Extensibility Method Definitions
@@ -4414,6 +4455,7 @@ namespace TubelessServices.Models
 			this._Tbl_Applications = new EntitySet<Tbl_Application>(new Action<Tbl_Application>(this.attach_Tbl_Applications), new Action<Tbl_Application>(this.detach_Tbl_Applications));
 			this._Tbl_Messages = new EntitySet<Tbl_Message>(new Action<Tbl_Message>(this.attach_Tbl_Messages), new Action<Tbl_Message>(this.detach_Tbl_Messages));
 			this._Tbl_Users = new EntitySet<Tbl_User>(new Action<Tbl_User>(this.attach_Tbl_Users), new Action<Tbl_User>(this.detach_Tbl_Users));
+			this._Tbl_ApplicationStorePermissions = new EntitySet<Tbl_ApplicationStorePermission>(new Action<Tbl_ApplicationStorePermission>(this.attach_Tbl_ApplicationStorePermissions), new Action<Tbl_ApplicationStorePermission>(this.detach_Tbl_ApplicationStorePermissions));
 			this._Tbl_CategoriesLookUp = default(EntityRef<Tbl_CategoriesLookUp>);
 			OnCreated();
 		}
@@ -4707,6 +4749,19 @@ namespace TubelessServices.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_DetailsLookup_Tbl_ApplicationStorePermission", Storage="_Tbl_ApplicationStorePermissions", ThisKey="Id", OtherKey="UserTypeCode")]
+		public EntitySet<Tbl_ApplicationStorePermission> Tbl_ApplicationStorePermissions
+		{
+			get
+			{
+				return this._Tbl_ApplicationStorePermissions;
+			}
+			set
+			{
+				this._Tbl_ApplicationStorePermissions.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_CategoriesLookUp_Tbl_DetailsLookup", Storage="_Tbl_CategoriesLookUp", ThisKey="IDCategoryLookUp", OtherKey="Id", IsForeignKey=true)]
 		public Tbl_CategoriesLookUp Tbl_CategoriesLookUp
 		{
@@ -4816,6 +4871,18 @@ namespace TubelessServices.Models
 		}
 		
 		private void detach_Tbl_Users(Tbl_User entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_DetailsLookup = null;
+		}
+		
+		private void attach_Tbl_ApplicationStorePermissions(Tbl_ApplicationStorePermission entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_DetailsLookup = this;
+		}
+		
+		private void detach_Tbl_ApplicationStorePermissions(Tbl_ApplicationStorePermission entity)
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_DetailsLookup = null;
@@ -12699,6 +12766,270 @@ namespace TubelessServices.Models
 				{
 					this._CreatedOn = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="balabar1_Tubeless_Develop.Tbl_ApplicationStorePermissions")]
+	public partial class Tbl_ApplicationStorePermission : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _ApplicationStoreId;
+		
+		private System.Nullable<bool> _IsPostFree;
+		
+		private System.Nullable<bool> _SendImageInPost;
+		
+		private System.Nullable<bool> _IsViewFree;
+		
+		private int _UserTypeCode;
+		
+		private EntityRef<Tbl_ApplicationStore> _Tbl_ApplicationStore;
+		
+		private EntityRef<Tbl_DetailsLookup> _Tbl_DetailsLookup;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnApplicationStoreIdChanging(int value);
+    partial void OnApplicationStoreIdChanged();
+    partial void OnIsPostFreeChanging(System.Nullable<bool> value);
+    partial void OnIsPostFreeChanged();
+    partial void OnSendImageInPostChanging(System.Nullable<bool> value);
+    partial void OnSendImageInPostChanged();
+    partial void OnIsViewFreeChanging(System.Nullable<bool> value);
+    partial void OnIsViewFreeChanged();
+    partial void OnUserTypeCodeChanging(int value);
+    partial void OnUserTypeCodeChanged();
+    #endregion
+		
+		public Tbl_ApplicationStorePermission()
+		{
+			this._Tbl_ApplicationStore = default(EntityRef<Tbl_ApplicationStore>);
+			this._Tbl_DetailsLookup = default(EntityRef<Tbl_DetailsLookup>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApplicationStoreId", DbType="Int NOT NULL")]
+		public int ApplicationStoreId
+		{
+			get
+			{
+				return this._ApplicationStoreId;
+			}
+			set
+			{
+				if ((this._ApplicationStoreId != value))
+				{
+					if (this._Tbl_ApplicationStore.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnApplicationStoreIdChanging(value);
+					this.SendPropertyChanging();
+					this._ApplicationStoreId = value;
+					this.SendPropertyChanged("ApplicationStoreId");
+					this.OnApplicationStoreIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsPostFree", DbType="Bit")]
+		public System.Nullable<bool> IsPostFree
+		{
+			get
+			{
+				return this._IsPostFree;
+			}
+			set
+			{
+				if ((this._IsPostFree != value))
+				{
+					this.OnIsPostFreeChanging(value);
+					this.SendPropertyChanging();
+					this._IsPostFree = value;
+					this.SendPropertyChanged("IsPostFree");
+					this.OnIsPostFreeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SendImageInPost", DbType="Bit")]
+		public System.Nullable<bool> SendImageInPost
+		{
+			get
+			{
+				return this._SendImageInPost;
+			}
+			set
+			{
+				if ((this._SendImageInPost != value))
+				{
+					this.OnSendImageInPostChanging(value);
+					this.SendPropertyChanging();
+					this._SendImageInPost = value;
+					this.SendPropertyChanged("SendImageInPost");
+					this.OnSendImageInPostChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsViewFree", DbType="Bit")]
+		public System.Nullable<bool> IsViewFree
+		{
+			get
+			{
+				return this._IsViewFree;
+			}
+			set
+			{
+				if ((this._IsViewFree != value))
+				{
+					this.OnIsViewFreeChanging(value);
+					this.SendPropertyChanging();
+					this._IsViewFree = value;
+					this.SendPropertyChanged("IsViewFree");
+					this.OnIsViewFreeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTypeCode", DbType="Int NOT NULL")]
+		public int UserTypeCode
+		{
+			get
+			{
+				return this._UserTypeCode;
+			}
+			set
+			{
+				if ((this._UserTypeCode != value))
+				{
+					if (this._Tbl_DetailsLookup.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUserTypeCodeChanging(value);
+					this.SendPropertyChanging();
+					this._UserTypeCode = value;
+					this.SendPropertyChanged("UserTypeCode");
+					this.OnUserTypeCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_ApplicationStore_Tbl_ApplicationStorePermission", Storage="_Tbl_ApplicationStore", ThisKey="ApplicationStoreId", OtherKey="ID", IsForeignKey=true)]
+		public Tbl_ApplicationStore Tbl_ApplicationStore
+		{
+			get
+			{
+				return this._Tbl_ApplicationStore.Entity;
+			}
+			set
+			{
+				Tbl_ApplicationStore previousValue = this._Tbl_ApplicationStore.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_ApplicationStore.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_ApplicationStore.Entity = null;
+						previousValue.Tbl_ApplicationStorePermissions.Remove(this);
+					}
+					this._Tbl_ApplicationStore.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_ApplicationStorePermissions.Add(this);
+						this._ApplicationStoreId = value.ID;
+					}
+					else
+					{
+						this._ApplicationStoreId = default(int);
+					}
+					this.SendPropertyChanged("Tbl_ApplicationStore");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_DetailsLookup_Tbl_ApplicationStorePermission", Storage="_Tbl_DetailsLookup", ThisKey="UserTypeCode", OtherKey="Id", IsForeignKey=true)]
+		public Tbl_DetailsLookup Tbl_DetailsLookup
+		{
+			get
+			{
+				return this._Tbl_DetailsLookup.Entity;
+			}
+			set
+			{
+				Tbl_DetailsLookup previousValue = this._Tbl_DetailsLookup.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_DetailsLookup.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_DetailsLookup.Entity = null;
+						previousValue.Tbl_ApplicationStorePermissions.Remove(this);
+					}
+					this._Tbl_DetailsLookup.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_ApplicationStorePermissions.Add(this);
+						this._UserTypeCode = value.Id;
+					}
+					else
+					{
+						this._UserTypeCode = default(int);
+					}
+					this.SendPropertyChanged("Tbl_DetailsLookup");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

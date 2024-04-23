@@ -275,12 +275,16 @@ namespace TubelessServices.Controllers.Wallet
                 transactionItem.TTN = transaction.TransactionTypeName;
                 transactionItem.image = transaction.ImageUrl;
                 transactionItem.icon = transaction.icon;
-                transactionItem.title = transaction.PostTitle;
+                //transactionItem.Zarib = transaction.;
+
+                if (transactionItem.TTC != 5)            //5 = شارژ کیف پول
+                    transactionItem.title = transaction.PostTitle;
                 
                 transactionItem.DateTime = Date.convertToPersianDate(transaction.CreatedOn);
 
                 //if (transaction.TransactionTypeCode == (int)WalletController.TransactionTypeCodeEnum.WalletSharje)
                 transactionItem.RefrenceNo = transaction.RefrenceNo;
+                transactionItem.IdPost = transaction.IDPost.ToString();
                 transactionItem.ID = transaction.TransactionID;
 
                 transactionListOut.Add(transactionItem);

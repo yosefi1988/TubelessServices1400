@@ -37,7 +37,7 @@ namespace TubelessServices.Controllers.Post
         PostCRUD postCRUD = new PostCRUD();
         ResponsePostList response = new ResponsePostList();
 
-
+        //todo remove and go to NewPost2
         [HttpPost]
         [Route("NewPost")]
         public string NewPost(RegisterPost newPostRequest)
@@ -162,6 +162,109 @@ namespace TubelessServices.Controllers.Post
                 return ssssssss;
             }
         }
+
+
+        [HttpPost]
+        [Route("NewPost2")]
+        public string NewPost2(RegisterPost newPostRequest)
+        {
+            Tbl_User user = userCRUD.findUserByUserCode(newPostRequest.UserCode).First();
+
+            int postId = postCRUD.regNewPost(newPostRequest, user);
+            if (postId != 0)
+            {
+                Tbl_Wallet wallet = walletCRUD.getWallet(user);
+                stores = storeCRUD.findStoreForApplication(newPostRequest.Store, newPostRequest.IDApplication);
+
+                bool isPostFree = false;
+                try
+                {
+                    isPostFree = (bool)stores.First().Tbl_ApplicationStorePermissions.Where(xx => xx.UserTypeCode == user.UserTypeCode).FirstOrDefault().IsPostFree;
+                }
+                catch { }
+
+                if (isPostFree)
+                {
+                    response.transactionList = new List<Transaction>();
+
+                    Tbl_WalletTransaction trans = new Tbl_WalletTransaction();
+                    trans.RefrenceNo = postId.ToString();
+                    response.appendTransaction(trans);
+                    response.wallet = new UserWallet();
+                    response.wallet.Amount = (long)wallet.Amount;
+                    string ssssssss = new JavaScriptSerializer().Serialize(response);
+                    return ssssssss;
+                }
+                else
+                {
+                    #region CreateTRANSACTION
+
+                    int IDUser = user.Id;
+                    int TransactionTypeCode;
+                    
+                    if (newPostRequest.IDApplication == (int)applications.Amlak)
+                        TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInAmlak;      //ایجاد پست پولی در اپ املاک
+                    if (newPostRequest.IDApplication == (int)applications.Yafte)
+                        TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInYafte;      //ایجاد پست پولی در اپ گمشده ها
+                    if (newPostRequest.IDApplication == (int)applications.Yadaki)
+                        TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInYadaki;      //ایجاد پست پولی در اپ لوازم یدکی
+                    if (newPostRequest.IDApplication == (int)applications.Moz)
+                        TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInMoz;      //ایجاد پست پولی در اپ مزایده 
+                    else
+                        TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePost;      //ایجاد پست
+
+
+                    float zarib = walletCRUD.getZarib(user.UserCode, TransactionTypeCode);
+                    float Amount = float.Parse(userCRUD.getTansactionValue(TransactionTypeCode)) * zarib;
+                    int idApp = newPostRequest.IDApplication;
+
+                    bool isWaletTransation = false;
+                    try
+                    {
+                        if (newPostRequest.DirectPay == true)
+                            isWaletTransation = false;
+                        else
+                            isWaletTransation = true;
+                    }
+                    catch (Exception ex) { }
+
+                    Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, IDUser, IDUser, idApp, Amount, zarib, TransactionTypeCode, postId + "", null, newPostRequest.IP, isWaletTransation);
+                    if (trans != null)
+                    { 
+                        //if (wallet.Amount < (Decimal)Amount)
+                        //    postCRUD.diActivePost(postId); 
+
+                        response.transactionList = new List<Transaction>();
+                        response.appendTransaction(trans);
+
+                        response.wallet = new UserWallet();
+                        response.wallet.Amount = (long)wallet.Amount + (long)Amount;
+
+                        string ssssssss = new JavaScriptSerializer().Serialize(response);
+                        return ssssssss;
+                    }
+                    else
+                    {
+                        postCRUD.diActivePost(postId);
+                        ServerResponse responsex = new ServerResponse();
+                        responsex.tubelessException.code = -2;
+                        responsex.tubelessException.message = "error in create post";
+                        string ssssssss = new JavaScriptSerializer().Serialize(responsex);
+                        return ssssssss;
+                    }
+                    #endregion
+                }
+            }
+            else
+            {
+                ServerResponse responsex = new ServerResponse();
+                responsex.tubelessException.code = -4;
+                responsex.tubelessException.message = "error in create post";
+                string ssssssss = new JavaScriptSerializer().Serialize(responsex);
+                return ssssssss;
+            }
+        }
+
 
         public enum applications
         {
@@ -406,71 +509,72 @@ namespace TubelessServices.Controllers.Post
             Models.Tbl_Wallet wallet = walletCRUD.getWallet((int)user.Id);
 
 
-            if (user.UserTypeCode == (int)userTypeCode.admin)
-            {
+            //if (user.UserTypeCode == (int)userTypeCode.admin)
+            //{
                 postCRUD.updatePostCount(postDetails.Id);
                 return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-            }
-            else if (wallet.Amount + (decimal)Amount >= 0)
-            {
-                //پولش به اندازه کافی هست
-                if (!postIsBuy)
-                {
-                    Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
-                    if (trans != null)
-                    {
-                        if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
-                        {
-                            postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
-                        }
-                    }
-                }
-                postCRUD.updatePostCount(postDetails.Id);
-                return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy,zarib);
-            }
-            else
-            {
-                //پول به اندازه کافی نداره
-                if (postIsBuy)
-                {
-                    //قبلا خریده
-                    //return post
-                    postCRUD.updatePostCount(postDetails.Id);
-                    return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-                }
-                else
-                {
-                    //قبلا نخریده
-                    if (stores.First().isFree)
-                    {
-                        //فروشگاه رایگان
-                        Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
-                        if (trans != null)
-                        {
-                            if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
-                            {
-                                postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
-                            }
-                        }
+            //}
+            //else if (wallet.Amount + (decimal)Amount >= 0)
+            //{
+            //    //پولش به اندازه کافی هست
+            //    if (!postIsBuy)
+            //    {
+            //        Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+            //        if (trans != null)
+            //        {
+            //            if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
+            //            {
+            //                postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
+            //            }
+            //        }
+            //    }
+            //    postCRUD.updatePostCount(postDetails.Id);
+            //    return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy,zarib);
+            //}
+            //else
+            //{
+            //    //پول به اندازه کافی نداره
+            //    if (postIsBuy)
+            //    {
+            //        //قبلا خریده
+            //        //return post
+            //        postCRUD.updatePostCount(postDetails.Id);
+            //        return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //    }
+            //    else
+            //    {
+            //        //قبلا نخریده
+            //        if (stores.First().isFree)
+            //        {
+            //            //فروشگاه رایگان
+            //            Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+            //            if (trans != null)
+            //            {
+            //                if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
+            //                {
+            //                    postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
+            //                }
+            //            }
 
-                        //return post
-                        postCRUD.updatePostCount(postDetails.Id);
-                        return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-                    }
-                    else
-                    {
-                        //فروشگاه غیر رایگان
-                        //return error
-                        ServerResponse responsex = new ServerResponse();
-                        responsex.tubelessException.code = -10;
-                        responsex.tubelessException.message = "Amount not enough";
-                        string ssssssss = new JavaScriptSerializer().Serialize(responsex);
-                        return ssssssss;
-                    }
-                }
-            }
+            //            //return post
+            //            postCRUD.updatePostCount(postDetails.Id);
+            //            return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //        }
+            //        else
+            //        {
+            //            //فروشگاه غیر رایگان
+            //            //return error
+            //            ServerResponse responsex = new ServerResponse();
+            //            responsex.tubelessException.code = -10;
+            //            responsex.tubelessException.message = "Amount not enough";
+            //            string ssssssss = new JavaScriptSerializer().Serialize(responsex);
+            //            return ssssssss;
+            //        }
+            //    }
+            //}
         }
 
+        //todo remove and go to PostDetailsNew2
         [HttpPost]
         [Route("PostDetailsNew")]
         public string PostDetailsNew(DetailsRequest request)
@@ -503,88 +607,170 @@ namespace TubelessServices.Controllers.Post
             int idApp = request.IDApplication;
             Models.Tbl_Wallet wallet = walletCRUD.getWallet((int)user.Id);
 
-            if (user.UserTypeCode == (int)userTypeCode.admin)
-            {
+            //if (user.UserTypeCode == (int)userTypeCode.admin)
+            //{
                 postCRUD.updatePostCount(postDetails.Id);
                 return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-            }
-            else if (user.UserTypeCode == (int)userTypeCode.creator && request.IDApplication == (int)applications.Amlak)
+            //}
+            //else if (user.UserTypeCode == (int)userTypeCode.creator && request.IDApplication == (int)applications.Amlak)
+            //{
+            //    postCRUD.updatePostCount(postDetails.Id);
+            //    return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //}
+            //else if (wallet.Amount + (decimal)Amount >= 0)
+            //{
+            //    //پولش به اندازه کافی هست
+            //    if (!postIsBuy)
+            //    {
+            //        Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+            //        if (trans != null)
+            //        {
+            //            if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
+            //            {
+            //                postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
+            //            }
+            //        }
+            //    }
+            //    postCRUD.updatePostCount(postDetails.Id);
+            //    if (user.PhoneNumberConfirmed)
+            //        return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //    else
+            //        return mobileNotConfirmed();
+            //}
+            //else
+            //{
+            //    //پول به اندازه کافی نداره
+            //    if (postIsBuy)
+            //    {
+            //        //قبلا خریده
+            //        //return post
+            //        postCRUD.updatePostCount(postDetails.Id);
+
+            //        if (user.PhoneNumberConfirmed)
+            //            return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //        else
+            //            return mobileNotConfirmed();
+            //    }
+            //    else
+            //    {
+            //        //قبلا نخریده
+            //        if (stores.First().isFree)
+            //        {
+            //            //فروشگاه رایگان
+            //            Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+            //            if (trans != null)
+            //            {
+            //                if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
+            //                {
+            //                    postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
+            //                }
+            //            }
+
+            //            //return post
+            //            postCRUD.updatePostCount(postDetails.Id);
+
+
+            //            if (user.PhoneNumberConfirmed)
+            //                return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+            //            else
+            //                return mobileNotConfirmed();
+                        
+            //        }
+            //        else
+            //        {
+            //            //فروشگاه غیر رایگان
+            //            //return error
+            //            ServerResponse responsex = new ServerResponse();
+            //            responsex.tubelessException.code = -10;
+            //            responsex.tubelessException.message = "Amount not enough";
+            //            string ssssssss = new JavaScriptSerializer().Serialize(responsex);
+            //            return ssssssss;
+            //        }
+            //    }
+            //}
+        }
+
+         
+        [HttpPost]
+        [Route("PostDetailsNew2")]
+        public string PostDetailsNew2(DetailsRequest request)
+        {
+            ResponsePost response = new ResponsePost();
+
+            //Initialize
+            int idApp = request.IDApplication;
+            stores = storeCRUD.findStoreForApplication(request.Store, request.IDApplication);
+            Tbl_User userCaller = userCRUD.findUserByUserCode(request.UserCode).First();
+            Viw_PostDetail postDetails = postCRUD.getPostDetails(request.IDPost);
+            Models.Tbl_Wallet walletCallerUser = walletCRUD.getWallet((int)userCaller.Id);
+            Tbl_User userCreator = userCRUD.findUserByID((int)postDetails.IDUser).First();
+            response.creator = preparePostCreator(userCreator);
+            IEnumerable<Tbl_Post_Amount> getPostAmount = postCRUD.getPostAmounts(request.IDPost);
+            List<String> postImages = postCRUD.getPostImages(request.IDPost);
+            bool postIsFav = postCRUD.postIsFav(request.IDPost, (int)userCaller.Id);
+            bool postIsBuy = postCRUD.postIsBuy(request.IDPost, (int)userCaller.Id);
+            int IDUserCreator = userCaller.Id;
+
+            float Amount;
+            int TransactionTypeCode = 0;
+
+            bool isViewFree = false;
+            try
             {
-                postCRUD.updatePostCount(postDetails.Id);
-                return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+                isViewFree = (bool) stores.First().Tbl_ApplicationStorePermissions.Where(xx => xx.UserTypeCode == userCaller.UserTypeCode).FirstOrDefault().IsViewFree;
             }
-            else if (wallet.Amount + (decimal)Amount >= 0)
+            catch { }
+
+            if (isViewFree || postIsBuy || (userCaller.Id == userCreator.Id))
             {
-                //پولش به اندازه کافی هست
-                if (!postIsBuy)
-                {
-                    Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
-                    if (trans != null)
-                    {
-                        if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
-                        {
-                            postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
-                        }
-                    }
-                }
+                //رایگان یا خریداری شده یا پست خودش
+                TransactionTypeCode = (int)TransactionTypeCodeEnum.SeePostFree;
+                float zarib = walletCRUD.getZarib(userCaller.UserCode, TransactionTypeCode);
+                Amount = (-1 * (float)postDetails.PriceForVsit) * zarib;
+
+                //Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(walletCallerUser.Id, (int)userCaller.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+                //if (trans != null)
+                //{
+                    postCRUD.addPostToUserSeens(request.IDPost, (int)userCaller.Id);
+                //}
                 postCRUD.updatePostCount(postDetails.Id);
-                if (user.PhoneNumberConfirmed)
-                    return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-                else
-                    return mobileNotConfirmed();
+                return preparePostDetailsResponse(response, postDetails, (long)Amount, walletCallerUser, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
             }
             else
             {
-                //پول به اندازه کافی نداره
-                if (postIsBuy)
-                {
-                    //قبلا خریده
-                    //return post
-                    postCRUD.updatePostCount(postDetails.Id);
+                //دیدن پست پولی
+                TransactionTypeCode = (int)TransactionTypeCodeEnum.SeePost;
+                float zarib = walletCRUD.getZarib(userCaller.UserCode, TransactionTypeCode);
+                Amount = (-1 * (float)postDetails.PriceForVsit) * zarib;
 
-                    if (user.PhoneNumberConfirmed)
-                        return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-                    else
-                        return mobileNotConfirmed();
+                if (walletCallerUser.Amount + (decimal)Amount >= 0)
+                {
+                    //پولش به اندازه کافی هست
+                        Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(walletCallerUser.Id, (int)userCaller.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
+                        if (trans != null)
+                        {
+                            postCRUD.addPostToUserSeens(request.IDPost, (int)userCaller.Id);
+                        }
+                        postCRUD.updatePostCount(postDetails.Id);
+                        //if (userCaller.PhoneNumberConfirmed)
+                        return preparePostDetailsResponse(response, postDetails, (long)Amount, walletCallerUser, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
+                        //else
+                        //    return mobileNotConfirmed();
+                    
                 }
                 else
                 {
-                    //قبلا نخریده
-                    if (stores.First().isFree)
-                    {
-                        //فروشگاه رایگان
-                        Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(wallet.Id, (int)user.Id, IDUserCreator, idApp, Amount, zarib, TransactionTypeCode, postDetails.Id + "", null, request.Ip);
-                        if (trans != null)
-                        {
-                            if (TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)
-                            {
-                                postCRUD.addPostToUserSeens(request.IDPost, (int)user.Id);
-                            }
-                        }
-
-                        //return post
-                        postCRUD.updatePostCount(postDetails.Id);
-
-
-                        if (user.PhoneNumberConfirmed)
-                            return preparePostDetailsResponse(response, postDetails, (long)Amount, wallet, postIsFav, postImages, getPostAmount, postIsBuy, zarib);
-                        else
-                            return mobileNotConfirmed();
-                        
-                    }
-                    else
-                    {
-                        //فروشگاه غیر رایگان
-                        //return error
-                        ServerResponse responsex = new ServerResponse();
-                        responsex.tubelessException.code = -10;
-                        responsex.tubelessException.message = "Amount not enough";
-                        string ssssssss = new JavaScriptSerializer().Serialize(responsex);
-                        return ssssssss;
-                    }
+                    //پول به اندازه کافی نداره
+                    //return error
+                    ServerResponse responsex = new ServerResponse();
+                    responsex.tubelessException.code = -10;
+                    responsex.tubelessException.message = "Amount not enough 1";
+                    string ssssssss = new JavaScriptSerializer().Serialize(responsex);
+                    return ssssssss;
                 }
             }
         }
+
 
         private User preparePostCreator(Tbl_User userCreator)
         {

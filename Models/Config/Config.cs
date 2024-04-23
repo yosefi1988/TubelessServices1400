@@ -11,15 +11,25 @@ namespace TubelessServices.Models.Config
         public int DeviceId = 0;
         public List<UMIC> umic = new List<UMIC>();
 
-        public Config(List<Tbl_ApplicationStore> stores, int deviceId)
+        public Config(Tbl_ApplicationStore store, int deviceId, Tbl_ApplicationStorePermission applicationStorePermission)
         {
             this.DeviceId = deviceId;
-            foreach (Tbl_ApplicationStore store in stores)
+            Store storeItem = new Store();
+            StorePermissions storePermissions = new StorePermissions();
+            if (store != null)
             {
-                Store storeItem = new Store();
                 storeItem.Id = store.ID;
                 storeItem.IsFree = store.isFree;
                 storeItem.Name = store.StoreName;
+
+                if (applicationStorePermission != null)
+                {
+                    storePermissions.IsPostFree = applicationStorePermission.IsPostFree;
+                    storePermissions.IsViewFree = applicationStorePermission.IsViewFree;
+                    storePermissions.SendImageInPost = applicationStorePermission.SendImageInPost;
+                    storeItem.Permissions = storePermissions;
+                }
+
                 StoreList.Add(storeItem);
             }
         }
@@ -30,6 +40,13 @@ namespace TubelessServices.Models.Config
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsFree { get; set; }
+        public StorePermissions Permissions { get; set; }
+}
+    public class StorePermissions
+    {
+        public bool? IsPostFree { get; set; }
+        public bool? IsViewFree { get; set; }
+        public bool? SendImageInPost { get; set; }
     }
     public class UMIC
     {

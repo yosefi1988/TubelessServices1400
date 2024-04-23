@@ -122,15 +122,18 @@ namespace TubelessServices.Controllers.Post
         }
         internal int regNewMPostAmounts(RegisterPost newPostRequest, int idPost)
         {
-            foreach (RegisterPost_Item item in newPostRequest.Items)
+            if (newPostRequest.Items != null)
             {
-                Tbl_Post_Amount newAmount = new Tbl_Post_Amount();
-                newAmount.IdPost = idPost;
-                newAmount.Value = item.Value;
-                newAmount.Text = item.Text;
-                db.Tbl_Post_Amounts.InsertOnSubmit(newAmount);
+                foreach (RegisterPost_Item item in newPostRequest.Items)
+                {
+                    Tbl_Post_Amount newAmount = new Tbl_Post_Amount();
+                    newAmount.IdPost = idPost;
+                    newAmount.Value = item.Value;
+                    newAmount.Text = item.Text;
+                    db.Tbl_Post_Amounts.InsertOnSubmit(newAmount);
+                }
+                db.SubmitChanges();
             }
-            db.SubmitChanges();
             return 0;
         }
 
@@ -223,7 +226,12 @@ namespace TubelessServices.Controllers.Post
             var post = (from record in db.Tbl_Posts
                         where record.Id == idPost
                         select record).Single();
-            post.VisitCount = post.VisitCount + 1;
+
+            Random rnd = new Random();
+            int rnd2 = (int)(rnd.NextDouble() * 5);
+            int rnd3 = rnd2 + 1;
+            post.VisitCount = post.VisitCount + (1 * rnd3);
+
             //db.Tbl_Posts.s(post);
             db.SubmitChanges();
         }

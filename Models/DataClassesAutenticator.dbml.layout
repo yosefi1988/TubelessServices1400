@@ -134,266 +134,266 @@
         <elementListCompartment Id="2905702f-51a0-434b-bf89-af0db6d49103" absoluteBounds="59.89, 34.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(61.875 : 27.2300032552083); (62.4166666666667 : 27.2300032552083 : JumpStart); (62.5833333333333 : 27.2300032552083 : JumpEnd); (65.625 : 27.2300032552083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(61.875 : 27.2300032552083); (62.4166666666667 : 27.2300032552083 : JumpStart); (62.5833333333333 : 27.2300032552083 : JumpEnd); (65.625 : 27.2300032552083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_ApplicationStore/Tbl_ApplicationStore_Tbl_DeviceApp" />
       <nodes>
         <classShapeMoniker Id="0d576569-0fa1-4754-8d71-d8f9e1fa8cc6" />
         <classShapeMoniker Id="a84a797c-60e4-4158-a8fb-07cd7dd6af35" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 27.1065991210938); (59.2916666666667 : 27.1065991210938 : JumpStart); (59.4583333333333 : 27.1065991210938 : JumpEnd); (59.6666666666667 : 27.1065991210938 : JumpStart); (59.8333333333333 : 27.1065991210938 : JumpEnd); (59.875 : 27.1065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 27.1065991210938); (59.2916666666667 : 27.1065991210938 : JumpStart); (59.4583333333333 : 27.1065991210938 : JumpEnd); (59.875 : 27.1065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_ApplicationStore" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="0d576569-0fa1-4754-8d71-d8f9e1fa8cc6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 27.96875); (59.6666666666667 : 27.96875 : JumpStart); (59.8333333333333 : 27.96875 : JumpEnd); (62.875 : 27.96875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 27.96875); (62.875 : 27.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_WalletTransaction" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="21bdf15c-83eb-497f-9b45-e32a08f7dc45" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 27.6065991210938); (59.2916666666667 : 27.6065991210938 : JumpStart); (59.4583333333333 : 27.6065991210938 : JumpEnd); (59.6666666666667 : 27.6065991210938 : JumpStart); (59.8333333333333 : 27.6065991210938 : JumpEnd); (62.5416666666667 : 27.6065991210938 : JumpStart); (62.8149324544271 : 27.6065991210938 : JumpEnd); (65.1666666666667 : 27.6065991210938 : JumpStart); (65.3333333333333 : 27.6065991210938 : JumpEnd); (65.625 : 27.6065991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 27.6065991210938); (59.2916666666667 : 27.6065991210938 : JumpStart); (59.4583333333333 : 27.6065991210938 : JumpEnd); (62.5416666666667 : 27.6065991210938 : JumpStart); (62.8149324544271 : 27.6065991210938 : JumpEnd); (65.1666666666667 : 27.6065991210938 : JumpStart); (65.3333333333333 : 27.6065991210938 : JumpEnd); (65.625 : 27.6065991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_DeviceApp" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="a84a797c-60e4-4158-a8fb-07cd7dd6af35" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.125 : 26.75); (58.125 : 26.5); (58.5729191666667 : 26.5 : JumpStart); (58.7395858333333 : 26.5 : JumpEnd); (59.375 : 26.5); (59.375 : 27.7315991210938); (59.6666666666667 : 27.7315991210938 : JumpStart); (59.8333333333333 : 27.7315991210938 : JumpEnd); (62.625 : 27.7315991210938); (62.625 : 27.375); (65.25 : 27.375); (65.25 : 28.2536506816406); (65.625 : 28.2536506816406)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.125 : 26.75); (58.125 : 26.5); (59.375 : 26.5); (59.375 : 27.7315991210938); (62.625 : 27.7315991210938); (62.625 : 27.375); (65.25 : 27.375); (65.25 : 28.2536506816406); (65.625 : 28.2536506816406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_DeviceApp1" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="a84a797c-60e4-4158-a8fb-07cd7dd6af35" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.6562525 : 26.75); (58.6562525 : 24.53125); (62.4166666666667 : 24.53125 : JumpStart); (62.5833333333333 : 24.53125 : JumpEnd); (62.875 : 24.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.6562525 : 26.75); (58.6562525 : 24.53125); (60.7916666666667 : 24.53125 : JumpStart); (60.9583333333333 : 24.53125 : JumpEnd); (62.4166666666667 : 24.53125 : JumpStart); (62.5833333333333 : 24.53125 : JumpEnd); (62.875 : 24.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_ElectedUser" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="c8a8e716-0489-4dbb-b679-4756b963f1fa" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 29.2508048502604); (59.5416666666667 : 29.2508048502604 : JumpStart); (59.8333333333333 : 29.2508048502604 : JumpEnd); (59.875 : 29.2508048502604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 29.2508048502604); (59.875 : 29.2508048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_ApplicationVersion" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="1cd6564e-c773-42bb-a679-e793890c0f38" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(56.375 : 24.0497054036458); (56.5 : 24.1747054036458); (62.5 : 24.1747054036458); (62.5 : 27.375); (62.5660744349011 : 27.4410744349011 : JumpStart); (62.6839255650989 : 27.5589255650989 : JumpEnd); (62.875 : 27.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(56.375 : 24.0497054036458); (56.5 : 24.1747054036458); (60.7916666666667 : 24.1747054036458 : JumpStart); (60.9583333333333 : 24.1747054036458 : JumpEnd); (62.5 : 24.1747054036458); (62.5 : 27.375); (62.5660744349011 : 27.4410744349011 : JumpStart); (62.6839255650989 : 27.5589255650989 : JumpEnd); (62.875 : 27.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_WalletTransaction" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="21bdf15c-83eb-497f-9b45-e32a08f7dc45" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(56.375 : 23.8061002018229); (62.875 : 23.8061002018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(56.375 : 23.8061002018229); (60.7916666666667 : 23.8061002018229 : JumpStart); (60.9583333333333 : 23.8061002018229 : JumpEnd); (62.875 : 23.8061002018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_ElectedUser" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="c8a8e716-0489-4dbb-b679-4756b963f1fa" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(55.375 : 21.125); (55.375 : 15.6450512695313); (57.125 : 15.6450512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(55.375 : 21.125); (55.375 : 15.6450512695313); (57.125 : 15.6450512695313)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_Loginto_Site" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="7e2b8788-f092-4526-8a14-08713c7a0b51" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(55.3437475 : 24.0497054036458); (55.3437475 : 28.5008048502604); (55.7760404166667 : 28.5008048502604 : JumpStart); (55.9427070833333 : 28.5008048502604 : JumpEnd); (57.125 : 28.5008048502604)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(55.3437475 : 24.0497054036458); (55.3437475 : 28.5008048502604); (57.125 : 28.5008048502604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_Application" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(53.625 : 22.6354484049479); (54.375 : 22.6354484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(53.625 : 22.6354484049479); (54.375 : 22.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_CategoriesLookUp/Tbl_CategoriesLookUp_Tbl_DetailsLookup" />
       <nodes>
         <classShapeMoniker Id="4d6e31a7-f714-4826-bf43-0907fca8ff50" />
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(61.875 : 37.4431469726563); (62.625 : 37.4431469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(61.875 : 37.4431469726563); (62.625 : 37.4431469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Device/Tbl_Device_Tbl_Loginto_DeviceSetting" />
       <nodes>
         <classShapeMoniker Id="f2e91ec3-9cda-4ffe-a37e-74b7ed0eea2d" />
         <classShapeMoniker Id="7fd6f9ee-bb44-412a-84b1-e1bb3e3ccedf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(61.875 : 39.7556062825521); (62.625 : 39.7556062825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(61.875 : 39.7556062825521); (62.625 : 39.7556062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Device/Tbl_Device_Tbl_Loginto_DeviceSite" />
       <nodes>
         <classShapeMoniker Id="f2e91ec3-9cda-4ffe-a37e-74b7ed0eea2d" />
         <classShapeMoniker Id="9395c3de-32cd-4e9a-97b8-8b99a8ca90d6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(61.875 : 36.75); (62.25 : 36.375); (62.25 : 35.0969962565104); (62.625 : 35.0969962565104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(61.875 : 36.75); (62.25 : 36.375); (62.25 : 35.0969962565104); (62.625 : 35.0969962565104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Device/Tbl_Device_tbl_UsersDevice" />
       <nodes>
         <classShapeMoniker Id="f2e91ec3-9cda-4ffe-a37e-74b7ed0eea2d" />
         <classShapeMoniker Id="71b0741e-299a-44c8-80cd-e837984072a6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.125 : 30.2516097005208); (58.125 : 31.7460034179688); (58.5416661666667 : 31.7460034179688 : JumpStart); (58.7083328333333 : 31.7460034179688 : JumpEnd); (58.8229184166667 : 31.7460034179688 : JumpStart); (58.9895850833333 : 31.7460034179688 : JumpEnd); (59.5416666666667 : 31.7460034179688 : JumpStart); (59.7083333333333 : 31.7460034179688 : JumpEnd); (60.7916666666667 : 31.7460034179688 : JumpStart); (60.9583333333333 : 31.7460034179688 : JumpEnd); (64.6666641666667 : 31.7460034179688 : JumpStart); (64.8645833333333 : 31.7460034179688 : JumpEnd); (65.1666666666667 : 31.7460034179688 : JumpStart); (65.3333333333333 : 31.7460034179688 : JumpEnd); (65.4166666666667 : 31.7460034179688 : JumpStart); (65.5833333333333 : 31.7460034179688 : JumpEnd); (65.875 : 31.7460034179688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.125 : 30.2516097005208); (58.125 : 31.7460034179688); (59.5416666666667 : 31.7460034179688 : JumpStart); (59.7083333333333 : 31.7460034179688 : JumpEnd); (60.7916666666667 : 31.7460034179688 : JumpStart); (60.9583333333333 : 31.7460034179688 : JumpEnd); (64.6666641666667 : 31.7460034179688 : JumpStart); (64.8333308333333 : 31.7460034179688 : JumpEnd); (65.1666666666667 : 31.7460034179688 : JumpStart); (65.3333333333333 : 31.7460034179688 : JumpEnd); (65.875 : 31.7460034179688)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_Message" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="c8de319f-7cfe-4f8a-9177-eda4557394ac" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(55.85937375 : 24.0497054036458); (55.85937375 : 31.5565026269531); (58.0416666666667 : 31.5565026269531 : JumpStart); (58.2083333333333 : 31.5565026269531 : JumpEnd); (58.5416661666667 : 31.5565026269531 : JumpStart); (58.7083328333333 : 31.5565026269531 : JumpEnd); (59.5416666666667 : 31.5565026269531 : JumpStart); (59.7083333333333 : 31.5565026269531 : JumpEnd); (60.7916666666667 : 31.5565026269531 : JumpStart); (60.9583333333333 : 31.5565026269531 : JumpEnd); (64.6666641666667 : 31.5565026269531 : JumpStart); (64.8645833333333 : 31.5565026269531 : JumpEnd); (65.1666666666667 : 31.5565026269531 : JumpStart); (65.3333333333333 : 31.5565026269531 : JumpEnd); (65.875 : 31.5565026269531)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(55.85937375 : 24.0497054036458); (55.85937375 : 31.5565026269531); (58.0416666666667 : 31.5565026269531 : JumpStart); (58.2083333333333 : 31.5565026269531 : JumpEnd); (58.5416661666667 : 31.5565026269531 : JumpStart); (58.7083328333333 : 31.5565026269531 : JumpEnd); (59.5416666666667 : 31.5565026269531 : JumpStart); (59.7083333333333 : 31.5565026269531 : JumpEnd); (60.7916666666667 : 31.5565026269531 : JumpStart); (60.9583333333333 : 31.5565026269531 : JumpEnd); (64.6666641666667 : 31.5565026269531 : JumpStart); (64.8645833333333 : 31.5565026269531 : JumpEnd); (65.1666666666667 : 31.5565026269531 : JumpStart); (65.3333333333333 : 31.5565026269531 : JumpEnd); (65.875 : 31.5565026269531)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_Message" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="c8de319f-7cfe-4f8a-9177-eda4557394ac" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(67.875 : 36.5681469726563); (68.625 : 36.5681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(67.875 : 36.5681469726563); (68.625 : 36.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Post/Tbl_Post_Tbl_Faved_Post" />
       <nodes>
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
         <classShapeMoniker Id="9e25058a-7efd-42ee-a92f-216746f458f5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(66.875 : 39.7323225911458); (66.875 : 42.4815991210938); (68.625 : 42.4815991210938)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(66.875 : 39.7323225911458); (66.875 : 42.4815991210938); (68.625 : 42.4815991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Post/Tbl_Post_Tbl_Post_Image" />
       <nodes>
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
         <classShapeMoniker Id="f928fbb6-ffea-49dd-b631-f85a635e0a1c" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(66.875 : 34.5); (66.875 : 33.5681469726563); (67.9166666666667 : 33.5681469726563 : JumpStart); (68.0833333333333 : 33.5681469726563 : JumpEnd); (68.625 : 33.5681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(66.875 : 34.5); (66.875 : 33.5681469726563); (68.625 : 33.5681469726563)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Post/Tbl_Post_Tbl_Visited_Post" />
       <nodes>
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
         <classShapeMoniker Id="63b84ebc-b31b-4db6-b4b8-d28a87976141" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(67.875 : 39.4911612955729); (68.625 : 39.4911612955729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(67.875 : 39.4911612955729); (68.625 : 39.4911612955729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Post/Tbl_Post_Tbl_Post_Amount" />
       <nodes>
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
         <classShapeMoniker Id="aea010c8-2268-4c5f-9d4e-54983b97dafc" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 28.6097774251302); (59.625 : 28.6097774251302); (59.625 : 31.8670068359375); (60.7916666666667 : 31.8670068359375 : JumpStart); (60.9583333333333 : 31.8670068359375 : JumpEnd); (64.6666641666667 : 31.8670068359375 : JumpStart); (64.8645833333333 : 31.8670068359375 : JumpEnd); (65.1666666666667 : 31.8670068359375 : JumpStart); (65.3333333333333 : 31.8670068359375 : JumpEnd); (65.4166666666667 : 31.8670068359375 : JumpStart); (65.5833333333333 : 31.8670068359375 : JumpEnd); (65.625 : 31.8670068359375); (65.625 : 33.1170068359375); (66.343748 : 33.1170068359375); (66.343748 : 34.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 28.6097774251302); (59.625 : 28.6097774251302); (59.625 : 31.8670068359375); (60.7916666666667 : 31.8670068359375 : JumpStart); (60.9583333333333 : 31.8670068359375 : JumpEnd); (64.6666641666667 : 31.8670068359375 : JumpStart); (64.8333308333333 : 31.8670068359375 : JumpEnd); (65.1666666666667 : 31.8670068359375 : JumpStart); (65.3333333333333 : 31.8670068359375 : JumpEnd); (65.625 : 31.8670068359375); (65.625 : 33.1170068359375); (66.343748 : 33.1170068359375); (66.343748 : 34.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_Application/Tbl_Application_Tbl_Post" />
       <nodes>
         <classShapeMoniker Id="409783ac-483d-433c-8023-4ad9e64f7153" />
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(60.875 : 31.3670068359375); (60.875 : 32.9142976888021); (62.625 : 32.9142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(60.875 : 31.3670068359375); (60.875 : 32.9142976888021); (62.625 : 32.9142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_ApplicationVersion/Tbl_ApplicationVersion_Tbl_UserApp" />
       <nodes>
         <classShapeMoniker Id="1cd6564e-c773-42bb-a679-e793890c0f38" />
         <classShapeMoniker Id="e86e5bf4-9201-498e-801e-4dbee659c400" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 36.4190991210938); (59.2916666666667 : 36.4190991210938 : JumpStart); (59.4583333333333 : 36.4190991210938 : JumpEnd); (63.5416666666667 : 36.4190991210938 : JumpStart); (63.7083333333333 : 36.4190991210938 : JumpEnd); (64.78125 : 36.4190991210938); (64.78125 : 30.8670068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 36.4190991210938); (59.2916666666667 : 36.4190991210938 : JumpStart); (59.4583333333333 : 36.4190991210938 : JumpEnd); (63.5416666666667 : 36.4190991210938 : JumpStart); (63.7083333333333 : 36.4190991210938 : JumpEnd); (64.78125 : 36.4190991210938); (64.78125 : 30.8670068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_WalletTransaction" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="21bdf15c-83eb-497f-9b45-e32a08f7dc45" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 33.9142976888021); (62.2916666666667 : 33.9142976888021 : JumpStart); (62.4583333333333 : 33.9142976888021 : JumpEnd); (64.7499975 : 33.9142976888021); (64.7499975 : 30.8670068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 33.9142976888021); (64.7499975 : 33.9142976888021); (64.7499975 : 30.8670068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_WalletTransaction1" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="21bdf15c-83eb-497f-9b45-e32a08f7dc45" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.6249995 : 33.375); (58.6249995 : 30.5016097005208); (59.5416666666667 : 30.5016097005208 : JumpStart); (59.7083333333333 : 30.5016097005208 : JumpEnd); (59.75 : 30.5016097005208); (59.75 : 25.0156275); (62.4166666666667 : 25.0156275 : JumpStart); (62.5833333333333 : 25.0156275 : JumpEnd); (62.875 : 25.0156275)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.6249995 : 33.375); (58.6249995 : 30.5016097005208); (59.5416666666667 : 30.5016097005208 : JumpStart); (59.7083333333333 : 30.5016097005208 : JumpEnd); (59.75 : 30.5016097005208); (59.75 : 25.0156275); (60.7916666666667 : 25.0156275 : JumpStart); (60.9583333333333 : 25.0156275 : JumpEnd); (62.4166666666667 : 25.0156275 : JumpStart); (62.5833333333333 : 25.0156275 : JumpEnd); (62.875 : 25.0156275)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_ElectedUser" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="c8a8e716-0489-4dbb-b679-4756b963f1fa" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 35.1666984049479); (59.2916666666667 : 35.1666984049479 : JumpStart); (59.4583333333333 : 35.1666984049479 : JumpEnd); (59.625 : 35.1666984049479); (59.625 : 36.2131982421875); (62.1666666666667 : 36.2131982421875 : JumpStart); (62.3333333333333 : 36.2131982421875 : JumpEnd); (63.5416666666667 : 36.2131982421875 : JumpStart); (63.7083333333333 : 36.2131982421875 : JumpEnd); (64.6979166666667 : 36.2131982421875 : JumpStart); (64.8645833333333 : 36.2131982421875 : JumpEnd); (65.625 : 36.2131982421875); (65.625 : 34.25); (65.9947881666667 : 34.25 : JumpStart); (66.1614548333333 : 34.25 : JumpEnd); (66.2604146666667 : 34.25 : JumpStart); (66.4270813333333 : 34.25 : JumpEnd); (66.5260406666667 : 34.25 : JumpStart); (66.6927073333333 : 34.25 : JumpEnd); (66.7916666666667 : 34.25 : JumpStart); (66.9583333333333 : 34.25 : JumpEnd); (67.3229191666667 : 34.25 : JumpStart); (67.4895858333333 : 34.25 : JumpEnd); (68.375 : 34.25); (68.375 : 34.5112939453125); (69.625 : 34.5112939453125); (69.625 : 35.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 35.1666984049479); (59.625 : 35.1666984049479); (59.625 : 36.2131982421875); (65.625 : 36.2131982421875); (65.625 : 34.25); (68.375 : 34.25); (68.375 : 34.5112939453125); (69.625 : 34.5112939453125); (69.625 : 35.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Faved_Post" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="9e25058a-7efd-42ee-a92f-216746f458f5" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 34.540498046875); (59.375 : 34.540498046875); (59.375 : 36.5881982421875); (61.9534684244792 : 36.5881982421875 : JumpStart); (62.1201350911458 : 36.5881982421875 : JumpEnd); (63.625 : 36.5881982421875); (63.625 : 35.6939925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 34.540498046875); (59.375 : 34.540498046875); (59.375 : 36.5881982421875); (63.625 : 36.5881982421875); (63.625 : 35.6939925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_tbl_UsersDevice" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="71b0741e-299a-44c8-80cd-e837984072a6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(57.84374775 : 33.375); (57.84374775 : 33.125); (58.1510402916667 : 33.125 : JumpStart); (58.3177069583333 : 33.125 : JumpEnd); (58.5416661666667 : 33.125 : JumpStart); (58.7083328333333 : 33.125 : JumpEnd); (58.8229184166667 : 33.125 : JumpStart); (58.9895850833333 : 33.125 : JumpEnd); (62.375 : 33.125); (62.375 : 34.0785953776042); (64.6979166666667 : 34.0785953776042 : JumpStart); (64.8645833333333 : 34.0785953776042 : JumpEnd); (65.9947881666667 : 34.0785953776042 : JumpStart); (66.1614548333333 : 34.0785953776042 : JumpEnd); (66.2604146666667 : 34.0785953776042 : JumpStart); (66.4270813333333 : 34.0785953776042 : JumpEnd); (66.7916666666667 : 34.0785953776042 : JumpStart); (66.9583333333333 : 34.0785953776042 : JumpEnd); (68 : 34.0785953776042); (68 : 33.1903214863281); (68.625 : 33.1903214863281)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(57.84374775 : 33.375); (57.84374775 : 33.125); (58.5416661666667 : 33.125 : JumpStart); (58.7083328333333 : 33.125 : JumpEnd); (62.375 : 33.125); (62.375 : 34.0785953776042); (66.2604146666667 : 34.0785953776042 : JumpStart); (66.4270813333333 : 34.0785953776042 : JumpEnd); (66.7916666666667 : 34.0785953776042 : JumpStart); (66.9583333333333 : 34.0785953776042 : JumpEnd); (68 : 34.0785953776042); (68 : 33.1903214863281); (68.625 : 33.1903214863281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Visited_Post" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="63b84ebc-b31b-4db6-b4b8-d28a87976141" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 37.1017569986979); (59.875 : 37.1017569986979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 37.1017569986979); (59.875 : 37.1017569986979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Device" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="f2e91ec3-9cda-4ffe-a37e-74b7ed0eea2d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(57.453121875 : 33.375); (57.453121875 : 31.9920068359375); (58.5416661666667 : 31.9920068359375 : JumpStart); (58.7083328333333 : 31.9920068359375 : JumpEnd); (58.8229184166667 : 31.9920068359375 : JumpStart); (58.9895850833333 : 31.9920068359375 : JumpEnd); (60.7916666666667 : 31.9920068359375 : JumpStart); (60.9583333333333 : 31.9920068359375 : JumpEnd); (64.6666641666667 : 31.9920068359375 : JumpStart); (64.8645833333333 : 31.9920068359375 : JumpEnd); (65.25 : 31.9920068359375); (65.25 : 30.6219993134766); (65.875 : 30.6219993134766)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(57.453121875 : 33.375); (57.453121875 : 31.9920068359375); (60.7916666666667 : 31.9920068359375 : JumpStart); (60.9583333333333 : 31.9920068359375 : JumpEnd); (64.6666641666667 : 31.9920068359375 : JumpStart); (64.8333308333333 : 31.9920068359375 : JumpEnd); (65.25 : 31.9920068359375); (65.25 : 30.6219993134766); (65.875 : 30.6219993134766)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Message" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="c8de319f-7cfe-4f8a-9177-eda4557394ac" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.90625175 : 33.375); (58.90625175 : 31.6170068359375); (59.5416666666667 : 31.6170068359375 : JumpStart); (59.7083333333333 : 31.6170068359375 : JumpEnd); (60.7916666666667 : 31.6170068359375 : JumpStart); (60.9583333333333 : 31.6170068359375 : JumpEnd); (64.6666641666667 : 31.6170068359375 : JumpStart); (64.8645833333333 : 31.6170068359375 : JumpEnd); (65.1666666666667 : 31.6170068359375 : JumpStart); (65.3333333333333 : 31.6170068359375 : JumpEnd); (65.5 : 31.6170068359375); (65.5 : 32.3670063359375); (65.5416666666667 : 32.3670063359375 : JumpStart); (65.7083333333333 : 32.3670063359375 : JumpEnd); (65.875 : 32.3670063359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.90625175 : 33.375); (58.90625175 : 31.6170068359375); (59.5416666666667 : 31.6170068359375 : JumpStart); (59.7083333333333 : 31.6170068359375 : JumpEnd); (60.7916666666667 : 31.6170068359375 : JumpStart); (60.9583333333333 : 31.6170068359375 : JumpEnd); (64.6666641666667 : 31.6170068359375 : JumpStart); (64.8333308333333 : 31.6170068359375 : JumpEnd); (65.1666666666667 : 31.6170068359375 : JumpStart); (65.3333333333333 : 31.6170068359375 : JumpEnd); (65.5 : 31.6170068359375); (65.5 : 32.3670063359375); (65.5416666666667 : 32.3670063359375 : JumpStart); (65.7083333333333 : 32.3670063359375 : JumpEnd); (65.875 : 32.3670063359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Message1" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="c8de319f-7cfe-4f8a-9177-eda4557394ac" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 34.019651344401); (64.6979166666667 : 34.019651344401 : JumpStart); (64.8645833333333 : 34.019651344401 : JumpEnd); (65.9947881666667 : 34.019651344401 : JumpStart); (66.1614548333333 : 34.019651344401 : JumpEnd); (66.2604146666667 : 34.019651344401 : JumpStart); (66.4270813333333 : 34.019651344401 : JumpEnd); (66.7916666666667 : 34.019651344401 : JumpStart); (66.9583333333333 : 34.019651344401 : JumpEnd); (67.4062525 : 34.019651344401); (67.4062525 : 34.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 34.019651344401); (67.4062525 : 34.019651344401); (67.4062525 : 34.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Post" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 33.8089440332031); (62.2916666666667 : 33.8089440332031 : JumpStart); (62.4583333333333 : 33.8089440332031 : JumpEnd); (64.6666641666667 : 33.8089440332031 : JumpStart); (64.8645833333333 : 33.8089440332031 : JumpEnd); (66.0781215 : 33.8089440332031); (66.0781215 : 34.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 33.8089440332031); (62.2916666666667 : 33.8089440332031 : JumpStart); (62.4583333333333 : 33.8089440332031 : JumpEnd); (64.6666641666667 : 33.8089440332031 : JumpStart); (64.8333308333333 : 33.8089440332031 : JumpEnd); (66.0781215 : 33.8089440332031); (66.0781215 : 34.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Post1" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 34.0410756722005); (64.6979166666667 : 34.0410756722005 : JumpStart); (64.8645833333333 : 34.0410756722005 : JumpEnd); (65.9947881666667 : 34.0410756722005 : JumpStart); (66.1614548333333 : 34.0410756722005 : JumpEnd); (66.2604146666667 : 34.0410756722005 : JumpStart); (66.4270813333333 : 34.0410756722005 : JumpEnd); (66.609374 : 34.0410756722005); (66.609374 : 34.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 34.0410756722005); (66.609374 : 34.0410756722005); (66.609374 : 34.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Post2" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="63d43f94-6cd2-4b7a-83e0-31c1c8c2bbcf" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(58.234373625 : 33.375); (58.234373625 : 32.488396344401); (58.5416661666667 : 32.488396344401 : JumpStart); (58.7083328333333 : 32.488396344401 : JumpEnd); (58.8229184166667 : 32.488396344401 : JumpStart); (58.9895850833333 : 32.488396344401 : JumpEnd); (60.7916666666667 : 32.488396344401 : JumpStart); (60.9583333333333 : 32.488396344401 : JumpEnd); (62.625 : 32.488396344401)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(58.234373625 : 33.375); (58.234373625 : 32.488396344401); (58.5416661666667 : 32.488396344401 : JumpStart); (58.7083328333333 : 32.488396344401 : JumpEnd); (58.8229184166667 : 32.488396344401 : JumpStart); (58.9895850833333 : 32.488396344401 : JumpEnd); (60.7916666666667 : 32.488396344401 : JumpStart); (60.9583333333333 : 32.488396344401 : JumpEnd); (62.625 : 32.488396344401)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_UserApp" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
         <classShapeMoniker Id="e86e5bf4-9201-498e-801e-4dbee659c400" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(54.82812125 : 24.0497054036458); (54.82812125 : 35.4142569986979); (57.125 : 35.4142569986979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(54.82812125 : 24.0497054036458); (54.82812125 : 35.4142569986979); (57.125 : 35.4142569986979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_User" />
       <nodes>
         <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(59.125 : 35.6899483235677); (59.2916666666667 : 35.6899483235677 : JumpStart); (59.4583333333333 : 35.6899483235677 : JumpEnd); (59.5416666666667 : 35.6899483235677 : JumpStart); (59.7083333333333 : 35.6899483235677 : JumpEnd); (59.875 : 35.6899483235677)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(59.125 : 35.6899483235677); (59.2916666666667 : 35.6899483235677 : JumpStart); (59.4583333333333 : 35.6899483235677 : JumpEnd); (59.5416666666667 : 35.6899483235677 : JumpStart); (59.7083333333333 : 35.6899483235677 : JumpEnd); (59.875 : 35.6899483235677)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_User/Tbl_User_Tbl_Wallet" />
       <nodes>
         <classShapeMoniker Id="6bcf938f-2add-49a6-bbcf-99879447dc09" />
@@ -490,5 +490,25 @@
         <elementListCompartment Id="b554cc47-ce34-4f4a-86d9-1cdd01d09144" absoluteBounds="36.015, 42.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="b5ade57f-b600-466d-814b-612bb81122b8" absoluteBounds="43, 16.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesAutenticatorDataContext/Tbl_ApplicationStorePermission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="287517c5-096f-42a9-be3f-cba0ec8796ac" absoluteBounds="43.015, 17.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(60.875 : 25.5); (60.875 : 17.845400390625); (55.4583333333333 : 17.845400390625 : JumpStart); (55.2916666666667 : 17.845400390625 : JumpEnd); (54.9270808333333 : 17.845400390625 : JumpStart); (54.7604141666667 : 17.845400390625 : JumpEnd); (45 : 17.845400390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_ApplicationStore/Tbl_ApplicationStore_Tbl_ApplicationStorePermission" />
+      <nodes>
+        <classShapeMoniker Id="0d576569-0fa1-4754-8d71-d8f9e1fa8cc6" />
+        <classShapeMoniker Id="b5ade57f-b600-466d-814b-612bb81122b8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(54.8437475 : 21.125); (54.8437475 : 17.2664476953125); (45 : 17.2664476953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesAutenticatorDataContext/Tbl_DetailsLookup/Tbl_DetailsLookup_Tbl_ApplicationStorePermission" />
+      <nodes>
+        <classShapeMoniker Id="bbf9a5d5-59d8-4db7-9cc4-27caf436c093" />
+        <classShapeMoniker Id="b5ade57f-b600-466d-814b-612bb81122b8" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

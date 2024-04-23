@@ -37,7 +37,9 @@ namespace TubelessServices.Controllers.Device
 
             int deviceId = 0;
             List<Tbl_Device> listDevice = deviceCRUD.findDeviceByDeviceID(deviceRegister.DeviceId);
-            List<Tbl_ApplicationStore> stores = new List<Tbl_ApplicationStore>();
+            Tbl_ApplicationStore requestFromStore = new Tbl_ApplicationStore();
+            Tbl_ApplicationStorePermission selectedStorePermisions = new Tbl_ApplicationStorePermission();
+
 
             if (listDevice.Count == 0)
             {
@@ -50,19 +52,42 @@ namespace TubelessServices.Controllers.Device
             }
 
 
+            int storeID = 0;
+            //int userTypeCode = 0;
+            //int userId = 0;
+
             //device app
             if (deviceId == 0)
             {
                 //error
             }
             else
-            {
-                int storeID = 0;
-                stores = storeCRUD.findStoreForApplication(deviceRegister);
+            { 
+                requestFromStore = storeCRUD.findStoreForApplication(deviceRegister).FirstOrDefault();
 
-                if(stores.Count == 1)
+                if (requestFromStore != null)
                 {
-                    storeID = stores.First().ID;
+                    storeID = requestFromStore.ID;
+                    //if(deviceRegister.IDUser == null)
+                    //{
+                    //    userId = (int) listDevice.First().IDUser;
+                    //}
+                    //else
+                    //{
+                    //    userId = int.Parse(deviceRegister.IDUser);
+                    //}
+                    //userTypeCode = userCRUD.findUserByID(userId).First().UserTypeCode;
+                    if (listDevice.ToList().Count == 0)
+                    {
+                        selectedStorePermisions = storeCRUD.findStoreForApplicationPermissions(deviceRegister, 1);      //UserTypeCode = 1  normalUser
+                    }
+                    else
+                    {
+                        if(listDevice.ToList().First().Tbl_User == null)
+                            selectedStorePermisions = storeCRUD.findStoreForApplicationPermissions(deviceRegister, 1);      //UserTypeCode = 1  normalUser
+                        else
+                            selectedStorePermisions = storeCRUD.findStoreForApplicationPermissions(deviceRegister, listDevice.ToList().First().Tbl_User.UserTypeCode);
+                    }
                 }
 
                 //insert or update
@@ -80,7 +105,9 @@ namespace TubelessServices.Controllers.Device
 
             }
 
-            Config config = new Config(stores, deviceId);
+            //Config config = new Config(stores, deviceId);
+            Config config = new Config(requestFromStore, deviceId, selectedStorePermisions);
+
             config.umic = deviceCRUD.checkMIC(deviceRegister.DeviceId);
 
             //return Config
@@ -99,7 +126,8 @@ namespace TubelessServices.Controllers.Device
 
             int deviceId = 0;
             List<Tbl_Device> listDevice = deviceCRUD.findDeviceByDeviceID(deviceRegister.DeviceId);
-            List<Tbl_ApplicationStore> stores = new List<Tbl_ApplicationStore>();
+            Tbl_ApplicationStore requestFromStore = new Tbl_ApplicationStore();
+            Tbl_ApplicationStorePermission selectedStorePermisions = new Tbl_ApplicationStorePermission();
 
             if (listDevice.Count == 0)
             {
@@ -111,6 +139,8 @@ namespace TubelessServices.Controllers.Device
                 deviceCRUD.updateDevice(deviceRegister, listDevice.First());
             }
 
+            int storeID = 0;
+            int userTypeCode = 0;
 
             //device app
             if (deviceId == 0)
@@ -119,12 +149,14 @@ namespace TubelessServices.Controllers.Device
             }
             else
             {
-                int storeID = 0;
-                stores = storeCRUD.findStoreForApplication(deviceRegister);
 
-                if (stores.Count == 1)
+                requestFromStore = storeCRUD.findStoreForApplication(deviceRegister).FirstOrDefault();
+
+                if (requestFromStore != null)
                 {
-                    storeID = stores.First().ID;
+                    storeID = requestFromStore.ID;
+                    userTypeCode = userCRUD.findUserByID(Int16.Parse(deviceRegister.IDUser)).First().UserTypeCode;
+                    selectedStorePermisions = storeCRUD.findStoreForApplicationPermissions(deviceRegister, userTypeCode);
                 }
 
                 //insert or update
@@ -146,7 +178,7 @@ namespace TubelessServices.Controllers.Device
 
             }
 
-            Config config = new Config(stores, deviceId);
+            Config config = new Config(requestFromStore, deviceId, selectedStorePermisions);
             config.umic = deviceCRUD.checkMIC(deviceRegister.DeviceId);
 
             //return Config
