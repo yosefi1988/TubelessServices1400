@@ -204,11 +204,11 @@ namespace TubelessServices.Controllers.Post
                     
                     if (newPostRequest.IDApplication == (int)applications.Amlak)
                         TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInAmlak;      //ایجاد پست پولی در اپ املاک
-                    if (newPostRequest.IDApplication == (int)applications.Yafte)
+                    else if(newPostRequest.IDApplication == (int)applications.Yafte)
                         TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInYafte;      //ایجاد پست پولی در اپ گمشده ها
-                    if (newPostRequest.IDApplication == (int)applications.Yadaki)
+                    else if(newPostRequest.IDApplication == (int)applications.Yadaki)
                         TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInYadaki;      //ایجاد پست پولی در اپ لوازم یدکی
-                    if (newPostRequest.IDApplication == (int)applications.Moz)
+                    else if(newPostRequest.IDApplication == (int)applications.Moz)
                         TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePostInMoz;      //ایجاد پست پولی در اپ مزایده 
                     else
                         TransactionTypeCode = (int)TransactionTypeCodeEnum.CreatePost;      //ایجاد پست
