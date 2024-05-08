@@ -407,6 +407,42 @@ namespace TubelessServices.Controllers.Post
             }
         }
 
+        internal List<PostItem> getAdList(reqPostList reqPostList, int userId)
+        {
+            PostSearchHelper helper = new Post.PostSearchHelper();
+ 
+            IEnumerable<Viw_postList> postList1 = (from x in db.Viw_postLists
+                                                    where x.IsDeleted == false && x.PostTypeCode == 9138
+                                                   select x).OrderByDescending(date => date.PriceForVsit).ToList();
+
+            IEnumerable<Viw_postList> finalList =
+            helper.checkIsActive( 
+                helper.checkExpireDate(
+                    helper.checkExpireDateFrom(
+                        helper.checkhExpireDateTo(
+                            helper.checkPublishDateTo(
+                                helper.checkPublishDateFrom(
+                                            helper.checkStateCode(
+                                                helper.checkCityCode(
+                                                                    //helper.searchString(
+                                                                        postList1, 
+                                                                    //reqPostList),
+                                                reqPostList),
+                                            reqPostList),
+                                reqPostList),
+                            reqPostList),
+                        reqPostList),
+                    reqPostList),
+                reqPostList), 
+            reqPostList);
+
+            IEnumerable<Models.Viw_postList> transactionList2 = finalList.Skip(reqPostList.pageIndex);
+            IEnumerable<Models.Viw_postList> transactionList3 = transactionList2.Take(1);
+
+            return preparelist(transactionList3);
+             
+        }
+
         internal List<PostItem> getPostListForSite(reqPostList reqPostList, int userId)
         {
             PostSearchHelper helper = new Post.PostSearchHelper();
