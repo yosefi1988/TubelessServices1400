@@ -413,14 +413,40 @@ namespace TubelessServices.Controllers.Post
         [Route("PostListWithAd")]
         public string PostListWithAd(reqPostList requestPostList)
         {
-            List<PostItem> adItem = postCRUD.getAdList(requestPostList, 0);
+            List<PostItem> adItems = new List<PostItem>();
+            PostItem adItem = null;
+            stores = storeCRUD.findStoreForApplication(requestPostList.Store, requestPostList.IDApplication);
+
+            if ((bool)stores.First().AdEnable)
+            {
+                adItems = postCRUD.getAdList(requestPostList, 0);
+                //checkOwnerAd1 postCRUD.getAdList(requestPostList, 0)
+
+                if (adItems.Count >= 1 && checkOwnerAmountForAd(adItems[0]))
+                {
+                    adItem = adItems[0];
+                }
+                else
+                {
+                    if(adItems.Count >= 2 && checkOwnerAmountForAd(adItems[1]))
+                    {
+                        adItem = adItems[1];
+                    }
+                    else if (adItems.Count >= 3 && checkOwnerAmountForAd(adItems[2]))
+                    {
+                        adItem = adItems[2];
+                    }                    
+                }
+
+            }
+
 
             if (requestPostList.UserCode == null)
             {
                 List<PostItem> postlist = postCRUD.getPostList(requestPostList, 0);
                 response.postList = postlist;
-                if(adItem.Count >= 1)
-                    response.postList.Add(adItem.First());
+                if(adItem != null)
+                    response.postList.Add(adItem);
             }
             else
             {
@@ -435,10 +461,10 @@ namespace TubelessServices.Controllers.Post
                 }
                 else
                 {
-                    List<PostItem> postlist = postCRUD.getPostList(requestPostList, userId);
+                    List<PostItem> postlist = postCRUD.getPostList(requestPostList, userId); 
                     response.postList = postlist;
-                    if (adItem.Count >= 1)
-                        response.postList.Add(adItem.First());
+                    if (adItem != null)
+                        response.postList.Add(adItem);
                 }
             }
 
@@ -447,7 +473,14 @@ namespace TubelessServices.Controllers.Post
             string ssssssss = new JavaScriptSerializer().Serialize(response);
             return ssssssss;
         }
-
+         
+        private bool checkOwnerAmountForAd(PostItem postItem)
+        {
+            if(walletCRUD.getWallet(Int16.Parse(postItem.IdOwner)).Amount  >= postItem.Amount * 5)
+                return true;
+            else
+                return false;
+        }
 
         [HttpPost]
         [Route("MyPostList")]
@@ -973,11 +1006,11 @@ namespace TubelessServices.Controllers.Post
             }
             else
             {
-                walletOwner = walletCRUD.getWallet((int)userCaller.Id);
+                walletOwner = walletCRUD.getWallet((int)userOwner.Id);
 
                 //دیدن پست پولی
                 int TransactionTypeCodeForOwner = (int)TransactionTypeCodeEnum.AdSeenByOwner;
-                float zaribForOwner = walletCRUD.getZarib(userCaller.UserCode, TransactionTypeCodeForOwner);
+                float zaribForOwner = walletCRUD.getZarib(userOwner.UserCode, TransactionTypeCodeForOwner);
                 AmountOwner = (-1 * (float)(postDetails.PriceForVsit) * zaribForOwner);
 
                 if (walletOwner.Amount + (decimal)AmountOwner >= 0)

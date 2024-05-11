@@ -437,7 +437,7 @@ namespace TubelessServices.Controllers.Post
             reqPostList);
 
             IEnumerable<Models.Viw_postList> transactionList2 = finalList.Skip(reqPostList.pageIndex);
-            IEnumerable<Models.Viw_postList> transactionList3 = transactionList2.Take(1);
+            IEnumerable<Models.Viw_postList> transactionList3 = transactionList2.Take(3);
 
             return preparelist(transactionList3);
              
@@ -518,6 +518,7 @@ namespace TubelessServices.Controllers.Post
                 postItem.CreatorFullName = postitem.CreatorName + " " + postitem.CreatorFamily;
                 postItem.TTC = postitem.PostTypeCode;
                 postItem.TTN = postitem.PostTypeName;
+                postItem.IdOwner = postitem.CreatorIDUser.ToString();
                 //postItem.image = postitem.
                 //postItem.icon = postitem.;
                 //postItem.RefrenceNo = postitem.Title;

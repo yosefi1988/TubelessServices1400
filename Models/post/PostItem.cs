@@ -13,6 +13,7 @@ namespace TubelessServices.Models.Post
         public string TTN { get; set; }
         public string image { get; set; }
         public string icon { get; set; }
+        public string IdOwner { get; set; }
 
         public string RefrenceNo { get; set; }
         public string title { get; set; }

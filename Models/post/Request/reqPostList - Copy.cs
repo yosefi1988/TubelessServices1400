@@ -26,7 +26,7 @@ namespace TubelessServices.Models.Post.Request
         public bool IsActive { get; set; }
         public bool Visited { get; set; }
         public bool Faved { get; set; }
-
+        public string Store { get; set; }
 
         //public bool IsDelete { get; set; }
         //public bool ReciveMessage { get; set; }
