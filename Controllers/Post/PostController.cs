@@ -440,6 +440,8 @@ namespace TubelessServices.Controllers.Post
 
             }
 
+            if (adItem != null)
+                requestPostList.pageSize = requestPostList.pageSize - 1;
 
             if (requestPostList.UserCode == null)
             {
@@ -476,7 +478,7 @@ namespace TubelessServices.Controllers.Post
          
         private bool checkOwnerAmountForAd(PostItem postItem)
         {
-            if(walletCRUD.getWallet(Int16.Parse(postItem.IdOwner)).Amount  >= postItem.Amount * 5)
+            if(walletCRUD.getWallet(Int32.Parse(postItem.IdOwner)).Amount  >= postItem.Amount * 5)
                 return true;
             else
                 return false;
