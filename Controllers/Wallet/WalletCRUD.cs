@@ -24,7 +24,17 @@ namespace TubelessServices.Controllers.Wallet
         UserCRUD userCRUD = new UserCRUD();
 
 
-        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount, float zarib, int TransactionTypeCode, String RefrenceNo, String MetaData, String ip)
+        public Tbl_WalletTransaction registerNewTransaction(
+            int walletId, 
+            int newUserId, 
+            int IDUserTransactionCreator, 
+            int IdApp, 
+            float Amount, 
+            float zarib, 
+            int TransactionTypeCode, 
+            String RefrenceNo, 
+            String MetaData, 
+            String ip)
         {
             try
             {
@@ -33,7 +43,7 @@ namespace TubelessServices.Controllers.Wallet
                     return transaction;
 
                 transaction.IDUser = newUserId;
-                transaction.IDUserCreator = IDUserCreator;
+                transaction.IDUserCreator = IDUserTransactionCreator;
                 transaction.IDApplication = IdApp;
                 transaction.Amount = (decimal)Amount;
                 transaction.Zarib = zarib;

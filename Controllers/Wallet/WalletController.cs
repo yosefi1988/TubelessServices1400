@@ -47,7 +47,12 @@ namespace TubelessServices.Controllers.Wallet
             CreatePostInAmlak = 8070,
             CreatePostInYadaki = 6056,
             CreatePostInMoz = 9137,
-            SeePostFree = 1009}
+            SeePostFree = 1009,
+
+            //ad
+            AdSeenByUser = 9139,
+            AdSeenByOwner = 9143
+        }
         
 
         [HttpPost]
