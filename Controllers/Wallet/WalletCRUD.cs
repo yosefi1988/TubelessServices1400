@@ -24,7 +24,36 @@ namespace TubelessServices.Controllers.Wallet
         UserCRUD userCRUD = new UserCRUD();
 
 
-        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount,float zarib , int TransactionTypeCode, String RefrenceNo, String MetaData, String ip)
+        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount, float zarib, int TransactionTypeCode, String RefrenceNo, String MetaData, String ip)
+        {
+            try
+            {
+                Tbl_WalletTransaction transaction = new Tbl_WalletTransaction();
+                if (Amount == 0)
+                    return transaction;
+
+                transaction.IDUser = newUserId;
+                transaction.IDUserCreator = IDUserCreator;
+                transaction.IDApplication = IdApp;
+                transaction.Amount = (decimal)Amount;
+                transaction.Zarib = zarib;
+                transaction.TransactionTypeCode = TransactionTypeCode;
+                transaction.RefrenceNo = RefrenceNo;
+                transaction.MetaData = MetaData;
+                transaction.TransactionTypeCode = TransactionTypeCode;
+                transaction.CreatedOn = DateTime.Now;
+                transaction.IP = ip;
+
+                db.Tbl_WalletTransactions.InsertOnSubmit(transaction);
+                db.SubmitChanges();
+                return transaction;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount,float zarib , int TransactionTypeCode, String RefrenceNo, String MetaData, String ip,bool isWaletTransaction)
         {
             try
             {
@@ -42,6 +71,7 @@ namespace TubelessServices.Controllers.Wallet
                 transaction.MetaData = MetaData;
                 transaction.TransactionTypeCode = TransactionTypeCode;
                 transaction.CreatedOn = DateTime.Now;
+                transaction.isWalletTransaction = isWaletTransaction;
                 transaction.IP = ip;
 
                 db.Tbl_WalletTransactions.InsertOnSubmit(transaction);
@@ -245,12 +275,16 @@ namespace TubelessServices.Controllers.Wallet
                 transactionItem.TTN = transaction.TransactionTypeName;
                 transactionItem.image = transaction.ImageUrl;
                 transactionItem.icon = transaction.icon;
-                transactionItem.title = transaction.PostTitle;
+                //transactionItem.Zarib = transaction.;
+
+                if (transactionItem.TTC != 5)            //5 = شارژ کیف پول
+                    transactionItem.title = transaction.PostTitle;
                 
                 transactionItem.DateTime = Date.convertToPersianDate(transaction.CreatedOn);
 
                 //if (transaction.TransactionTypeCode == (int)WalletController.TransactionTypeCodeEnum.WalletSharje)
                 transactionItem.RefrenceNo = transaction.RefrenceNo;
+                transactionItem.IdPost = transaction.IDPost.ToString();
                 transactionItem.ID = transaction.TransactionID;
 
                 transactionListOut.Add(transactionItem);

@@ -51,5 +51,18 @@ namespace TubelessServices.Controllers.Application
             return appList3;
 
         }
+        internal IEnumerable<Viw_Site_AppList> getApplicationByStore(String storeName, int idApplication)
+        {
+            IEnumerable<Viw_Site_AppList> appList1 = (from x in db.Viw_Site_AppLists
+                                                  where
+                                                      x.StoreName.Equals(storeName) &&
+                                                      x.ApplicationID == idApplication
+                                                  select x).OrderByDescending(date => date.Views).ToList();
+
+
+            return appList1;
+
+        }
+
     }
 }

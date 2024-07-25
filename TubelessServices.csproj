@@ -333,6 +333,7 @@
     <Compile Include="Models\post\PostAmount.cs" />
     <Compile Include="Models\post\PostFullItem.cs" />
     <Compile Include="Models\post\Request\DetailsRequest.cs" />
+    <Compile Include="Models\post\Request\ApplicationDetails.cs" />
     <Compile Include="Models\post\Request\RegisterPost_Item.cs" />
     <Compile Include="Models\post\Request\RegisterPost.cs" />
     <Compile Include="Models\post\Request\reqPostList - Copy.cs" />

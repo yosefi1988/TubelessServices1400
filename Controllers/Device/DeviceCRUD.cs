@@ -29,7 +29,11 @@ namespace TubelessServices.Controllers.Device
             device.ModifiedOn = DateTime.Now;
             device.IP = deviceRegister.IP;
             device.PushNotificaionToken = deviceRegister.token;
-            device.IDUser = int.Parse(deviceRegister.IDUser);
+
+            if(deviceRegister.IDUser == null)
+                device.IDUser = 10012;//کابر لاگین نشده
+            else
+                device.IDUser = int.Parse(deviceRegister.IDUser);
 
             try
             {
@@ -56,6 +60,11 @@ namespace TubelessServices.Controllers.Device
             db.SubmitChanges();
         }
 
+        internal void updateDeviceUserId(Tbl_Device device, int newUserId)
+        { 
+            device.IDUser = newUserId;
+            db.SubmitChanges();
+        }
         internal bool insertDeviceApp(int deviceId, RequestDeviceRegister deviceRegister, int storeID)
         {
             Tbl_DeviceApp newDeviceApp = new Tbl_DeviceApp();

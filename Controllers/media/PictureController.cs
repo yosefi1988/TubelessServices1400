@@ -53,7 +53,7 @@ namespace TubelessServices.Controllers.media
                             var extension = ext.ToLower();
                             if (!AllowedFileExtensions.Contains(extension))
                             {
-                                return response(-121,"Please Upload image of type .jpg,.png.");
+                                return response(-121,"Please Upload image of type  jpg , png.");
                             }
                             else if (postedFileTitlePicture.ContentLength > MaxContentLength)
                             {
@@ -63,7 +63,8 @@ namespace TubelessServices.Controllers.media
                             {
                                 var filePath = HttpContext.Current.Server.MapPath("~/Images/Blog/" + DateTime.Now.Year + "/" +
                                                                 BlogId + "_" +
-                                                                postedFileTitlePicture.FileName + "_" +
+                                                                "TTP" + "_" +
+                                                                //postedFileTitlePicture.FileName + "_" +
                                                                 DateTime.Now.Year +
                                                                 DateTime.Now.Month +
                                                                 DateTime.Now.Day +
@@ -81,10 +82,10 @@ namespace TubelessServices.Controllers.media
                                 {
                                     postedFileTitlePicture.SaveAs(filePath);
 
-                                //    if (extension == ".jpg" || extension == ".png")
+                                //    if (extension == ".jp g" || extension == ".png")
                                 //    {
                                 //        //save low quality of pic
-                                //        //using (Bitmap bitmap = (Bitmap)Image.FromFile("file.jpg"))
+                                //        //using (Bitmap bitmap = (Bitmap)Image.FromFile("file.jp g"))
                                 //        using (Bitmap bitmap = (Bitmap)Image.FromFile(filePath))
                                 //        {
                                 //            using (Bitmap newBitmap = new Bitmap(bitmap))
@@ -95,7 +96,7 @@ namespace TubelessServices.Controllers.media
                                 //                //}
 
                                 //                newBitmap.SetResolution(80, 100);
-                                //                if (extension == ".jpg")
+                                //                if (extension == ".jp g")
                                 //                {
                                 //                    newBitmap.Save(filePath.Replace("\\Images\\Blog\\", "\\Images\\Blog\\Thumbnail\\"), ImageFormat.Jpeg);
                                 //                }
@@ -138,7 +139,7 @@ namespace TubelessServices.Controllers.media
                             var extension = ext.ToLower();
                             if (!AllowedFileExtensions.Contains(extension))
                             {
-                                return response(-121,"Please Upload image of type .jpg,.png.");
+                                return response(-121,"Please Upload image of type jpg , png.");
                             }
                             else if (postedFileTextPicture.ContentLength > MaxContentLength)
                             {
@@ -148,7 +149,8 @@ namespace TubelessServices.Controllers.media
                             {
                                 var filePath = HttpContext.Current.Server.MapPath("~/Images/Blog/" + DateTime.Now.Year + "/" +
                                                                 BlogId + "_" +
-                                                                postedFileTextPicture.FileName + "_" +
+                                                                "TP" + "_" +
+                                                                //postedFileTextPicture.FileName + "_" +
                                                                 DateTime.Now.Year +
                                                                 DateTime.Now.Month +
                                                                 DateTime.Now.Day +
@@ -190,7 +192,7 @@ namespace TubelessServices.Controllers.media
                         var extension = ext.ToLower();
                         if (!AllowedFileExtensions.Contains(extension))
                         {
-                            return response(-121,"Please Upload image of type .jpg,.png.");
+                            return response(-121,"Please Upload image of type  jpg , png.");
                         }
                         else if (postedFile.ContentLength > MaxContentLength)
                         {
@@ -199,7 +201,9 @@ namespace TubelessServices.Controllers.media
                         else
                         {
                             var filePath = HttpContext.Current.Server.MapPath("~/Images/Blog/" + DateTime.Now.Year + "/" +
-                                postedFile.FileName +
+                                BlogId + "_" +
+                                "P" + "_" +
+                                //postedFile.FileName +
                                 DateTime.Now.Year +
                                 DateTime.Now.Month +
                                 DateTime.Now.Day +
@@ -314,7 +318,7 @@ namespace TubelessServices.Controllers.media
                         if (!AllowedFileExtensions.Contains(extension))
                         {
                             response.tubelessException.code = -121;
-                            response.tubelessException.message = "Please Upload image of type .jpg,.png.";
+                            response.tubelessException.message = "Please Upload image of type jpg , png.";
                             return new JavaScriptSerializer().Serialize(response);
                         }
                         else if (postedFile.ContentLength > MaxContentLength)
@@ -327,7 +331,8 @@ namespace TubelessServices.Controllers.media
                         {
                             var filePath = HttpContext.Current.Server.MapPath("~/Images/Avatar/" + DateTime.Now.Year + "/" +
                                 UserId + "_" +
-                                postedFile.FileName + "_" +
+                                "UP" + "_" +
+                                //postedFile.FileName + "_" +
                                 DateTime.Now.Year +
                                 DateTime.Now.Month +
                                 DateTime.Now.Day +
