@@ -13,10 +13,7 @@ namespace TubelessServices
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
-        {
-            // New code
-            config.EnableCors();
-
+        { 
 
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
