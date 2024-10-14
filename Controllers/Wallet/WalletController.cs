@@ -30,26 +30,32 @@ namespace TubelessServices.Controllers.Wallet
         TransactionResponse response = new TransactionResponse();
 
         [HttpPost]
-        [Route("WalletChargeTransaction")]
-        public string WalletChargeTransaction(reqTransaction transaction)
+        [Route("TCreateTransaction")]
+        public string TCreateTransaction(reqTransaction transaction)
         {
             reqTransaction newTransaction = transaction;
-            newTransaction.ttc = (int) TransactionTypeCodeEnum.WalletSharje;        //شارژ کیف پول
-            return WalletTransaction(transaction);
+            newTransaction.ttc = (int) TransactionTypeCodeEnum.InCommingByWalletSharje;  
+            WalletTransaction(transaction,false);
+            newTransaction.ttc = (int)TransactionTypeCodeEnum.WalletSharje;    
+            return WalletTransaction(transaction, true);
         }
 
         public enum TransactionTypeCodeEnum {
-            startGift = 4 ,
-            SeePost = 6 ,
+            //true
             WalletSharje = 5,
+            InCommingByWalletSharje = 52,
+            startGift = 4 ,
+            SeePost = 6,
+            SeePostFree = 1009,
+
+            //bool isWaletTransation
             CreatePost = 9,
             CreatePostInYafte = 5058,
             CreatePostInAmlak = 8070,
             CreatePostInYadaki = 6056,
             CreatePostInMoz = 9137,
-            SeePostFree = 1009,
 
-            //ad
+            //ad + true
             AdSeenByUser = 9139,
             AdSeenByOwner = 9143
         }
@@ -57,7 +63,7 @@ namespace TubelessServices.Controllers.Wallet
 
         [HttpPost]
         [Route("WalletTransaction")]
-        public string WalletTransaction(reqTransaction transaction)
+        public string WalletTransaction(reqTransaction transaction,bool isWaletTransaction)
         {
             int walletId = 0;
             try
@@ -81,7 +87,18 @@ namespace TubelessServices.Controllers.Wallet
                 float Amount = float.Parse(transaction.Amount) * zarib;
                 int idApp = userCRUD.getIdApplication(transaction.IDApplicationVersion);
 
-                Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(walletId, IDUser, IDUser, idApp, Amount, zarib, TransactionTypeCode, transaction.refrenceNo, transaction.metaData, transaction.IP);
+                Tbl_WalletTransaction trans = walletCRUD.registerNewTransaction(
+                    walletId, 
+                    IDUser, 
+                    IDUser, 
+                    idApp, 
+                    Amount, 
+                    zarib, 
+                    TransactionTypeCode, 
+                    transaction.refrenceNo, 
+                    transaction.metaData, 
+                    transaction.IP,
+                    isWaletTransaction);
                 if(trans != null)
                 {
                     if(TransactionTypeCode == (int) TransactionTypeCodeEnum.SeePost || TransactionTypeCode == (int)TransactionTypeCodeEnum.SeePostFree)

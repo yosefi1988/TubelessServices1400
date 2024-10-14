@@ -69,7 +69,7 @@ namespace TubelessServices.Controllers.Autenticator
                             float Amount = float.Parse(userCRUD.getTansactionValue(TransactionTypeCode)) * zarib;
                             int idApp = userCRUD.getIdApplication(loginAccount.IDApplicationVersion);
 
-                            walletCRUD.registerNewTransaction(walletId,(int) newUserId, IDUserCreator, idApp, Amount, zarib , TransactionTypeCode, null,null,loginAccount.IP);
+                            walletCRUD.registerNewTransaction(walletId,(int) newUserId, IDUserCreator, idApp, Amount, zarib , TransactionTypeCode, null,null,loginAccount.IP,true);
                         }
                     }
 

@@ -34,7 +34,8 @@ namespace TubelessServices.Controllers.Wallet
             int TransactionTypeCode, 
             String RefrenceNo, 
             String MetaData, 
-            String ip)
+            String ip,
+            bool isWaletTransaction)
         {
             try
             {
@@ -46,35 +47,6 @@ namespace TubelessServices.Controllers.Wallet
                 transaction.IDUserCreator = IDUserTransactionCreator;
                 transaction.IDApplication = IdApp;
                 transaction.Amount = (decimal)Amount;
-                transaction.Zarib = zarib;
-                transaction.TransactionTypeCode = TransactionTypeCode;
-                transaction.RefrenceNo = RefrenceNo;
-                transaction.MetaData = MetaData;
-                transaction.TransactionTypeCode = TransactionTypeCode;
-                transaction.CreatedOn = DateTime.Now;
-                transaction.IP = ip;
-
-                db.Tbl_WalletTransactions.InsertOnSubmit(transaction);
-                db.SubmitChanges();
-                return transaction;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-        public Tbl_WalletTransaction registerNewTransaction(int walletId, int newUserId, int IDUserCreator, int IdApp, float Amount,float zarib , int TransactionTypeCode, String RefrenceNo, String MetaData, String ip,bool isWaletTransaction)
-        {
-            try
-            {
-                Tbl_WalletTransaction transaction = new Tbl_WalletTransaction();
-                if (Amount == 0)
-                    return transaction;
-
-                transaction.IDUser = newUserId;
-                transaction.IDUserCreator = IDUserCreator;
-                transaction.IDApplication = IdApp;
-                transaction.Amount = (decimal) Amount;
                 transaction.Zarib = zarib;
                 transaction.TransactionTypeCode = TransactionTypeCode;
                 transaction.RefrenceNo = RefrenceNo;
@@ -292,7 +264,7 @@ namespace TubelessServices.Controllers.Wallet
                 
                 transactionItem.DateTime = Date.convertToPersianDate(transaction.CreatedOn);
 
-                //if (transaction.TransactionTypeCode == (int)WalletController.TransactionTypeCodeEnum.WalletSharje)
+                //if (transaction.TransactionTypeCode == (int)WalletController.TransactionTypeCodeEnum.Wall etSharje)
                 transactionItem.RefrenceNo = transaction.RefrenceNo;
                 transactionItem.IdPost = transaction.IDPost.ToString();
                 transactionItem.ID = transaction.TransactionID;
