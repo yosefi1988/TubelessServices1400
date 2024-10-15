@@ -43,7 +43,7 @@ namespace TubelessServices.Controllers.Wallet
         public enum TransactionTypeCodeEnum {
             //true
             WalletSharje = 5,
-            InCommingByWalletSharje = 52,
+            InCommingByWalletSharje = 9149,
             startGift = 4 ,
             SeePost = 6,
             SeePostFree = 1009,
