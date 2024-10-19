@@ -125,7 +125,9 @@ namespace TubelessServices.Controllers.Wallet
                             checkMaxAmount(
                                 checkMinAmount(
                                     checkAmount(
-                                        checkAppID(transactionList1, transaction),
+                                        checkIsWallet(
+                                            checkAppID(transactionList1, transaction),
+                                        transaction),
                                     transaction),
                                 transaction),
                             transaction),
@@ -219,6 +221,19 @@ namespace TubelessServices.Controllers.Wallet
             }
         }
 
+
+        private IEnumerable<Viw_WalletTransaction2> checkIsWallet(IEnumerable<Viw_WalletTransaction2> transactionList1, reqTransaction transaction)
+        {
+            if (transaction != null)
+            {
+                IEnumerable<Models.Viw_WalletTransaction2> listAmount = transactionList1.Where(x => x.isWalletTransaction == true);
+                return listAmount;
+            }
+            else
+            {
+                return transactionList1;
+            }
+        }
         private IEnumerable<Viw_WalletTransaction2> checkAmount(IEnumerable<Viw_WalletTransaction2> transactionList1, reqTransaction transaction)
         {
             if (transaction.Amount != null)
