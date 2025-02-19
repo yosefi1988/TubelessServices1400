@@ -352,8 +352,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="assets\brand\bootstrap-logo-white.svg" />
+    <Content Include="assets\brand\bootstrap-logo.svg" />
+    <Content Include="assets\dist\css\bootstrap.min.css" />
+    <Content Include="assets\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="assets\dist\css\carousel.rtl.css" />
+    <Content Include="assets\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\color-modes.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css%403.css" />
+    <Content Include="Content\product.css" />
+    <Content Include="Content\vazir.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -389,6 +401,26 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="fonts\CALIBRI.TTF" />
+    <Content Include="fonts\CALIBRIB.TTF" />
+    <Content Include="fonts\CALIBRII.TTF" />
+    <Content Include="fonts\CALIBRIL.TTF" />
+    <Content Include="fonts\CALIBRILI.TTF" />
+    <Content Include="fonts\CALIBRIZ.TTF" />
+    <Content Include="fonts\tahoma.ttf" />
+    <Content Include="fonts\tahomabd.ttf" />
+    <Content Include="fonts\Vazir-Black-FD.woff2" />
+    <Content Include="fonts\Vazir-Bold-FD.woff2" />
+    <Content Include="fonts\Vazir-FD.woff2" />
+    <Content Include="fonts\Vazir-Medium-FD.woff2" />
+    <Content Include="fonts\Vazir.eot" />
+    <Content Include="fonts\Vazir.ttf" />
+    <Content Include="fonts\Vazir.woff" />
+    <Content Include="fonts\Vazir.woff2" />
+    <Content Include="assets\dist\css\bootstrap.min.css.map" />
+    <Content Include="assets\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="assets\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="Properties\PublishProfiles\140311profile.pubxml" />
     <None Include="Properties\PublishProfiles\localPublish.pubxml" />
     <None Include="Properties\PublishProfiles\tubelessSajjadpublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -417,14 +449,23 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\IndexO.cshtml" />
+    <Content Include="ViewsS\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Blog\2021\Thumbnail\" />
+    <Folder Include="ViewsS\_SajjadYosefiDoc\" />
+    <Folder Include="ViewsT\" />
+    <Folder Include="Views\_OfficialAppDoc\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,12 +1,35 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import 'product.css';
+/*@import 'vazir.css';*/
+
+:root , [data-bs-theme=light]{
+    --bs-body-font-size: 0.85rem;
 }
+
+p {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+
+body {
+    padding-bottom: 20px;
+    font-family: 'Vazirmatn';
+    /*font-family: Vazir;*/
+}
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -15,3 +38,14 @@ select,
 textarea {
     max-width: 280px;
 }
+/*@font-face {
+ font-family: 'sans-serif';
+ font-weight: normal;
+ font-style: normal;
+ src: url('../fonts/sans-serif.eot') format('embedded-opentype'), 
+     url('../fonts/sans-serif.woff') format('woff'), 
+     url('../fonts/sans-serif.ttf') format('truetype'),
+     url('../fonts/sans-serif.otf') format('opentype'), 
+     url('../fonts/sans-serif.svg#sans-serif') format('svg');
+}*/
+

@@ -1,0 +1,625 @@
+﻿﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@*multi Lang =>  https://stackoverflow.com/a/46008865*@
+@*https://www.w3.org/International/questions/qa-html-dir*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    //url
+    const targetUrl = 'http://test.sajjadyosefi.ir/api/Application/ApplicationListByTypeCode';
+    const targetCat2Url = 'http://test.sajjadyosefi.ir/api/Application/ApplicationListByCompanyCode';
+    const targetCatLevel1Url = 'http://test.sajjadyosefi.ir/api/Category/CategoryLevel1';
+    const targetCatLevel2Url = 'http://test.sajjadyosefi.ir/api/Category/CategoryLevel2';
+    const targetDetailsUrl = 'Details';
+    const targetPicUrl = 'https://sajjadyosefi.ir/img/profile.jpg';
+    const proxyUrl = 'https://corsproxy.io/?';
+
+    //js
+    var _incallback;
+    var pages = 1;
+    var Id = 8057;
+    var pageIndex = 0;
+    var pageSize = 5;
+    $(window).scroll(function () {
+        var hT = $('#progressmarker').offset().top, 
+            hH = $('#progressmarker').outerHeight(),
+            wH = $(window).height(),
+            wS = $(window).scrollTop();
+        // don't do it if we have reached last page OR we are still grabbing items
+        if (pages >= pageIndex && !_incallback) {
+            if (wS > (hT + hH - wH)) {
+                GetApplicationsListDataByCat();
+            }
+        }
+    });
+    $(document).ready(function () {
+        $("button").click(function () {
+            //$.ajax({
+            //    type: 'POST',
+            //    url: proxyUrl + targetUrl, 
+            //    data: {
+            //        "id": 8057,
+            //        "pageIndex": 0,
+            //        "pageSize": 10
+            //    }, 
+            //    success: function (data) {
+            //        alert("Data: " + data + "\nStatus: " + status);
+            //    }
+            //});
+        });
+        GetCat1ListData();
+    });
+
+
+    //load from server
+    function GetApplicationsListDataByCat() {
+        //ok
+        //service name : ApplicationListByTypeCode
+        var data1 = {
+            "id": Id,
+            "pageIndex": pageIndex,
+            "pageSize": pageSize
+        };
+
+        _incallback = true;
+        $.ajax({
+            type: 'POST', 
+            url: proxyUrl + targetUrl,
+            //headers: { 
+            //    'Content-Type': 'application/json'
+            //},    
+            data: JSON.stringify(data1), 
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {  
+                    var arr = $.parseJSON(data);
+                    for (var i = 0, len = arr.postList.length; i < len; i++) {
+                        AppendApplicationsListData(arr.postList[i]); 
+                    }
+                    pageIndex++;
+                    _incallback = false;
+                    pages = pageIndex;
+                }
+                GetCallApplicationsListData();
+
+            },
+            beforeSend: function () {
+                $("#progress").show();
+                GetCallApplicationsListData();
+
+            },
+            complete: function () {
+                $("#progress").hide();
+                //_incallback = false;
+                GetCallApplicationsListData();
+
+            },
+            error: function () {
+                alert("Error while retrieving data!"); 
+                _incallback = true;
+            }
+        });
+    }
+    function GetApplicationsListDataByCompany() {
+        //باید ساخته بشه
+        //نام سرویس
+        //targetCat2Url  - ApplicationListByCompanyCode
+
+        var data1 = {
+            "id": Id,
+            "pageIndex": pageIndex,
+            "pageSize": pageSize
+        };
+
+        _incallback = true;
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetCat2Url,
+            //headers: { 
+            //    'Content-Type': 'application/json'
+            //},  
+            data: JSON.stringify(data1),
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+
+                    for (var i = 0, len = arr.postList.length; i < len; i++) {
+                        AppendApplicationsListData(arr.postList[i]);
+                    }
+
+                    pageIndex++;
+                    _incallback = false;
+                    pages = pageIndex;
+                }
+                GetCallApplicationsListData();
+
+            },
+            beforeSend: function () {
+                $("#progress").show();
+                GetCallApplicationsListData();
+
+            },
+            complete: function () {
+                $("#progress").hide();
+                //_incallback = false;
+                GetCallApplicationsListData();
+
+            },
+            error: function () {
+                alert("Error while retrieving data!");
+                _incallback = true;
+            }
+        });
+    }
+
+    function GetCat1ListData() {
+        var data1 = {
+            "pageIndex": 0,
+            "pageSize": 2
+        };
+
+
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetCatLevel1Url,
+            data: JSON.stringify(data1),
+//            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+                    for (var i = 0, len = arr.cat1list.length; i < len; i++) {
+                        AppendCat1Data(arr.cat1list[i]);
+                    }
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide();
+            },
+            error: function () {
+                alert("Error while retrieving data!");
+            }
+        });
+    }
+    function GetCat2ListData(id) {
+        //اینو باید از سرور بگیرم
+        //الان هارد کده
+        // listCat2 1  -  listCat2 2
+
+        //[Viw_Site_Cat_level_2]
+        //اپلیکیشن های پارساپرداز
+        //اپلیکیشن های رسمی بانک ها
+        //وب سایت های پارسا پرداز
+
+        var data1 = {
+            "id": Id,
+            "pageIndex": 0,
+            "pageSize": 2
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetCatLevel2Url,
+            //data: {
+            //    //"id": Id,
+            //    "pageIndex": pageIndex,
+            //    "pageSize": 1
+            //},
+            data: JSON.stringify(data1),
+            contentType: "application/json",
+
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+
+                    for (var i = 0, len = arr.cat2list.length; i < len; i++) {
+                        AppendCat2Data(arr.cat2list[i],Id);
+                    }
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide();
+            },
+            error: function () {
+                alert("Error while retrieving data!");
+            }
+        });
+    }
+    function PrepareGetApplicationsListDataByNewCat(id) {
+        //reset listmore
+        //$("#listmore").html('<div class="col-md-4">  <h2>Getting started</h2>  <p>  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that  enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development. </p> <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more »</a></p> </div>');
+        $("#listmore").html('');
+        
+        _incallback;
+        pages = 1;
+        Id = id;
+        pageIndex = 0;
+        pageSize = 5;
+        GetApplicationsListDataByCat();
+
+        //reset listCat2
+        $("#listCat2").html('');
+        $("#nav-home" + id).html('');
+        GetCat2ListData(id);
+    }
+    function PrepareGetApplicationsListDataByCompanyId(id) {
+        //reset listmore
+        //$("#listmore").html('<div class="col-md-4">  <h2>Getting started</h2>  <p>  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that  enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development. </p> <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more »</a></p> </div>');
+        $("#listmore").html('');
+
+        _incallback;
+        pages = 1;
+        Id = id;
+        pageIndex = 0;
+        pageSize = 5;
+        GetApplicationsListDataByCompany();
+
+        //reset listCat2
+        //$("#listCat2").append('<div class="col-md-4">  <h2>Getting started</h2>  <p>  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that  enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development. </p> <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more »</a></p> </div>');
+    }
+    function GotoDetails(url,applicationid,storeName) {
+        //window.location.href = targetDetailsUrl + '?applicationid=' + applicationid + '&storeName=' + storeName;
+        window.location.href = url + "/home/" + targetDetailsUrl + '?applicationid=' + applicationid + '&storeName=' + storeName;
+        
+
+
+        //var data1 = {
+        //    "applicationid": applicationid,
+        //    "storeName": storeName
+        //} 
+        //$.ajax({
+        //    type: 'POST',
+        //    url: targetDetailsUrl,
+        //    data: JSON.stringify(data),
+        //    contentType: "application/json",
+
+        //    success: function (data) {
+        //        if (data != null) {
+        //            var arr = $.parseJSON(data);
+
+        //            for (var i = 0, len = arr.cat2list.length; i < len; i++) {
+        //                AppendCat2Data(arr.cat2list[i]);
+        //            }
+        //        }
+        //    },
+        //    beforeSend: function () {
+        //        $("#progress").show();
+        //    },
+        //    complete: function () {
+        //        $("#progress").hide();
+        //    },
+        //    error: function () {
+        //        alert("Error while retrieving data!");
+        //    }
+        //});
+
+
+    }
+
+
+    //Append
+    function AppendApplicationsListData(obj) {
+        //var isFree; if (obj.isFree) isFree = "(رایگان)"
+        var isFree; if (obj.isFree) isFree = ' <span class="badge rounded-pill bg-primary">رایگان</span>';
+
+        var store = GetStoreNameFarsi(obj.StoreName);
+
+        //1
+        $("#listmore").append('' +
+            '<div class="feature col">' +
+                '<div class="card">' +
+                  '<div class="card-body">' +
+                         '<a href="javascript:void(0);" onclick="GotoDetails(\'' + obj.MainUrl + '\',       \'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')" class="">' +
+                                '<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">' +
+                                        '<img width="100em" height="100em" src=' + obj.LogoPicture + '>' +
+                                '</div>' +
+                                '<h3 class="fs-2 text-body-emphasis">' + obj.NameFa + '</h3>' +
+                         '</a>' +
+                         '<p class="card-text">' + obj.StatementFa + '</p>' +
+                  '</div>' +
+                  '<ul class="list-group list-group-flush">' +
+                        '<li class="list-group-item">نام نسخه ' + obj.VersionName + ' - کد نسخه (' + obj.VersionCode + ')</li>' +
+                        '<li class="list-group-item">سازنده : ' + obj.Company + ' (<a class="card-link" href="' + obj.CompanyUrl + '"> مشاهده وب سایت... </a>)</li>' +
+                        '<li class="list-group-item">منتشر شده در ' + store + isFree + '</li>' +
+                  '</ul>' +
+                  '<div class="card-footer text-body-secondary">' +
+                        '<a href="javascript:void(0);" onclick="GotoDetails(\'' + obj.MainUrl + '\',\'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')" class="card-link">دانلود و مشاهده جزئیات...</a>' +
+                        //'<a href="#" class="card-link">رابط آخر</a>' +
+                  '</div>' +  
+                '</div>' +
+              '</div>' +
+            '</div>'
+        + '');
+
+
+        //2
+    //    $("#listmore").append('' +
+    //        '<div class="feature col">' +
+    //        '<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">'+
+    //            '<img width="100em" height="100em" src=' + obj.LogoPicture + '>' +
+    //        '</div>' +
+    //        '<h3 class="fs-2 text-body-emphasis">' + obj.NameFa + '</h3>' +
+    //        '<p class="h6">(' + obj.VersionName + '-v' + obj.VersionCode + ')</p>' +
+    //        '<p>' + obj.StatementFa + '</p>' +
+    //        //'<p>' + obj.TextFa + '</p>' +
+    //        '<p>سازنده : ' + obj.Company + '<a class="btn btn-default" href="' + obj.CompanyUrl + '">سایت... »</a></p></p>' +
+    //        '<p>منتشر شده در ' + store + isFree + '</p>' +
+
+    //            '<a href="javascript:void(0);" class="icon-link" onclick="GotoDetails(\'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')">' +
+    //                'جزئیات...' +
+    //                '<svg class="bi"><use xlink:href="#chevron-right" /></svg>'+
+    //            '</a>'+
+    //        '</div>'
+
+    //       // ' <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=' + obj.ApplicationID + '">جزئیات... »</a></p>' +
+    //+ '');
+
+    }
+    function AppendCat1Data(obj) {
+ 
+        //1
+        //$("#listCat1").append('<div class="col-md-4">  <h2>' + obj.Name + '</h2>  <p><a  class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByNewCat(' + obj.Id + ');">' + obj.Name + '... &raquo;</a></p> </div>');
+        
+        //2
+        $("#nav-tabx1").append(
+                //'<button class="nav-link" id="nav-home-tab' + obj.Id + '" data-bs-toggle="tab" data-bs-target="#nav-home' + obj.Id + '" type="button" role="tab" aria-controls="nav-home' + obj.Id + '" aria-selected="false" tabindex="-1">' + obj.Name + '</button>'
+                 ' <button  class="nav-link" id="nav-home-tab' + obj.Id + '"  data-bs-toggle="tab"  data-bs-target="#nav-home' + obj.Id + '"  type="button" role="tab"  aria-controls="nav-home' + obj.Id + '"  aria-selected="false"  href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByNewCat(' + obj.Id + ');">' +
+                obj.Name 
+                + '</button> '
+            );
+
+        $("#nav-tabContentx1").append(
+            '<div class="tab-pane fade" id="nav-home' + obj.Id + '" role="tabpanel" aria-labelledby="nav-home-tab' + obj.Id + '">' +
+                '<p class="px-3">محتوى لتوضيح كيف يعمل التبويب. هذا المحتوى مرتبط بتبويب الصفحة الرئيسية. إذن، أمامنا بعض التحدّيات الصعبة. لكن لا يمكننا أن نعتمد على التطورات التكنولوجية وحدها في ميدان قوى السوق الحرة، لإخراجنا من هذه الورطة، لا سيّما أنها نفسها، مقرونة بالافتقار إلى البصيرة، هي التي أودت بنا إلى هذا التبدُّل المناخي في الدرجة الأولى.</p>'+
+            '</div>' 
+            );
+
+    }
+    function AppendCat2Data(obj,idp) {
+        //1
+        //$("#listCat2").append('<div class="col-md-4">*****</div>');
+        //$("#listCat2").append('<div class="col-md-4">  <h2>' + obj.Name + '</h2>  <p><a  class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByCompanyId(' + obj.Id + ');">' + obj.Name + '... &raquo;</a></p> </div>');
+
+
+        //2
+        $("#nav-home" + idp).append(' <button  type="button" class="btn btn-secondary"  data-bs-container="body"  data-bs-toggle="popover" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByCompanyId(' + obj.Id + ');">' + obj.Name + '... &raquo;</button>');
+    }
+
+
+    //other
+    function GetCallApplicationsListData() {
+        //alert("Call data" + " id:" + Id + " | pageIndex:" + pageIndex + " | pageSize :" + pageSize + " | incallback :" + _incallback);
+        //$("#listmore").append('<div class="col-md-4">  <h2>Getting started</h2>  <p>  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that  enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development. </p> <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more »</a></p> </div>');
+        //$("#listmore").append('<div class="col-md-4">  <h2>Getting started</h2>  <p>  ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that  enables a clean separation of concerns and gives you full control over markup for enjoyable, agile development. </p> <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more »</a></p> </div>');
+    }
+    function GetStoreNameFarsi(name) {
+        if (name == 'socialNetwork')
+            return 'شبکه های اجتماعی';
+
+        if (name == 'iranapps')
+            return 'ایران اپس';
+        if (name == 'myket')
+            return 'مایکت';
+        if (name == 'Bazar')
+            return 'کافه بازار';
+        if (name == 'jhobin')
+            return 'ژوبین'; 
+    }
+  
+
+</script> 
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>عنوان المثال.</h1>
+                    <p class="opacity-75">تشير الدراسات الإحصائية حسب الجمعية الأمريكية للغات بأن الإقبال على العربية زاد %126 في الولايات المتحدة الأمريكية وحدها بين عامي 2002 و2009م.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">سجل اليوم</a></p>
+                </div>
+            </div>
+        </div>
+        @*<div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>عنوان مثال آخر.</h1>
+                    <p>حسب المجلس الثقافي البريطاني فإن تعليم الإنجليزية داخل بريطانيا يسهم في تعزيز اقتصادها بما يتجاوز ملياري جنيه سنوياً، كما أنه وفر أكثر من 26 ألف وظيفة.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">أعرف أكثر</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>واحد أكثر لقياس جيد.</h1>
+                    <p>الإحصاءات لحجم الاستثمار اللغوي خارج بريطانيا تتفاوت من سنة لأخرى إلا أن المدير التنفيذي للمجلس الثقافي البريطاني إدي بايرز يرى أن استثمار تعليم الإنجليزية في الخارج لا يحسب على المستوى المالي فحسب بل على المستوى السياسي أيضاً.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">تصفح المعرض</a></p>
+                </div>
+            </div>
+        </div>*@
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">السابق</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">التالي</span>
+    </button>
+</div> 
+@*<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <h2 class="fw-normal">عنوان</h2>
+            <p>تذكر دائماً أن الحاسوب لا يمتلك ذكاءً، ولكنه يكتسب الذكاء الاصطناعي من خلال ثلاثة عناصر وظيفية رئيسة، هي: القدرة على التحليل، والقدرة على التأليف، والاستدلال المنطقي.</p>
+            <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <h2 class="fw-normal">عنوان آخر</h2>
+            <p>إذا أردنا استخدام الحاسوب الذكي في معالجة اللغة العربية فإننا نجد أنفسنا أمام تحدٍّ كبير، خاصة وأن لغتنا تمتاز بتماسك منظوماتها وتداخلها، ومع ذلك فإن الذكاء الاصطناعي يمكّننا من الحصول على أربعة أنواع من المعالجة، هي: المعالجة الصوتية، والمعالجة الصرفية، والمعالجة النحوية، والمعالجة الدلالية.</p>
+            <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>
+            <h2 class="fw-normal">عنوان ثالث لتأكيد المعلومة</h2>
+            <p>بفضل بحوث الذكاء الاصطناعي وتقنياته استطعنا الانتقال من مرحلة التعامل مع الفيزيائي إلى مرحلة التعامل مع المنطقي، وقد انعكس هذا الانتقال بصورة إيجابية على الكيفية التي تتعامل بها الشعوب مع لغاتها الحيَّة، وهذا يعني أنه يجب أن ينعكس بصورة إيجابية على كيفية تعاملنا مع لغتنا العربية.</p>
+            <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+</div><!-- /.container -->*@
+
+@*<div id="listCat1" class="row">
+    @*<div class="col-md-4">
+        <h2>برنامه های موبایلی</h2>
+        <p>
+            مرور و نمایش لیستی از بهترین اپ های سیستم عامل اندروید.
+            این دسته بندی به عنوان پیشفرض انتخاب شده و نمایش داده می شود. 
+        </p>
+        <p><a  class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByNewCat(8057);">لیست اپ ها... &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>سایت ها</h2>
+        <p>مشاهده و مرور بهترین سایت ها.</p>
+        @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>* @
+        <p><a class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByNewCat(8059);">نمایش بیشتر... &raquo;</a></p>
+    </div>
+</div>*@
+<div class="bd-example-snippet bd-code-snippet">
+    <div class="bd-example m-0 border-0">
+        <nav>
+            <div class="nav nav-tabs mb-3" id="nav-tabx1" role="tablist">
+                @*<button class="nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="false" tabindex="-1">الصفحة الرئيسية</button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">الملف الشخصي</button>
+                <button class="nav-link active" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="true">اتصل بنا</button>*@
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContentx1"> 
+
+            @*<div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <p class="px-3">محتوى لتوضيح كيف يعمل التبويب. هذا المحتوى مرتبط بتبويب الصفحة الرئيسية. إذن، أمامنا بعض التحدّيات الصعبة. لكن لا يمكننا أن نعتمد على التطورات التكنولوجية وحدها في ميدان قوى السوق الحرة، لإخراجنا من هذه الورطة، لا سيّما أنها نفسها، مقرونة بالافتقار إلى البصيرة، هي التي أودت بنا إلى هذا التبدُّل المناخي في الدرجة الأولى.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <p class="px-3">محتوى لتوضيح كيف يعمل التبويب. هذا المحتوى مرتبط بتبويب الملف الشخصي. معظم البشر في بلدان العالَم النامي، لم يقتنوا بعد مكيّفهم الأول، والمشكلة إلى ازدياد. فمعظم البلدان النامية هي من البلدان الأشد حرارة والأكثر اكتظاظًا بالسكان في العالم.</p>
+            </div>
+            <div class="tab-pane fade active show" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <p class="px-3">محتوى لتوضيح كيف يعمل التبويب. هذا المحتوى مرتبط بتبويب الاتصال بنا. أمامنا بعض التحدّيات الصعبة. لكن لا يمكننا أن نعتمد على التطورات التكنولوجية وحدها في ميدان قوى السوق الحرة، بل يجب وضع معايير جدوى جديدة لشركات البناء ومعايير أعلى لجدوى التكييف من أجل تحفيز الحلول المستدامة قانونيًا.</p>
+            </div>*@
+            </div>
+    </div>
+</div>
+
+<a id="progressmarker" href="#examples"> </a>
+
+
+<div id="listCat2" class="row">
+    @*<div class="col-md-4">
+        <h2>listCat2 1</h2>
+        <p>
+            مرور و نمایش لیستی از بهترین اپ های سیستم عامل اندروید. 
+            این دسته بندی به عنوان پیشفرض انتخاب شده و نمایش داده می شود. 
+        </p> 
+        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+        <a class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByCompanyId(8066);">وب سایت های پارسا پرداز &raquo;</a>
+        <a class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByCompanyId(8064);">اپلیکیشن های رسمی بانک ها &raquo;</a>
+        <a class="btn btn-default" href="javascript:void(0);" onclick="PrepareGetApplicationsListDataByCompanyId(8063);">اپلیکیشن های پارساپرداز &raquo;</a>
+
+
+    </div>
+    <div class="col-md-4">
+        <h2>listCat2 2 </h2>
+        <p>Browse a list of the best websites and portals.</p>
+        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+    </div>*@
+
+</div> 
+
+<div class="container px-4 py-5" id="featured-3">
+    @*<h2 class="pb-2 border-bottom">لیست</h2>*@
+    <div id="listmore" class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        @*<div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#collection" /></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="btn btn-primary">
+                Primary button
+            </a>
+            <a href="#" class="icon-link">
+                Call to action
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>*@
+        @*<div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle" /></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="icon-link">
+                Call to action
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>*@
+        @*<div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2" /></svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="icon-link">
+                Call to action
+                <svg class="bi"><use xlink:href="#chevron-right" /></svg>
+            </a>
+        </div>*@
+    </div>
+</div>
+<div id="listmore0" class="row mb-2">
+    @*<div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>*@
+
+</div>
+
+
