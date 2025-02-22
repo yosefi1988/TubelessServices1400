@@ -9,14 +9,20 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script>
-    //url
-    const targetUrl = 'http://test.sajjadyosefi.ir/api/Application/ApplicationListByTypeCode';
-    const targetCat2Url = 'http://test.sajjadyosefi.ir/api/Application/ApplicationListByCompanyCode';
-    const targetCatLevel1Url = 'http://test.sajjadyosefi.ir/api/Category/CategoryLevel1';
-    const targetCatLevel2Url = 'http://test.sajjadyosefi.ir/api/Category/CategoryLevel2';
+    //Main url
+    const Host = 'http://localhost:24710';
+
+    const targetUrl = Host + '/api/Application/ApplicationListByTypeCode';
+    const targetCat2Url = Host + '/api/Application/ApplicationListByCompanyCode';
+    const targetCatLevel1Url = Host + '/api/Category/CategoryLevel1';
+    const targetCatLevel2Url = Host + '/api/Category/CategoryLevel2';
     const targetDetailsUrl = 'Details';
+
     const targetPicUrl = 'https://sajjadyosefi.ir/img/profile.jpg';
-    const proxyUrl = 'https://corsproxy.io/?';
+
+    //const proxyUrl = 'https://corsproxy.io/?';
+    //const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    const proxyUrl = '';
 
     //js
     var _incallback;
