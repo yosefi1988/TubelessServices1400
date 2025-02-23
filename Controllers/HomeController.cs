@@ -27,6 +27,25 @@ namespace TubelessServices.Controllers
             return View();
         }
 
+        public ActionResult IndexListOfMozayede(string ApplicationID)
+        {
+            ViewBag.Title = "Home Page";
+
+
+            if (ApplicationID != null)
+            {
+                ViewBag.ApplicationID = ApplicationID;
+            }
+            else
+            {
+                string siteID = ConfigurationManager.AppSettings["SiteID"];
+                ViewBag.ApplicationID = siteID;
+            }
+
+            return View();
+        }
+
+
         public ActionResult Details(string ApplicationID, string storeName)
         {
 

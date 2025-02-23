@@ -768,6 +768,7 @@ namespace TubelessServices.Controllers.Post
         }
 
         [HttpPost]
+        [HttpGet]
         [Route("PostListForSite")]
         public string PostListForSite(reqPostList requestPostList)
         {

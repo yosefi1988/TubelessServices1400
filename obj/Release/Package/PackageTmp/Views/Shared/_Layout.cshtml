@@ -4,38 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="سایت تخصصی مزایده و مناقصات کشور">
+    <meta name="keywords" content="مناقصات کشور,سایت مناقصات,آگهی مزایده قوه قضاییه">
+    <meta name="author" content="پارساپردازگسترغرب">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content=""> <!-- website name -->
+    <meta property="og:site" content=""> <!-- website link -->
+    <meta property="og:title" content=""> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content=""> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content=""> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content=""> <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <!-- Webpage Title -->
+    <title>سایت تخصصی مزایده و مناقصات کشور</title>
+
+    <!-- Styles
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="~/Content/moz/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/moz/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="~/Content/moz/css/swiper.css" rel="stylesheet" />
+    <link href="~/Content/moz/css/styles.css" rel="stylesheet" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images\moz\favicon.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY8SQ40CRN"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PY8SQ40CRN');
+
+    </script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
 </body>
 </html>

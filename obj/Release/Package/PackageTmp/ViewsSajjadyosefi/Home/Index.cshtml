@@ -1,0 +1,244 @@
+﻿﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@*multi Lang =>  https://stackoverflow.com/a/46008865*@
+@*https://www.w3.org/International/questions/qa-html-dir*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    //url
+    const Host = 'http://localhost:24710';
+    //const Host = 'https://test.officialapp.ir';
+    //const Host = 'https://test.sajjadyosefi.ir';
+    
+    const targetUrl = Host + '/api/Application/ApplicationListByTypeCode';
+    const targetPostUrl = Host + '/api/Post/PostListForSite';
+    const targetxxxxxxxxxxxUrl = Host + '/api/Application/ApplicationListByCompanyCode';
+    const targetxxxxxxxxxxxxUrl = Host + '/api/Category/CategoryLevel1';
+    const targetxxxxxxxxxxxxxUrl = Host + '/api/Category/CategoryLevel2';
+    const targetDetailsUrl = 'home/Details';
+    const targetPicUrl = 'https://officialapp.ir/img/profile.jpg';
+    //const proxyUrl = 'https://corsproxy.io/?';
+    //const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    const proxyUrl = '';
+
+    //js
+    var _incallback;
+    var pages = 1;
+
+    var ApplicationId = 4;// 5; گمشده// 1008;املاک
+    var pageIndex = 0;
+    var pageSize = 5;
+    var ttc = 8109;
+
+    $(window).scroll(function () {
+        scroll(ApplicationId);
+    });
+
+    $(document).ready(function () {
+        $("button").click(function () {
+            //$.ajax({
+            //    type: 'POST',
+            //    url: proxyUrl + targetUrl,
+            //    data: {
+            //        "id": 8057,
+            //        "pageIndex": 0,
+            //        "pageSize": 10
+            //    },
+            //    success: function (data) {
+            //        alert("Data: " + data + "\nStatus: " + status);
+            //    }
+            //});
+        });
+        GetApplicationsListDataByCat();
+        getUrlVars3();
+    });
+
+
+
+    function getUrlVars3() {
+        ApplicationId =  @ViewBag.ApplicationID;
+        scroll(ApplicationId);
+    }
+    function scroll(applicationID) {
+        var hT = $('#progressmarker').offset().top,
+            hH = $('#progressmarker').outerHeight(),
+            wH = $(window).height(),
+            wS = $(window).scrollTop();
+        // don't do it if we have reached last page OR we are still grabbing items
+        if (pages >= pageIndex && !_incallback) {
+            if (wS > (hT + hH - wH)) {
+                GetApplicationsPostListData(applicationID);
+            }
+        }
+    }
+
+    //load from server
+    function GetApplicationsListDataByCat() {
+        var Id = 8057;
+        //service name : ApplicationListByTypeCode
+        var data1 = {
+            "id": Id,
+            "pageIndex": 0,
+            "pageSize": 3
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetUrl,
+            //headers: {
+            //    'Content-Type': 'application/json'
+            //},
+            data: JSON.stringify(data1),
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+                    for (var i = 0, len = arr.postList.length; i < len; i++) {
+                        AppendApplicationsListData(arr.postList[i]);
+                    }
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide();
+            },
+            error: function () {
+                alert("Error while retrieving data!");
+            }
+        });
+    }
+    function GetApplicationsPostListData(applicationID) {
+        var data1 = {
+            "IDApplication": applicationID,
+            "IsActive":true,
+            "pageIndex": pageIndex,
+            "pageSize": pageSize,
+            "ttc":ttc
+        };
+
+        _incallback = true;
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetPostUrl,
+            //headers: {
+            //    'Content-Type': 'application/json'
+            //},
+            data: JSON.stringify(data1),
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+                    for (var i = 0, len = arr.postList.length; i < len; i++) {
+                        AppendApplicationPostsListData(arr.postList[i]);
+                    }
+
+                    pageIndex++;
+                    _incallback = false;
+                    pages = pageIndex;
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide();
+                //_incallback = false;
+            },
+            error: function () {
+                alert("Error while retrieving data!");
+                _incallback = true;
+            }
+        });
+    }
+
+    //Append
+    function AppendApplicationsListData(obj) {
+        var isFree; if (obj.isFree) isFree = "(رایگان)"
+        var store = GetStoreNameFarsi(obj.StoreName);
+
+        $("#listAppMore").append('' +
+            //'<div class="col-md-4">' +
+            //'<h2>' + obj.NameFa + '(' + obj.VersionName + '-v' + obj.VersionCode + ')</h2>' +
+            //'<p>' + obj.StatementFa + '</p>' +
+            //'<img width="100px" height="100px" src=' + obj.LogoPicture + '>' +
+            ////'<p>' + obj.TextFa + '</p>' +
+            //'<p>سازنده : ' + obj.Company + '<a class="btn btn-default" href="' + obj.CompanyUrl + '">سایت... »</a></p></p>' +
+            //'<p>منتشر شده در ' + store + isFree + '</p>' +
+            //' <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=' + obj.ApplicationID + '">جزئیات... »</a></p>' +
+            //'<a  class="btn btn-default" href="javascript:void(0);" onclick="GotoDetails(\'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')">جزئیات2... &raquo;</a>' +
+
+            //'</div>'
+
+             '<div class="feature col">' +
+                '<div class="card">' +
+                  '<div class="card-body">' +
+                         '<a href="javascript:void(0);" onclick="GotoDetails(\'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')" class="">' +
+                                '<div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">' +
+                                        '<img width="100em" height="100em" src=' + obj.LogoPicture + '>' +
+                                '</div>' +
+                                '<h3 class="fs-2 text-body-emphasis">' + obj.NameFa + '</h3>' +
+                         '</a>' +
+                         '<p class="card-text">' + obj.StatementFa + '</p>' +
+                  '</div>' +
+                  '<ul class="list-group list-group-flush">' +
+                        '<li class="list-group-item">نام نسخه ' + obj.VersionName + ' - کد نسخه (' + obj.VersionCode + ')</li>' +
+                        '<li class="list-group-item">سازنده : ' + obj.Company + ' (<a class="card-link" href="' + obj.CompanyUrl + '"> مشاهده وب سایت... </a>)</li>' +
+                        '<li class="list-group-item">منتشر شده در ' + store + isFree + '</li>' +
+                  '</ul>' +
+                  '<div class="card-footer text-body-secondary">' +
+                        '<a href="javascript:void(0);" onclick="GotoDetails(\'' + obj.ApplicationID + '\',\'' + obj.StoreName + '\')" class="card-link">دانلود و مشاهده جزئیات...</a>' +
+        //'<a href="#" class="card-link">رابط آخر</a>' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
+
+    +'');
+    }
+    function AppendApplicationPostsListData(obj) {
+        $("#listmore").append('' +
+            '<div class="col-md-6">'+
+                '<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">'+
+                    '<div class="col p-4 d-flex flex-column position-static">'+
+                        '<strong class="d-inline-block mb-2 text-success-emphasis">' + obj.TTN + '-' + obj.StateName + '</strong>'+
+                        '<h3 class="mb-0">' + obj.title + '</h3>'+
+                        '<div class="mb-1 text-body-secondary">' + obj.DateTime + '</div>'+
+                        '<p class="mb-auto">' + obj.text + '</p>'+
+                        '<a href="'+obj.text+'" class="icon-link">مشاهده بیشتر &raquo;</a>'+
+                    '</div>'+
+                    '<div class="col-auto d-block">'+
+                        //'<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">صورة مصغرة</text></svg>'+
+                        '<img class="bd-placeholder-img" width="200" height="250" src=' + obj.TitlePicture + ' role="img"       aria-label="Placeholder:' + obj.title + '" preserveAspectRatio="xMidYMid slice" focusable="false">' +
+                    '</div>'+
+                '</div>'+
+            '</div>'
+        + '');
+    }
+    function GetStoreNameFarsi(name) {
+        if (name == 'socialNetwork')
+            return 'شبکه های اجتماعی';
+        if (name == 'iranapps')
+            return 'ایران اپس';
+        if (name == 'myket')
+            return 'مایکت';
+        if (name == 'Bazar')
+            return 'کافه بازار';
+        if (name == 'jhobin')
+            return 'ژوبین';
+    }
+    function GotoDetails(applicationid, storeName) {
+        window.location.href = targetDetailsUrl + '?applicationid=' + applicationid + '&storeName=' + storeName;
+    }
+</script> 
+<a id="progressmarker" href="#examples"> </a> 
+<div id="listCat1" class="row"></div>  
+<div id="listAppMore" class="row mb-3"></div>
+<div id="listmore" class="row mb-2"></div>
+<hr />
+ver 1.01.1

@@ -1,0 +1,273 @@
+﻿﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+    //url
+    const targetUrl = 'http://test.sajjadyosefi.ir/api/Application/ApplicationDetails';
+    const proxyUrl = 'https://corsproxy.io/?';
+
+    //js  
+    $(window).scroll(function () {    });
+    $(document).ready(function () {
+        $("button").click(function () {
+            //$.ajax({
+            //    type: 'POST',
+            //    url: proxyUrl + targetUrl,
+            //    data: {  },
+            //    success: function (data) {
+            //        alert("Data: " + data + "\nStatus: " + status);
+            //    }
+            //});
+        });
+        getUrlVars();
+        //getUrlVars2();
+        getUrlVars3();
+
+    });
+
+    // Read a page's GET URL variables and return them as an associative array.
+    function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+    function getUrlVars2() {
+        var data = JSON.parse($("body").text());
+
+        console.log(data.name); // "علی"
+        console.log(data.age); // 30
+        console.log(data.city); // "تهران"
+    }
+
+    function getUrlVars3() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+
+
+        //1
+        //vars
+
+        //2
+        @ViewBag.UserName
+        LoadDetailsFromServer(@ViewBag.ApplicationID,'@ViewBag.storeName');
+    }
+
+
+    //OK load Details from server
+    function LoadDetailsFromServer(applicationID, storeName) {
+        var data1 = {
+            "ApplicationID": applicationID,
+            "storeName": storeName
+        };
+        $.ajax({
+            type: 'POST',
+            url: proxyUrl + targetUrl,
+            data: JSON.stringify(data1),
+            contentType: "application/json",
+            success: function (data) {
+                if (data != null) {
+                    var arr = $.parseJSON(data);
+                    for (var i = 0, len = arr.postList.length; i < len; i++) {
+                        AppendApplicationsDetailsData(arr.postList[i]);
+                    }
+                }
+            },
+            beforeSend: function () {
+                $("#progress").show();
+            },
+            complete: function () {
+                $("#progress").hide(); 
+            },
+            error: function () {
+                alert("Error while retrieving data!"); 
+            }
+        });
+    }
+ 
+
+
+    //Append
+    function AppendApplicationsDetailsData(obj) {
+        //var obj = jQuery.parseJSON('{"ApplicationID":2,"NameFa":"مزایده","StatementFa":"مزایده","TextFa":"مزایده","LogoPicture":null,"NameEn":null,"StatementEn":null,"VersionCode":0,"VersionName":"آبنبات","Price":null,"DownloadCount":null,"Views":null,"StoreName":"iranapps","isFree":true,"URL":null,"Description":"مزایده","AppTypeCode":8057,"CompanyCode":8063,"Company":"اپلیکیشن های پارساپرداز","CompanyUrl":"0","CompanyIcon":"0","Priority":null}');
+        //var obj = jQuery.parseJSON(data);
+ 
+        var isFree; if (obj.isFree) isFree = "(رایگان)"
+        var store = GetStoreNameFarsi(obj.StoreName);
+         
+        //آلبوم
+        //$("#appnameDesc").append(obj.StatementFa);
+        $("#appHeader").append( 
+            '<img width="100px" height="100px" src=' + obj.LogoPicture + '>' +
+            '<h1 id="appname" class="display-3 fw-bold">'+ obj.NameFa +'</h1>'+
+            '<h3  id="appnameDesc" class="fw-normal text-muted mb-3"></h3>'+
+            '<div class="d-flex gap-3 justify-content-center lead fw-normal">'+
+                '<a class="icon-link" href="' + obj.MainUrl + '/Home/Index?applicationid=' + obj.ApplicationID + '">'+
+                    'بدون نصب &raquo;'+
+                    '<svg class="bi"><use xlink:href="#chevron-right"></use></svg>'+
+                '</a> '+
+                '<a href="'+obj.DownloadUrl+'" class="btn btn-primary btn-lg">دانلود و نصب &raquo;</a>'+
+            '</div>'
+            );
+
+        //متن اصلی
+        $("#listmore").append('' +
+            '<div class="jumbotron">'+
+                '<h1>' + obj.NameFa + '(' + obj.VersionName + '-v' + obj.VersionCode + ')</h1>' +
+                '<p class="lead">' + obj.StatementFa + '</p>'+
+                '<p>' + obj.TextFa + '</p>' + 
+            '</div>'+
+
+            '<div class="col-md-4">' +  
+            //'<p>' + obj.Priority + '</p>' +
+            
+            //' <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=' + obj.ApplicationID + '">xxxx... »</a></p>' +
+            '</div>'
+        + '');
+
+
+        //اطلاعات
+        $("#appDetails").append(
+            '<img width="100px" height="100px" src=' + obj.ImageUrl + '>'  + '</br>'+
+            '<strong>نام کامل : </strong>' + obj.Name + 
+            '<' + obj.NameEn + '>' + '-' + obj.ApplicationID + '</br>'+
+            '<strong>دسته بندی : </strong>' + obj.Name + '-' + obj.AppTypeCode + '</br>' +
+            '<strong>توضیحات : </strong>' + obj.Description + '</br>'+ 
+            '<' + obj.ApplicationVersionStatement + '>' + '</br>'+ 
+            '<strong>تارنمای اصلی :</strong>' + '<a href="' + obj.MainUrl + '" class="icon-link">' + obj.MainUrl + '</a>' + '</br>'
+        );
+         
+
+        //نسخه
+        $("#appPublished").append(
+            '<img width="100px" height="100px" src=' + obj.icon + '>'  + '</br>'+
+         //   '<img width="100px" height="100px" src=' + obj.icon + '>' +
+            'منتشر شده در ' + store  + '</br>'+
+            '<strong>قیمت : </strong><' + obj.Price + '>' + isFree + '</br>'+ 
+            '<strong>دفعات دانلود : </strong>' + obj.DownloadCount + '</br>'+ 
+            '<strong>دفعات بازدید : </strong>' + obj.Views + '</br>'+ 
+            '<strong>آدرس دانلود : </strong>' + obj.DownloadUrl + '' + '</br>'+ 
+            '<strong>آدرس وب :</strong>' + '<a href="' + obj.URL + '" class="icon-link">' + obj.URL + '</a>' + '</br>' 
+        );
+     
+
+        //تولید کننده
+        $("#appCreator").append(
+            '<img width="100px" height="100px" src=' + obj.CompanyIcon + '></br>' +
+            '<strong>تولید کننده : </strong>' + obj.Company + '-' + obj.CompanyCode);
+            $("#appCreatorSite").append('<strong>وبسایت تولید کننده : </strong>' + '<a class="icon-link" href="' + obj.CompanyUrl + '">سایت... »</a>' 
+        );
+
+        //$("#listmore").append('<div class="col-md-4">' + obj.Description + '</div>');
+    }
+ 
+    function GetStoreNameFarsi(name) {
+        if (name == 'socialNetwork')
+            return 'شبکه های اجتماعی';
+
+        if (name == 'iranapps')
+            return 'ایران اپس';
+        if (name == 'myket')
+            return 'مایکت';
+        if (name == 'Bazar')
+            return 'کافه بازار';
+        if (name == 'jhobin')
+            return 'ژوبین';
+    }
+
+
+</script>
+<br />
+<a id="progressmarker" href="#examples"> </a>
+<br />
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+    <div  id="appHeader" class="col-md-6 p-lg-5 mx-auto my-5" style="z-index: 1;position: relative;">         
+
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+
+
+
+</div>
+
+<div id="listCat1" class="row">
+    @*<div class="col-md-4">
+        <h2>برنامه های موبایلی</h2>
+        <p>
+            مرور و نمایش لیستی از بهترین اپ های سیستم عامل اندروید.
+            این دسته بندی به عنوان پیشفرض انتخاب شده و نمایش داده می شود. 
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>سایت ها</h2>
+        <p>مشاهده و مرور بهترین سایت ها.</p>
+        @*<p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>* @
+    </div>*@
+</div>
+<hr /> 
+
+<div id="listmore" class="row mb-2">
+</div>
+ 
+<div>
+    <div class="bd-example-snippet bd-code-snippet">
+        <div class="bd-example m-0 border-0">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            اطلاعات
+                        </button>
+                    </h4>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p id="appDetails"></p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            نسخه
+                        </button>
+                    </h4>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p id="appPublished"></p> 
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            تولید کننده
+                        </button>
+                    </h4>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                             
+                            <p id="appCreator"></p>
+                            <p id="appCreatorSite"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
